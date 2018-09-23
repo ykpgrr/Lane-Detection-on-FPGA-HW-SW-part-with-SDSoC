@@ -10,7 +10,7 @@ Mehmet Akif AKKAYA (akifakkaya1@gmail.com) - VIVADO Platform <br />
 Sıddıka Berna ÖRS YALÇIN (Advisor) <br />
 
 1-) Lane Detection ()<br />
-2-) __Lane Detection SDSoC FPGA () <br />__
+__2-) Lane Detection SDSoC FPGA () <br />__
 3-) Lane-Detection VIVADO FPGA () <br />
 
 ## TODO
