@@ -19,7 +19,7 @@ __2-) Lane Detection SDSoC FPGA (This Repository) <br />__
 -- x Add Summary of REALIZATION OF LANE DETECTION ALGORITHMS ON FPGA USING SDSOC AND VIVADO <br />
 -- Add SDSoC software/hardware diagram on Readme <br />
 -- Add Results <br />
--- Add project settings files <br />
+- Add project settings files <br />
 
 
 
