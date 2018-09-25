@@ -35,5 +35,9 @@ The lane detection algorithm is written in “C++” with “OpenCV” library. 
 
 According to the time analysis of the lane detection algorithm, the preprocessing part was implemented in hardware. SDSoC and Vivado platforms were used to make implementation of the developed lane detection algorithm on FPGA. Low level code (Verilog) is used in Vivado platform while high level code (C++) is used in SDSoC platform. In SDSoC platform, the "xfOpenCV" library was also used. The “xfOpenCV” library is a set of 50+ kernels, optimized for Xilinx FPGAs and SoCs, based on the OpenCV computer vision library. The kernels in the xfOpenCV library are optimized and supported in the Xilinx SDSoC Tool Suit.<br />
 
-
-
+# Lane-Detection-SDSoC-FPGA
+### Dependencies
+- Xilinx SDx Development Environments (tested version 2018.1 ) <br />
+- OpenCV 2.4 (tested at windows platform __(builded for windows)__ ) <br />
+- OpenCV 2.4 for ARM processor  (tested on Zedboard __(builded for ARCH32 architecture)__) <br />
+- Xilinx xfOpenCV Library <br />
