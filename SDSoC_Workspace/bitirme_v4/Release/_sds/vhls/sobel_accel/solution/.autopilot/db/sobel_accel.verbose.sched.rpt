@@ -1,0 +1,136 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel_accel'
+================================================================
+* Date:           Wed May 23 18:09:51 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        sobel_accel
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.89|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  312166|  312166|  312166|  312166|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+ <State 1> : 0.00ns
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_src_rows_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_src_rows)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_src_cols_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_src_cols)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_dstgx_rows_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_dstgx_rows)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_dstgx_cols_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_dstgx_cols)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_dstgy_cols_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_dstgy_cols)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "call fastcc void @Sobel(i32 %p_src_rows_read, i32 %p_src_cols_read, [307200 x i8]* %p_src_data_V, i32 %p_dstgx_rows_read, i32 %p_dstgx_cols_read, [307200 x i8]* %p_dstgx_data_V, i32 %p_dstgy_cols_read, [307200 x i8]* %p_dstgy_data_V)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 2> : 0.00ns
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %p_src_allocatedFlag), !map !230"
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_src_rows), !map !234"
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_src_cols), !map !238"
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_src_size), !map !242"
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([307200 x i8]* %p_src_data_V), !map !246"
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %p_dstgx_allocatedFlag), !map !252"
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgx_rows), !map !256"
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgx_cols), !map !260"
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgx_size), !map !264"
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([307200 x i8]* %p_dstgx_data_V), !map !268"
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %p_dstgy_allocatedFlag), !map !272"
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgy_rows), !map !276"
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgy_cols), !map !280"
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgy_size), !map !284"
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([307200 x i8]* %p_dstgy_data_V), !map !288"
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @sobel_accel_str) nounwind"
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 1, i32 65535, [1 x i8]* @p_str) nounwind" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:35]
+ST_2 : Operation 26 [1/2] (0.00ns)   --->   "call fastcc void @Sobel(i32 %p_src_rows_read, i32 %p_src_cols_read, [307200 x i8]* %p_src_data_V, i32 %p_dstgx_rows_read, i32 %p_dstgx_cols_read, [307200 x i8]* %p_dstgx_data_V, i32 %p_dstgy_cols_read, [307200 x i8]* %p_dstgy_data_V)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "ret void" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:39]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

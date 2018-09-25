@@ -1,0 +1,665 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel_accel'
+================================================================
+* Date:           Wed May 23 18:09:52 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        sobel_accel
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.89|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  312166|  312166|  312166|  312166|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------+-------+--------+--------+--------+--------+----------+
+        |                 |       |     Latency     |     Interval    | Pipeline |
+        |     Instance    | Module|   min  |   max  |   min  |   max  |   Type   |
+        +-----------------+-------+--------+--------+--------+--------+----------+
+        |grp_Sobel_fu_78  |Sobel  |  312165|  312165|  312164|  312164| dataflow |
+        +-----------------+-------+--------+--------+--------+--------+----------+
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+ <State 1> : 0.00ns
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_src_rows_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_src_rows)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%p_src_cols_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_src_cols)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%p_dstgx_rows_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_dstgx_rows)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%p_dstgx_cols_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_dstgx_cols)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_dstgy_cols_read = call i32 @_ssdm_op_Read.ap_auto.i32P(i32* %p_dstgy_cols)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]
+ST_1 : Operation 8 [2/2] (0.00ns)   --->   "call fastcc void @Sobel(i32 %p_src_rows_read, i32 %p_src_cols_read, [307200 x i8]* %p_src_data_V, i32 %p_dstgx_rows_read, i32 %p_dstgx_cols_read, [307200 x i8]* %p_dstgx_data_V, i32 %p_dstgy_cols_read, [307200 x i8]* %p_dstgy_data_V)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 2> : 0.00ns
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %p_src_allocatedFlag), !map !230"
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_src_rows), !map !234"
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_src_cols), !map !238"
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_src_size), !map !242"
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([307200 x i8]* %p_src_data_V), !map !246"
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %p_dstgx_allocatedFlag), !map !252"
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgx_rows), !map !256"
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgx_cols), !map !260"
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgx_size), !map !264"
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([307200 x i8]* %p_dstgx_data_V), !map !268"
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i8* %p_dstgy_allocatedFlag), !map !272"
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgy_rows), !map !276"
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgy_cols), !map !280"
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %p_dstgy_size), !map !284"
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([307200 x i8]* %p_dstgy_data_V), !map !288"
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([12 x i8]* @sobel_accel_str) nounwind"
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLatency(i32 1, i32 65535, [1 x i8]* @p_str) nounwind" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:35]
+ST_2 : Operation 26 [1/2] (0.00ns)   --->   "call fastcc void @Sobel(i32 %p_src_rows_read, i32 %p_src_cols_read, [307200 x i8]* %p_src_data_V, i32 %p_dstgx_rows_read, i32 %p_dstgx_cols_read, [307200 x i8]* %p_dstgx_data_V, i32 %p_dstgy_cols_read, [307200 x i8]* %p_dstgy_data_V)" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:37]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "ret void" [C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp:39]
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+STG Binding: 
+---------------- STG Properties BEGIN ----------------
+- Is combinational: 0
+- Is one-state seq: 0
+- Is datapath-only: 0
+- Is pipelined: 0
+- Is top level: 1
+Port [ Return ] is wired: 1; IO mode=ap_ctrl_hs:ce=0
+Port [ p_src_allocatedFlag]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_src_rows]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_src_cols]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_src_size]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_src_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=1; pingpong=0; private_global=0; MemPort=[13]; IO mode=ap_memory:ce=0
+Port [ p_dstgx_allocatedFlag]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_dstgx_rows]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_dstgx_cols]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_dstgx_size]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_dstgx_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+Port [ p_dstgy_allocatedFlag]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_dstgy_rows]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_dstgy_cols]:  wired=1; compound=0; hidden=0; nouse=0; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_dstgy_size]:  wired=1; compound=0; hidden=0; nouse=1; global=0; static=0; extern=0; dir=0; type=0; pingpong=0; private_global=0; IO mode=ap_none:ce=0
+Port [ p_dstgy_data_V]:  wired=1; compound=1; hidden=0; nouse=0; global=0; static=0; extern=0; dir=1; type=1; pingpong=0; private_global=0; MemPort=[03]; IO mode=ap_memory:ce=0
+---------------- STG Properties END ------------------
+
+---------------- Datapath Model BEGIN ----------------
+
+<LifeTime>
+<method=bitvector/>
+p_src_rows_read   (read         ) [ 001]
+p_src_cols_read   (read         ) [ 001]
+p_dstgx_rows_read (read         ) [ 001]
+p_dstgx_cols_read (read         ) [ 001]
+p_dstgy_cols_read (read         ) [ 001]
+StgValue_9        (specbitsmap  ) [ 000]
+StgValue_10       (specbitsmap  ) [ 000]
+StgValue_11       (specbitsmap  ) [ 000]
+StgValue_12       (specbitsmap  ) [ 000]
+StgValue_13       (specbitsmap  ) [ 000]
+StgValue_14       (specbitsmap  ) [ 000]
+StgValue_15       (specbitsmap  ) [ 000]
+StgValue_16       (specbitsmap  ) [ 000]
+StgValue_17       (specbitsmap  ) [ 000]
+StgValue_18       (specbitsmap  ) [ 000]
+StgValue_19       (specbitsmap  ) [ 000]
+StgValue_20       (specbitsmap  ) [ 000]
+StgValue_21       (specbitsmap  ) [ 000]
+StgValue_22       (specbitsmap  ) [ 000]
+StgValue_23       (specbitsmap  ) [ 000]
+StgValue_24       (spectopmodule) [ 000]
+StgValue_25       (speclatency  ) [ 000]
+StgValue_26       (call         ) [ 000]
+StgValue_27       (ret          ) [ 000]
+</LifeTime>
+
+<model>
+
+<comp_list>
+<comp id="0" class="1000" name="p_src_allocatedFlag">
+<pin_list>
+<pin id="1" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_allocatedFlag"/></StgValue>
+</bind>
+</comp>
+
+<comp id="2" class="1000" name="p_src_rows">
+<pin_list>
+<pin id="3" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_rows"/></StgValue>
+</bind>
+</comp>
+
+<comp id="4" class="1000" name="p_src_cols">
+<pin_list>
+<pin id="5" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_cols"/></StgValue>
+</bind>
+</comp>
+
+<comp id="6" class="1000" name="p_src_size">
+<pin_list>
+<pin id="7" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_size"/></StgValue>
+</bind>
+</comp>
+
+<comp id="8" class="1000" name="p_src_data_V">
+<pin_list>
+<pin id="9" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_src_data_V"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="10" class="1000" name="p_dstgx_allocatedFlag">
+<pin_list>
+<pin id="11" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgx_allocatedFlag"/></StgValue>
+</bind>
+</comp>
+
+<comp id="12" class="1000" name="p_dstgx_rows">
+<pin_list>
+<pin id="13" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgx_rows"/></StgValue>
+</bind>
+</comp>
+
+<comp id="14" class="1000" name="p_dstgx_cols">
+<pin_list>
+<pin id="15" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgx_cols"/></StgValue>
+</bind>
+</comp>
+
+<comp id="16" class="1000" name="p_dstgx_size">
+<pin_list>
+<pin id="17" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgx_size"/></StgValue>
+</bind>
+</comp>
+
+<comp id="18" class="1000" name="p_dstgx_data_V">
+<pin_list>
+<pin id="19" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgx_data_V"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="20" class="1000" name="p_dstgy_allocatedFlag">
+<pin_list>
+<pin id="21" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgy_allocatedFlag"/></StgValue>
+</bind>
+</comp>
+
+<comp id="22" class="1000" name="p_dstgy_rows">
+<pin_list>
+<pin id="23" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgy_rows"/></StgValue>
+</bind>
+</comp>
+
+<comp id="24" class="1000" name="p_dstgy_cols">
+<pin_list>
+<pin id="25" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgy_cols"/></StgValue>
+</bind>
+</comp>
+
+<comp id="26" class="1000" name="p_dstgy_size">
+<pin_list>
+<pin id="27" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgy_size"/></StgValue>
+</bind>
+</comp>
+
+<comp id="28" class="1000" name="p_dstgy_data_V">
+<pin_list>
+<pin id="29" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_dstgy_data_V"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</bind>
+</comp>
+
+<comp id="30" class="1001" name="const_30">
+<pin_list>
+<pin id="31" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_Read.ap_auto.i32P"/></StgValue>
+</bind>
+</comp>
+
+<comp id="32" class="1001" name="const_32">
+<pin_list>
+<pin id="33" dir="1" index="0" bw="1" slack="0"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="Sobel"/></StgValue>
+</bind>
+</comp>
+
+<comp id="34" class="1001" name="const_34">
+<pin_list>
+<pin id="35" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecBitsMap"/></StgValue>
+</bind>
+</comp>
+
+<comp id="36" class="1001" name="const_36">
+<pin_list>
+<pin id="37" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecTopModule"/></StgValue>
+</bind>
+</comp>
+
+<comp id="38" class="1001" name="const_38">
+<pin_list>
+<pin id="39" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="sobel_accel_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="40" class="1001" name="const_40">
+<pin_list>
+<pin id="41" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="_ssdm_op_SpecLatency"/></StgValue>
+</bind>
+</comp>
+
+<comp id="42" class="1001" name="const_42">
+<pin_list>
+<pin id="43" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="44" class="1001" name="const_44">
+<pin_list>
+<pin id="45" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name=""/></StgValue>
+</bind>
+</comp>
+
+<comp id="46" class="1001" name="const_46">
+<pin_list>
+<pin id="47" dir="1" index="0" bw="1" slack="2147483647"/>
+</pin_list>
+<bind>
+<StgValue><ssdm name="p_str"/></StgValue>
+</bind>
+</comp>
+
+<comp id="48" class="1004" name="p_src_rows_read_read_fu_48">
+<pin_list>
+<pin id="49" dir="0" index="0" bw="32" slack="0"/>
+<pin id="50" dir="0" index="1" bw="32" slack="0"/>
+<pin id="51" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_src_rows_read/1 "/>
+</bind>
+</comp>
+
+<comp id="54" class="1004" name="p_src_cols_read_read_fu_54">
+<pin_list>
+<pin id="55" dir="0" index="0" bw="32" slack="0"/>
+<pin id="56" dir="0" index="1" bw="32" slack="0"/>
+<pin id="57" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_src_cols_read/1 "/>
+</bind>
+</comp>
+
+<comp id="60" class="1004" name="p_dstgx_rows_read_read_fu_60">
+<pin_list>
+<pin id="61" dir="0" index="0" bw="32" slack="0"/>
+<pin id="62" dir="0" index="1" bw="32" slack="0"/>
+<pin id="63" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_dstgx_rows_read/1 "/>
+</bind>
+</comp>
+
+<comp id="66" class="1004" name="p_dstgx_cols_read_read_fu_66">
+<pin_list>
+<pin id="67" dir="0" index="0" bw="32" slack="0"/>
+<pin id="68" dir="0" index="1" bw="32" slack="0"/>
+<pin id="69" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_dstgx_cols_read/1 "/>
+</bind>
+</comp>
+
+<comp id="72" class="1004" name="p_dstgy_cols_read_read_fu_72">
+<pin_list>
+<pin id="73" dir="0" index="0" bw="32" slack="0"/>
+<pin id="74" dir="0" index="1" bw="32" slack="0"/>
+<pin id="75" dir="1" index="2" bw="32" slack="0"/>
+</pin_list>
+<bind>
+<opcode="read(1150) " fcode="read"/>
+<opset="p_dstgy_cols_read/1 "/>
+</bind>
+</comp>
+
+<comp id="78" class="1004" name="grp_Sobel_fu_78">
+<pin_list>
+<pin id="79" dir="0" index="0" bw="0" slack="0"/>
+<pin id="80" dir="0" index="1" bw="32" slack="0"/>
+<pin id="81" dir="0" index="2" bw="32" slack="0"/>
+<pin id="82" dir="0" index="3" bw="8" slack="0"/>
+<pin id="83" dir="0" index="4" bw="32" slack="0"/>
+<pin id="84" dir="0" index="5" bw="32" slack="0"/>
+<pin id="85" dir="0" index="6" bw="8" slack="0"/>
+<pin id="86" dir="0" index="7" bw="32" slack="0"/>
+<pin id="87" dir="0" index="8" bw="8" slack="0"/>
+<pin id="88" dir="1" index="9" bw="0" slack="2147483647"/>
+</pin_list>
+<bind>
+<opcode="call(48) " fcode="call"/>
+<opset="StgValue_8/1 "/>
+</bind>
+</comp>
+
+<comp id="98" class="1005" name="p_src_rows_read_reg_98">
+<pin_list>
+<pin id="99" dir="0" index="0" bw="32" slack="1"/>
+<pin id="100" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_src_rows_read "/>
+</bind>
+</comp>
+
+<comp id="103" class="1005" name="p_src_cols_read_reg_103">
+<pin_list>
+<pin id="104" dir="0" index="0" bw="32" slack="1"/>
+<pin id="105" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_src_cols_read "/>
+</bind>
+</comp>
+
+<comp id="108" class="1005" name="p_dstgx_rows_read_reg_108">
+<pin_list>
+<pin id="109" dir="0" index="0" bw="32" slack="1"/>
+<pin id="110" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_dstgx_rows_read "/>
+</bind>
+</comp>
+
+<comp id="113" class="1005" name="p_dstgx_cols_read_reg_113">
+<pin_list>
+<pin id="114" dir="0" index="0" bw="32" slack="1"/>
+<pin id="115" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_dstgx_cols_read "/>
+</bind>
+</comp>
+
+<comp id="118" class="1005" name="p_dstgy_cols_read_reg_118">
+<pin_list>
+<pin id="119" dir="0" index="0" bw="32" slack="1"/>
+<pin id="120" dir="1" index="1" bw="32" slack="1"/>
+</pin_list>
+<bind>
+<opset="p_dstgy_cols_read "/>
+</bind>
+</comp>
+
+</comp_list>
+
+<net_list>
+<net id="52"><net_src comp="30" pin="0"/><net_sink comp="48" pin=0"/></net>
+
+<net id="53"><net_src comp="2" pin="0"/><net_sink comp="48" pin=1"/></net>
+
+<net id="58"><net_src comp="30" pin="0"/><net_sink comp="54" pin=0"/></net>
+
+<net id="59"><net_src comp="4" pin="0"/><net_sink comp="54" pin=1"/></net>
+
+<net id="64"><net_src comp="30" pin="0"/><net_sink comp="60" pin=0"/></net>
+
+<net id="65"><net_src comp="12" pin="0"/><net_sink comp="60" pin=1"/></net>
+
+<net id="70"><net_src comp="30" pin="0"/><net_sink comp="66" pin=0"/></net>
+
+<net id="71"><net_src comp="14" pin="0"/><net_sink comp="66" pin=1"/></net>
+
+<net id="76"><net_src comp="30" pin="0"/><net_sink comp="72" pin=0"/></net>
+
+<net id="77"><net_src comp="24" pin="0"/><net_sink comp="72" pin=1"/></net>
+
+<net id="89"><net_src comp="32" pin="0"/><net_sink comp="78" pin=0"/></net>
+
+<net id="90"><net_src comp="48" pin="2"/><net_sink comp="78" pin=1"/></net>
+
+<net id="91"><net_src comp="54" pin="2"/><net_sink comp="78" pin=2"/></net>
+
+<net id="92"><net_src comp="8" pin="0"/><net_sink comp="78" pin=3"/></net>
+
+<net id="93"><net_src comp="60" pin="2"/><net_sink comp="78" pin=4"/></net>
+
+<net id="94"><net_src comp="66" pin="2"/><net_sink comp="78" pin=5"/></net>
+
+<net id="95"><net_src comp="18" pin="0"/><net_sink comp="78" pin=6"/></net>
+
+<net id="96"><net_src comp="72" pin="2"/><net_sink comp="78" pin=7"/></net>
+
+<net id="97"><net_src comp="28" pin="0"/><net_sink comp="78" pin=8"/></net>
+
+<net id="101"><net_src comp="48" pin="2"/><net_sink comp="98" pin=0"/></net>
+
+<net id="102"><net_src comp="98" pin="1"/><net_sink comp="78" pin=1"/></net>
+
+<net id="106"><net_src comp="54" pin="2"/><net_sink comp="103" pin=0"/></net>
+
+<net id="107"><net_src comp="103" pin="1"/><net_sink comp="78" pin=2"/></net>
+
+<net id="111"><net_src comp="60" pin="2"/><net_sink comp="108" pin=0"/></net>
+
+<net id="112"><net_src comp="108" pin="1"/><net_sink comp="78" pin=4"/></net>
+
+<net id="116"><net_src comp="66" pin="2"/><net_sink comp="113" pin=0"/></net>
+
+<net id="117"><net_src comp="113" pin="1"/><net_sink comp="78" pin=5"/></net>
+
+<net id="121"><net_src comp="72" pin="2"/><net_sink comp="118" pin=0"/></net>
+
+<net id="122"><net_src comp="118" pin="1"/><net_sink comp="78" pin=7"/></net>
+
+</net_list>
+
+</model> 
+---------------- Datapath Model END ------------------
+
+* FSMD analyzer results:
+  - Output states:
+	Port: p_dstgx_data_V | {1 2 }
+	Port: p_dstgy_data_V | {1 2 }
+ - Input state : 
+	Port: sobel_accel : p_src_rows | {1 }
+	Port: sobel_accel : p_src_cols | {1 }
+	Port: sobel_accel : p_src_data_V | {1 2 }
+	Port: sobel_accel : p_dstgx_rows | {1 }
+	Port: sobel_accel : p_dstgx_cols | {1 }
+	Port: sobel_accel : p_dstgy_cols | {1 }
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+
+* Functional unit list:
+|----------|------------------------------|---------|---------|---------|---------|---------|
+| Operation|        Functional Unit       |   BRAM  |  DSP48E |  Delay  |    FF   |   LUT   |
+|----------|------------------------------|---------|---------|---------|---------|---------|
+|   call   |        grp_Sobel_fu_78       |    3    |    3    | 53.1615 |   1333  |   1276  |
+|----------|------------------------------|---------|---------|---------|---------|---------|
+|          |  p_src_rows_read_read_fu_48  |    0    |    0    |    0    |    0    |    0    |
+|          |  p_src_cols_read_read_fu_54  |    0    |    0    |    0    |    0    |    0    |
+|   read   | p_dstgx_rows_read_read_fu_60 |    0    |    0    |    0    |    0    |    0    |
+|          | p_dstgx_cols_read_read_fu_66 |    0    |    0    |    0    |    0    |    0    |
+|          | p_dstgy_cols_read_read_fu_72 |    0    |    0    |    0    |    0    |    0    |
+|----------|------------------------------|---------|---------|---------|---------|---------|
+|   Total  |                              |    3    |    3    | 53.1615 |   1333  |   1276  |
+|----------|------------------------------|---------|---------|---------|---------|---------|
+
+Memories:
+N/A
+
+* Register list:
++-------------------------+--------+
+|                         |   FF   |
++-------------------------+--------+
+|p_dstgx_cols_read_reg_113|   32   |
+|p_dstgx_rows_read_reg_108|   32   |
+|p_dstgy_cols_read_reg_118|   32   |
+| p_src_cols_read_reg_103 |   32   |
+|  p_src_rows_read_reg_98 |   32   |
++-------------------------+--------+
+|          Total          |   160  |
++-------------------------+--------+
+
+* Multiplexer (MUX) list: 
+|-----------------|------|------|------|--------||---------||---------|
+|       Comp      |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------------|------|------|------|--------||---------||---------|
+| grp_Sobel_fu_78 |  p1  |   2  |  32  |   64   ||    9    |
+| grp_Sobel_fu_78 |  p2  |   2  |  32  |   64   ||    9    |
+| grp_Sobel_fu_78 |  p4  |   2  |  32  |   64   ||    9    |
+| grp_Sobel_fu_78 |  p5  |   2  |  32  |   64   ||    9    |
+| grp_Sobel_fu_78 |  p7  |   2  |  32  |   64   ||    9    |
+|-----------------|------|------|------|--------||---------||---------|
+|      Total      |      |      |      |   320  ||  8.845  ||    45   |
+|-----------------|------|------|------|--------||---------||---------|
+
+
+
+* Summary:
++-----------+--------+--------+--------+--------+--------+
+|           |  BRAM  | DSP48E |  Delay |   FF   |   LUT  |
++-----------+--------+--------+--------+--------+--------+
+|  Function |    3   |    3   |   53   |  1333  |  1276  |
+|   Memory  |    -   |    -   |    -   |    -   |    -   |
+|Multiplexer|    -   |    -   |    8   |    -   |   45   |
+|  Register |    -   |    -   |    -   |   160  |    -   |
++-----------+--------+--------+--------+--------+--------+
+|   Total   |    3   |    3   |   62   |  1493  |  1321  |
++-----------+--------+--------+--------+--------+--------+

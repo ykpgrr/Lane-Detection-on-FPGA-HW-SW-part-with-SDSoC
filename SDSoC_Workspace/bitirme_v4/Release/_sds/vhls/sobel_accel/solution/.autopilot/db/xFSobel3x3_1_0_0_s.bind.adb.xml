@@ -1,0 +1,380 @@
+<stg><name>xFSobel3x3<1, 0, 0></name>
+
+
+<trans_list>
+
+<trans id="20" from="1" to="2">
+<condition id="1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:0  %src_buf3_2_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf3_2_V_read)
+
+]]></Node>
+<StgValue><ssdm name="src_buf3_2_V_read_1"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:1  %src_buf3_1_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf3_1_V_read)
+
+]]></Node>
+<StgValue><ssdm name="src_buf3_1_V_read_1"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:2  %src_buf3_0_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf3_0_V_read)
+
+]]></Node>
+<StgValue><ssdm name="src_buf3_0_V_read_1"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="12" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:3  %src_buf2_2_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf2_2_V_read)
+
+]]></Node>
+<StgValue><ssdm name="src_buf2_2_V_read_1"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="13" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:4  %src_buf2_0_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf2_0_V_read)
+
+]]></Node>
+<StgValue><ssdm name="src_buf2_0_V_read_1"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="14" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:5  %src_buf1_2_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf1_2_V_read)
+
+]]></Node>
+<StgValue><ssdm name="src_buf1_2_V_read_1"/></StgValue>
+</operation>
+
+<operation id="9" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="15" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:6  %src_buf1_1_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf1_1_V_read)
+
+]]></Node>
+<StgValue><ssdm name="src_buf1_1_V_read_1"/></StgValue>
+</operation>
+
+<operation id="10" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="16" bw="8" op_0_bw="8" op_1_bw="8">
+<![CDATA[
+:7  %src_buf1_0_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf1_0_V_read)
+
+]]></Node>
+<StgValue><ssdm name="src_buf1_0_V_read_1"/></StgValue>
+</operation>
+
+<operation id="11" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8">
+<![CDATA[
+:8  %GradientvaluesX_V_wr = call fastcc i8 @"xFGradientX3x3<0, 0>"(i8 %src_buf1_0_V_read_1, i8 %src_buf1_2_V_read_1, i8 %src_buf2_0_V_read_1, i8 %src_buf2_2_V_read_1, i8 %src_buf3_0_V_read_1, i8 %src_buf3_2_V_read_1)
+
+]]></Node>
+<StgValue><ssdm name="GradientvaluesX_V_wr"/></StgValue>
+</operation>
+
+<operation id="12" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8">
+<![CDATA[
+:9  %GradientvaluesY_V_wr = call fastcc i8 @"xFGradientY3x3<0, 0>"(i8 %src_buf1_0_V_read_1, i8 %src_buf1_1_V_read_1, i8 %src_buf1_2_V_read_1, i8 %src_buf3_0_V_read_1, i8 %src_buf3_1_V_read_1, i8 %src_buf3_2_V_read_1)
+
+]]></Node>
+<StgValue><ssdm name="GradientvaluesY_V_wr"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="13" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="17" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8">
+<![CDATA[
+:8  %GradientvaluesX_V_wr = call fastcc i8 @"xFGradientX3x3<0, 0>"(i8 %src_buf1_0_V_read_1, i8 %src_buf1_2_V_read_1, i8 %src_buf2_0_V_read_1, i8 %src_buf2_2_V_read_1, i8 %src_buf3_0_V_read_1, i8 %src_buf3_2_V_read_1)
+
+]]></Node>
+<StgValue><ssdm name="GradientvaluesX_V_wr"/></StgValue>
+</operation>
+
+<operation id="14" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="18" bw="8" op_0_bw="8" op_1_bw="8" op_2_bw="8" op_3_bw="8" op_4_bw="8" op_5_bw="8" op_6_bw="8">
+<![CDATA[
+:9  %GradientvaluesY_V_wr = call fastcc i8 @"xFGradientY3x3<0, 0>"(i8 %src_buf1_0_V_read_1, i8 %src_buf1_1_V_read_1, i8 %src_buf1_2_V_read_1, i8 %src_buf3_0_V_read_1, i8 %src_buf3_1_V_read_1, i8 %src_buf3_2_V_read_1)
+
+]]></Node>
+<StgValue><ssdm name="GradientvaluesY_V_wr"/></StgValue>
+</operation>
+
+<operation id="15" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="19" bw="16" op_0_bw="16" op_1_bw="8">
+<![CDATA[
+:10  %mrv = insertvalue { i8, i8 } undef, i8 %GradientvaluesX_V_wr, 0
+
+]]></Node>
+<StgValue><ssdm name="mrv"/></StgValue>
+</operation>
+
+<operation id="16" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="20" bw="16" op_0_bw="16" op_1_bw="8">
+<![CDATA[
+:11  %mrv_1 = insertvalue { i8, i8 } %mrv, i8 %GradientvaluesY_V_wr, 1
+
+]]></Node>
+<StgValue><ssdm name="mrv_1"/></StgValue>
+</operation>
+
+<operation id="17" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="21" bw="0" op_0_bw="16">
+<![CDATA[
+:12  ret { i8, i8 } %mrv_1
+
+]]></Node>
+<StgValue><ssdm name=""/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="21" name="src_buf1_0_V_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="src_buf1_0_V_read"/></StgValue>
+</port>
+<port id="22" name="src_buf1_1_V_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="src_buf1_1_V_read"/></StgValue>
+</port>
+<port id="23" name="src_buf1_2_V_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="src_buf1_2_V_read"/></StgValue>
+</port>
+<port id="24" name="src_buf2_0_V_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="src_buf2_0_V_read"/></StgValue>
+</port>
+<port id="25" name="src_buf2_2_V_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="src_buf2_2_V_read"/></StgValue>
+</port>
+<port id="26" name="src_buf3_0_V_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="src_buf3_0_V_read"/></StgValue>
+</port>
+<port id="27" name="src_buf3_1_V_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="src_buf3_1_V_read"/></StgValue>
+</port>
+<port id="28" name="src_buf3_2_V_read" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="src_buf3_2_V_read"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="30" from="_ssdm_op_Read.ap_auto.i8" to="src_buf3_2_V_read_1" fromId="29" toId="3">
+</dataflow>
+<dataflow id="31" from="src_buf3_2_V_read" to="src_buf3_2_V_read_1" fromId="28" toId="3">
+</dataflow>
+<dataflow id="32" from="_ssdm_op_Read.ap_auto.i8" to="src_buf3_1_V_read_1" fromId="29" toId="4">
+</dataflow>
+<dataflow id="33" from="src_buf3_1_V_read" to="src_buf3_1_V_read_1" fromId="27" toId="4">
+</dataflow>
+<dataflow id="34" from="_ssdm_op_Read.ap_auto.i8" to="src_buf3_0_V_read_1" fromId="29" toId="5">
+</dataflow>
+<dataflow id="35" from="src_buf3_0_V_read" to="src_buf3_0_V_read_1" fromId="26" toId="5">
+</dataflow>
+<dataflow id="36" from="_ssdm_op_Read.ap_auto.i8" to="src_buf2_2_V_read_1" fromId="29" toId="6">
+</dataflow>
+<dataflow id="37" from="src_buf2_2_V_read" to="src_buf2_2_V_read_1" fromId="25" toId="6">
+</dataflow>
+<dataflow id="38" from="_ssdm_op_Read.ap_auto.i8" to="src_buf2_0_V_read_1" fromId="29" toId="7">
+</dataflow>
+<dataflow id="39" from="src_buf2_0_V_read" to="src_buf2_0_V_read_1" fromId="24" toId="7">
+</dataflow>
+<dataflow id="40" from="_ssdm_op_Read.ap_auto.i8" to="src_buf1_2_V_read_1" fromId="29" toId="8">
+</dataflow>
+<dataflow id="41" from="src_buf1_2_V_read" to="src_buf1_2_V_read_1" fromId="23" toId="8">
+</dataflow>
+<dataflow id="42" from="_ssdm_op_Read.ap_auto.i8" to="src_buf1_1_V_read_1" fromId="29" toId="9">
+</dataflow>
+<dataflow id="43" from="src_buf1_1_V_read" to="src_buf1_1_V_read_1" fromId="22" toId="9">
+</dataflow>
+<dataflow id="44" from="_ssdm_op_Read.ap_auto.i8" to="src_buf1_0_V_read_1" fromId="29" toId="10">
+</dataflow>
+<dataflow id="45" from="src_buf1_0_V_read" to="src_buf1_0_V_read_1" fromId="21" toId="10">
+</dataflow>
+<dataflow id="47" from="xFGradientX3x3<0, 0>" to="GradientvaluesX_V_wr" fromId="46" toId="11">
+</dataflow>
+<dataflow id="48" from="src_buf1_0_V_read_1" to="GradientvaluesX_V_wr" fromId="10" toId="11">
+</dataflow>
+<dataflow id="49" from="src_buf1_2_V_read_1" to="GradientvaluesX_V_wr" fromId="8" toId="11">
+</dataflow>
+<dataflow id="50" from="src_buf2_0_V_read_1" to="GradientvaluesX_V_wr" fromId="7" toId="11">
+</dataflow>
+<dataflow id="51" from="src_buf2_2_V_read_1" to="GradientvaluesX_V_wr" fromId="6" toId="11">
+</dataflow>
+<dataflow id="52" from="src_buf3_0_V_read_1" to="GradientvaluesX_V_wr" fromId="5" toId="11">
+</dataflow>
+<dataflow id="53" from="src_buf3_2_V_read_1" to="GradientvaluesX_V_wr" fromId="3" toId="11">
+</dataflow>
+<dataflow id="55" from="xFGradientY3x3<0, 0>" to="GradientvaluesY_V_wr" fromId="54" toId="12">
+</dataflow>
+<dataflow id="56" from="src_buf1_0_V_read_1" to="GradientvaluesY_V_wr" fromId="10" toId="12">
+</dataflow>
+<dataflow id="57" from="src_buf1_1_V_read_1" to="GradientvaluesY_V_wr" fromId="9" toId="12">
+</dataflow>
+<dataflow id="58" from="src_buf1_2_V_read_1" to="GradientvaluesY_V_wr" fromId="8" toId="12">
+</dataflow>
+<dataflow id="59" from="src_buf3_0_V_read_1" to="GradientvaluesY_V_wr" fromId="5" toId="12">
+</dataflow>
+<dataflow id="60" from="src_buf3_1_V_read_1" to="GradientvaluesY_V_wr" fromId="4" toId="12">
+</dataflow>
+<dataflow id="61" from="src_buf3_2_V_read_1" to="GradientvaluesY_V_wr" fromId="3" toId="12">
+</dataflow>
+<dataflow id="62" from="xFGradientX3x3<0, 0>" to="GradientvaluesX_V_wr" fromId="46" toId="13">
+</dataflow>
+<dataflow id="63" from="src_buf1_0_V_read_1" to="GradientvaluesX_V_wr" fromId="10" toId="13">
+</dataflow>
+<dataflow id="64" from="src_buf1_2_V_read_1" to="GradientvaluesX_V_wr" fromId="8" toId="13">
+</dataflow>
+<dataflow id="65" from="src_buf2_0_V_read_1" to="GradientvaluesX_V_wr" fromId="7" toId="13">
+</dataflow>
+<dataflow id="66" from="src_buf2_2_V_read_1" to="GradientvaluesX_V_wr" fromId="6" toId="13">
+</dataflow>
+<dataflow id="67" from="src_buf3_0_V_read_1" to="GradientvaluesX_V_wr" fromId="5" toId="13">
+</dataflow>
+<dataflow id="68" from="src_buf3_2_V_read_1" to="GradientvaluesX_V_wr" fromId="3" toId="13">
+</dataflow>
+<dataflow id="69" from="xFGradientY3x3<0, 0>" to="GradientvaluesY_V_wr" fromId="54" toId="14">
+</dataflow>
+<dataflow id="70" from="src_buf1_0_V_read_1" to="GradientvaluesY_V_wr" fromId="10" toId="14">
+</dataflow>
+<dataflow id="71" from="src_buf1_1_V_read_1" to="GradientvaluesY_V_wr" fromId="9" toId="14">
+</dataflow>
+<dataflow id="72" from="src_buf1_2_V_read_1" to="GradientvaluesY_V_wr" fromId="8" toId="14">
+</dataflow>
+<dataflow id="73" from="src_buf3_0_V_read_1" to="GradientvaluesY_V_wr" fromId="5" toId="14">
+</dataflow>
+<dataflow id="74" from="src_buf3_1_V_read_1" to="GradientvaluesY_V_wr" fromId="4" toId="14">
+</dataflow>
+<dataflow id="75" from="src_buf3_2_V_read_1" to="GradientvaluesY_V_wr" fromId="3" toId="14">
+</dataflow>
+<dataflow id="77" from="StgValue_76" to="mrv" fromId="76" toId="15">
+</dataflow>
+<dataflow id="78" from="GradientvaluesX_V_wr" to="mrv" fromId="13" toId="15">
+</dataflow>
+<dataflow id="79" from="mrv" to="mrv_1" fromId="15" toId="16">
+</dataflow>
+<dataflow id="80" from="GradientvaluesY_V_wr" to="mrv_1" fromId="14" toId="16">
+</dataflow>
+<dataflow id="81" from="mrv_1" to="StgValue_17" fromId="16" toId="17">
+</dataflow>
+</dataflows>
+
+
+</stg>

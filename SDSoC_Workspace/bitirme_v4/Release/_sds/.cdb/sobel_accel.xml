@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd" xd:vendor="xilinx.com" xd:library="hls" xd:name="sobel_accel" xd:version="1.0">
+    <xd:component xd:vendor="xilinx.com" xd:library="hls" xd:name="sobel_accel" xd:version="1.0" xd:type="accelerator">
+        <xd:busInterface xd:name="ap_clk" xd:busTypeRef="clock" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="ap_clk"/>
+        <xd:busInterface xd:name="ap_rst_n" xd:busTypeRef="reset" xd:mode="slave" xd:direction="in" xd:library="signal" xd:port="ap_rst_n"/>
+        <xd:busInterface xd:name="ap_ctrl" xd:busTypeRef="acc_handshake" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_src_allocatedFlag" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_src_rows" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_src_cols" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_src_size" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_src_data_V_address0" xd:busTypeRef="data" xd:mode="master"/>
+        <xd:busInterface xd:name="p_src_data_V_q0" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgx_allocatedFlag" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgx_rows" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgx_cols" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgx_size" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgx_data_V_address0" xd:busTypeRef="data" xd:mode="master"/>
+        <xd:busInterface xd:name="p_dstgx_data_V_d0" xd:busTypeRef="data" xd:mode="master"/>
+        <xd:busInterface xd:name="p_dstgy_allocatedFlag" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgy_rows" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgy_cols" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgy_size" xd:busTypeRef="data" xd:mode="slave"/>
+        <xd:busInterface xd:name="p_dstgy_data_V_address0" xd:busTypeRef="data" xd:mode="master"/>
+        <xd:busInterface xd:name="p_dstgy_data_V_d0" xd:busTypeRef="data" xd:mode="master"/>
+        <xd:port xd:name="p_src_data_V_ce0" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
+        <xd:port xd:name="p_dstgx_data_V_ce0" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
+        <xd:port xd:name="p_dstgx_data_V_we0" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
+        <xd:port xd:name="p_dstgy_data_V_ce0" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
+        <xd:port xd:name="p_dstgy_data_V_we0" xd:direction="out" xd:busTypeRef="port" xd:mode="master"/>
+    </xd:component>
+</xd:repository>

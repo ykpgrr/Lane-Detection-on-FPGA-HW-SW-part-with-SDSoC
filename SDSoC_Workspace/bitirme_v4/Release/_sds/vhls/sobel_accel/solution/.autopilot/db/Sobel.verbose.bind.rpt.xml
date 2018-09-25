@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Sobel'" level="0">
+<item name = "Date">Wed May 23 18:09:51 2018
+</item>
+<item name = "Version">2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)</item>
+<item name = "Project">sobel_accel</item>
+<item name = "Solution">solution</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 6.89, 2.70</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">312165, 312165, 312164, 312164, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_xFSobelFilter3x3_fu_124">xFSobelFilter3x3, 312163, 312163, 312163, 312163, none</column>
+<column name="grp_Sobel_Loop_2_proc38_fu_133">Sobel_Loop_2_proc38, 5, 308641, 5, 308641, none</column>
+<column name="grp_Sobel_Loop_1_proc374_fu_146">Sobel_Loop_1_proc374, 5, 308641, 5, 308641, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

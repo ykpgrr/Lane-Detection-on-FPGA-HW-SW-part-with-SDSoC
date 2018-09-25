@@ -1,0 +1,183 @@
+
+
+================================================================
+== Vivado HLS Report for 'Sobel'
+================================================================
+* Date:           Wed May 23 18:09:51 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        sobel_accel
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.89|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  312165|  312165|  312164|  312164| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+
+* FSM state operations: 
+
+ <State 1> : 3.63ns
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_dst_maty_cols_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_dst_maty_cols_read)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_dst_matx_cols_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_dst_matx_cols_read)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%p_dst_matx_rows_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_dst_matx_rows_read)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%p_src_mat_cols_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_src_mat_cols_read)"
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%p_src_mat_rows_read_3 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_src_mat_rows_read)"
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%p_dst_maty_cols_read_s = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%p_dst_matx_cols_read_s = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%p_dst_matx_rows_read_s = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%p_src_mat_cols_read_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%p_src_mat_rows_read_c = alloca i32, align 4"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%p_src_V_V = alloca i8, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:1454]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%p_dstx_V_V = alloca i8, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:1455]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%p_dsty_V_V = alloca i8, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:1456]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_1 : Operation 20 [2/2] (3.63ns)   --->   "call fastcc void @Sobel_Loop_1_proc374(i32 %p_src_mat_rows_read_3, i32 %p_src_mat_cols_read_3, [307200 x i8]* %p_src_mat_data_V, i8* %p_src_V_V, i32 %p_dst_matx_rows_read_3, i32 %p_dst_matx_cols_read_3, i32 %p_dst_maty_cols_read_3, i32* %p_src_mat_rows_read_c, i32* %p_src_mat_cols_read_c, i32* %p_dst_matx_rows_read_s, i32* %p_dst_matx_cols_read_s, i32* %p_dst_maty_cols_read_s)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 2> : 0.00ns
+ST_2 : Operation 21 [1/2] (0.00ns)   --->   "call fastcc void @Sobel_Loop_1_proc374(i32 %p_src_mat_rows_read_3, i32 %p_src_mat_cols_read_3, [307200 x i8]* %p_src_mat_data_V, i8* %p_src_V_V, i32 %p_dst_matx_rows_read_3, i32 %p_dst_matx_cols_read_3, i32 %p_dst_maty_cols_read_3, i32* %p_src_mat_rows_read_c, i32* %p_src_mat_cols_read_c, i32* %p_dst_matx_rows_read_s, i32* %p_dst_matx_cols_read_s, i32* %p_dst_maty_cols_read_s)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 3> : 0.00ns
+ST_3 : Operation 22 [2/2] (0.00ns)   --->   "call fastcc void @xFSobelFilter3x3(i8* %p_src_V_V, i8* %p_dstx_V_V, i8* %p_dsty_V_V, i32* nocapture %p_src_mat_rows_read_c, i32* nocapture %p_src_mat_cols_read_c)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 4> : 0.00ns
+ST_4 : Operation 23 [1/2] (0.00ns)   --->   "call fastcc void @xFSobelFilter3x3(i8* %p_src_V_V, i8* %p_dstx_V_V, i8* %p_dsty_V_V, i32* nocapture %p_src_mat_rows_read_c, i32* nocapture %p_src_mat_cols_read_c)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 5> : 0.00ns
+ST_5 : Operation 24 [2/2] (0.00ns)   --->   "call fastcc void @Sobel_Loop_2_proc38(i32* nocapture %p_dst_matx_rows_read_s, i32* nocapture %p_dst_matx_cols_read_s, i8* %p_dstx_V_V, [307200 x i8]* %p_dst_matx_data_V, i32* nocapture %p_dst_maty_cols_read_s, i8* %p_dsty_V_V, [307200 x i8]* %p_dst_maty_data_V)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 6> : 0.00ns
+ST_6 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, [1 x i8]* @p_str) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:1458]
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @p_src_OC_V_OC_V_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i8* %p_src_V_V, i8* %p_src_V_V)"
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%empty_38 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_src_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%empty_39 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @p_dstx_OC_V_OC_V_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i8* %p_dstx_V_V, i8* %p_dstx_V_V)"
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%empty_40 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_dstx_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%empty_41 = call i32 (...)* @_ssdm_op_SpecChannel([10 x i8]* @p_dsty_OC_V_OC_V_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i8* %p_dsty_V_V, i8* %p_dsty_V_V)"
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%empty_42 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_dsty_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%empty_43 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @p_src_mat_OC_rows_OC_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %p_src_mat_rows_read_c, i32* %p_src_mat_rows_read_c)"
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%empty_44 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %p_src_mat_rows_read_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%empty_45 = call i32 (...)* @_ssdm_op_SpecChannel([21 x i8]* @p_src_mat_OC_cols_OC_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %p_src_mat_cols_read_c, i32* %p_src_mat_cols_read_c)"
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%empty_46 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %p_src_mat_cols_read_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%empty_47 = call i32 (...)* @_ssdm_op_SpecChannel([22 x i8]* @p_dst_matx_OC_rows_OC, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 3, i32 0, i32* %p_dst_matx_rows_read_s, i32* %p_dst_matx_rows_read_s)"
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%empty_48 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %p_dst_matx_rows_read_s, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%empty_49 = call i32 (...)* @_ssdm_op_SpecChannel([22 x i8]* @p_dst_matx_OC_cols_OC, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 3, i32 0, i32* %p_dst_matx_cols_read_s, i32* %p_dst_matx_cols_read_s)"
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%empty_50 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %p_dst_matx_cols_read_s, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%empty_51 = call i32 (...)* @_ssdm_op_SpecChannel([22 x i8]* @p_dst_maty_OC_cols_OC, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 3, i32 0, i32* %p_dst_maty_cols_read_s, i32* %p_dst_maty_cols_read_s)"
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%empty_52 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %p_dst_maty_cols_read_s, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_6 : Operation 42 [1/2] (0.00ns)   --->   "call fastcc void @Sobel_Loop_2_proc38(i32* nocapture %p_dst_matx_rows_read_s, i32* nocapture %p_dst_matx_cols_read_s, i8* %p_dstx_V_V, [307200 x i8]* %p_dst_matx_data_V, i32* nocapture %p_dst_maty_cols_read_s, i8* %p_dsty_V_V, [307200 x i8]* %p_dst_maty_data_V)"   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "ret void" [C:/xfopencv/include\imgproc/xf_sobel.hpp:1490]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	wire read on port 'p_dst_maty_cols_read' [9]  (0 ns)
+	'call' operation to 'Sobel_Loop_1_proc374' [39]  (3.63 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

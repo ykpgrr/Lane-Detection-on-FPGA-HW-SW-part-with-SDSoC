@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1312" content="Analyzing design file &apos;C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp&apos; ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1465" content="Validating synthesis directives ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:45 . Memory (MB): peak = 102.578 ; gain = 45.137" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 102.617 ; gain = 45.176" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1467" content="Starting code transformations ..." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-1&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:1048) in function &apos;void xf::xFSobel7x7&lt;1, 0, 0&gt;(PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*)&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Compute_Grad_Loop&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:498) in function &apos;void xf::xFSobel5x5&lt;1, 0, 0&gt;(PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*)&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Compute_Grad_Loop&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:155) in function &apos;void xf::xFSobel3x3&lt;1, 0, 0&gt;(PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*, PixelType&lt;0&gt;::name*)&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xfPackPixels&lt;1, 0, 0&gt;&apos; into &apos;xf::ProcessSobel3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:240)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xfPackPixels&lt;1, 0, 0&gt;&apos; into &apos;xf::ProcessSobel3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:239)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xfPackPixels&lt;1, 0, 0&gt;&apos; into &apos;xf::ProcessSobel3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:230)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xfPackPixels&lt;1, 0, 0&gt;&apos; into &apos;xf::ProcessSobel3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:229)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xfPackPixels&lt;1, 0, 0&gt;&apos; into &apos;xf::ProcessSobel3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:224)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xfPackPixels&lt;1, 0, 0&gt;&apos; into &apos;xf::ProcessSobel3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:223)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xfPackPixels&lt;1, 0, 0&gt;&apos; into &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:355)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xfPackPixels&lt;1, 0, 0&gt;&apos; into &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:354)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xf::ProcessSobel3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; into &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:324)." tag=""/>
+	<Message prefix="[XFORM 203-603]" severity="INFO" keynum="792" content="Inlining function &apos;xf::xFSobelFilter&lt;480, 640, 0, 0, 1, 0, 0&gt;&apos; into &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:1474)." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:55 . Memory (MB): peak = 143.934 ; gain = 86.492" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1472" content="Checking synthesizability ..." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:56 . Memory (MB): peak = 145.414 ; gain = 87.973" tag=""/>
+	<Message prefix="[XFORM 203-502]" severity="INFO" keynum="813" content="Unrolling all sub-loops inside loop &apos;Col_Loop&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:190) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; for pipelining." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.1.1&apos; (C:/xfopencv/include\common/xf_utility.h:51) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.1.2&apos; (C:/xfopencv/include\common/xf_utility.h:51) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.1.3&apos; (C:/xfopencv/include\common/xf_utility.h:51) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.1.4&apos; (C:/xfopencv/include\common/xf_utility.h:51) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.1.5&apos; (C:/xfopencv/include\common/xf_utility.h:51) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.1.6&apos; (C:/xfopencv/include\common/xf_utility.h:51) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.2&apos; (C:/xfopencv/include\common/xf_utility.h:51) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-501]" severity="INFO" keynum="891" content="Unrolling loop &apos;Loop-2.3&apos; (C:/xfopencv/include\common/xf_utility.h:51) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;GradientValuesX.V&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:273) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;GradientValuesY.V&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:274) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;src_buf1.V&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:278) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;src_buf2.V&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:278) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;src_buf3.V&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:279) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-101]" severity="INFO" keynum="692" content="Partitioning array &apos;buf.V&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:286) in dimension 1 completely." tag=""/>
+	<Message prefix="[XFORM 203-721]" severity="INFO" keynum="875" content="Changing loop &apos;Loop_1_proc&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:1460) to a process function for dataflow in function &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;&apos;." tag=""/>
+	<Message prefix="[XFORM 203-721]" severity="INFO" keynum="875" content="Changing loop &apos;Loop_2_proc&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:1477) to a process function for dataflow in function &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;&apos;." tag=""/>
+	<Message prefix="[XFORM 203-713]" severity="WARNING" keynum="768" content="All the elements of global array &apos;_dst_matx.data.V&apos; should be updated in process function &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;_Loop_2_proc38&apos;, otherwise it may not be synthesized correctly." tag=""/>
+	<Message prefix="[XFORM 203-713]" severity="WARNING" keynum="768" content="All the elements of global array &apos;_dst_maty.data.V&apos; should be updated in process function &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;_Loop_2_proc38&apos;, otherwise it may not be synthesized correctly." tag=""/>
+	<Message prefix="[XFORM 203-712]" severity="INFO" keynum="801" content="Applying dataflow to function &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;&apos;, detected/extracted 3 process function(s): 
+	 &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;_Loop_1_proc3740&apos;
+	 &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos;
+	 &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;_Loop_2_proc38&apos;." tag=""/>
+	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:303:3) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:189:25) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos;... converting 4 basic blocks." tag=""/>
+	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:110:1) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:136:2) in function &apos;xf::xFGradientY3x3&lt;0, 0&gt;&apos;... converting 3 basic blocks." tag=""/>
+	<Message prefix="[XFORM 203-401]" severity="INFO" keynum="809" content="Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:64:1) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:91:2) in function &apos;xf::xFGradientX3x3&lt;0, 0&gt;&apos;... converting 3 basic blocks." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:58 . Memory (MB): peak = 177.766 ; gain = 120.324" tag=""/>
+	<Message prefix="[XFORM 203-542]" severity="WARNING" keynum="790" content="Cannot flatten a loop nest &apos;Row_Loop&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:303:3) in function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch." tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;xf::xFSobelFilter3x3&lt;480, 640, 0, 0, 1, 0, 0, 640&gt;&apos; to &apos;xFSobelFilter3x3&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:189:4)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;xf::xFSobel3x3&lt;1, 0, 0&gt;&apos; to &apos;xFSobel3x3&lt;1, 0, 0&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:147)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;xf::xFGradientY3x3&lt;0, 0&gt;&apos; to &apos;xFGradientY3x3&lt;0, 0&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:114:2)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;xf::xFGradientX3x3&lt;0, 0&gt;&apos; to &apos;xFGradientX3x3&lt;0, 0&gt;&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:68:2)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;_Loop_2_proc38&apos; to &apos;Sobel_Loop_2_proc38&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:1477:32)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;_Loop_1_proc3740&apos; to &apos;Sobel_Loop_1_proc374&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:1460:31)" tag=""/>
+	<Message prefix="[XFORM 203-631]" severity="WARNING" keynum="902" content="Renaming function &apos;xf::Sobel&lt;0, 3, 0, 0, 480, 640, 1&gt;&apos; to &apos;Sobel&apos; (C:/xfopencv/include\imgproc/xf_sobel.hpp:1454:1)" tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:59 . Memory (MB): peak = 240.293 ; gain = 182.852" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1317" content="Starting hardware synthesis ..." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1385" content="Synthesizing &apos;sobel_accel&apos; ..." tag=""/>
+	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;xFGradientX3x3&lt;0, 0&gt;&apos; to &apos;xFGradientX3x3_0_0_s&apos;." tag=""/>
+	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;xFGradientY3x3&lt;0, 0&gt;&apos; to &apos;xFGradientY3x3_0_0_s&apos;." tag=""/>
+	<Message prefix="[SYN 201-103]" severity="WARNING" keynum="534" content="Legalizing function name &apos;xFSobel3x3&lt;1, 0, 0&gt;&apos; to &apos;xFSobel3x3_1_0_0_s&apos;." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Sobel_Loop_1_proc374&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1.1&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 59.347 seconds; current allocated memory: 191.483 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.112 seconds; current allocated memory: 191.710 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;xFGradientX3x3_0_0_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;xFGradientX3x3&lt;0, 0&gt;&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.115 seconds; current allocated memory: 191.822 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.075 seconds; current allocated memory: 191.920 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;xFGradientY3x3_0_0_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;xFGradientY3x3&lt;0, 0&gt;&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.118 seconds; current allocated memory: 192.017 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.083 seconds; current allocated memory: 192.115 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;xFSobel3x3_1_0_0_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="112" content="Pipelining function &apos;xFSobel3x3&lt;1, 0, 0&gt;&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.101 seconds; current allocated memory: 192.170 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.098 seconds; current allocated memory: 192.273 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;xFSobelFilter3x3&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Clear_Row_Loop&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Col_Loop&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 6." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.682 seconds; current allocated memory: 192.808 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-102]" severity="WARNING" keynum="192" content="The specified resource core for memory &apos;buf_0_V&apos; will be ignored if a simpler one can be used." tag=""/>
+	<Message prefix="[BIND 205-102]" severity="WARNING" keynum="192" content="The specified resource core for memory &apos;buf_1_V&apos; will be ignored if a simpler one can be used." tag=""/>
+	<Message prefix="[BIND 205-102]" severity="WARNING" keynum="192" content="The specified resource core for memory &apos;buf_2_V&apos; will be ignored if a simpler one can be used." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.328 seconds; current allocated memory: 193.315 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Sobel_Loop_2_proc38&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="107" content="Pipelining loop &apos;Loop 1.1&apos;." tag=""/>
+	<Message prefix="[SCHED 204-61]" severity="INFO" keynum="110" content="Pipelining result : Target II = 1, Final II = 1, Depth = 2." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.679 seconds; current allocated memory: 193.550 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.143 seconds; current allocated memory: 193.701 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;Sobel&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.136 seconds; current allocated memory: 193.788 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.351 seconds; current allocated memory: 194.085 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1477" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-42]" severity="INFO" keynum="HLS_42_1438" content="-- Implementing module &apos;sobel_accel&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1478" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="139" content="Starting scheduling ..." tag=""/>
+	<Message prefix="[SCHED 204-71]" severity="WARNING" keynum="78" content="Latency directive discarded for region sobel_accel since region contains function calls with variable latency." tag=""/>
+	<Message prefix="[SCHED 204-11]" severity="INFO" keynum="138" content="Finished scheduling." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.413 seconds; current allocated memory: 194.200 MB." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="439" content="Starting micro-architecture generation ..." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="211" content="Performing variable lifetime analysis." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="210" content="Exploring resource sharing." tag=""/>
+	<Message prefix="[BIND 205-101]" severity="INFO" keynum="206" content="Binding ..." tag=""/>
+	<Message prefix="[BIND 205-100]" severity="INFO" keynum="438" content="Finished micro-architecture generation." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.146 seconds; current allocated memory: 194.277 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Sobel_Loop_1_proc374&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Sobel_Loop_1_proc374&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.312 seconds; current allocated memory: 194.731 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;xFGradientX3x3_0_0_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;xFGradientX3x3_0_0_s&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.367 seconds; current allocated memory: 195.073 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;xFGradientY3x3_0_0_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;xFGradientY3x3_0_0_s&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.334 seconds; current allocated memory: 195.337 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;xFSobel3x3_1_0_0_s&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;xFSobel3x3_1_0_0_s&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.343 seconds; current allocated memory: 195.558 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;xFSobelFilter3x3&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;xFSobelFilter3x3_buf_0_V&apos; to &apos;xFSobelFilter3x3_bkb&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;xFSobelFilter3x3_buf_1_V&apos; to &apos;xFSobelFilter3x3_cud&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;xFSobelFilter3x3_buf_2_V&apos; to &apos;xFSobelFilter3x3_dEe&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;sobel_accel_mux_32_8_1_1&apos; to &apos;sobel_accel_mux_3eOg&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="368" content="Generating core module &apos;sobel_accel_mux_3eOg&apos;: 3 instance(s)." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;xFSobelFilter3x3&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.341 seconds; current allocated memory: 196.590 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Sobel_Loop_2_proc38&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Sobel_Loop_2_proc38&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 1.296 seconds; current allocated memory: 197.123 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;Sobel&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;start_for_xFSobelFilter3x3_U0&apos; to &apos;start_for_xFSobelfYi&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[SYN 201-210]" severity="INFO" keynum="402" content="Renamed object name &apos;start_for_Sobel_Loop_2_proc38_U0&apos; to &apos;start_for_Sobel_Lg8j&apos; due to the length limit 20" tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;Sobel&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.389 seconds; current allocated memory: 197.758 MB." tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1483" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1484" content="-- Generating RTL for module &apos;sobel_accel&apos;" tag=""/>
+	<Message prefix="[HLS 200-10]" severity="INFO" keynum="HLS_10_1485" content="----------------------------------------------------------------" tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_src_allocatedFlag&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_src_rows&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_src_cols&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_src_size&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_src_data_V&apos; to &apos;ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgx_allocatedFlag&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgx_rows&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgx_cols&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgx_size&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgx_data_V&apos; to &apos;ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgy_allocatedFlag&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgy_rows&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgy_cols&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgy_size&apos; to &apos;ap_none&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on port &apos;sobel_accel/p_dstgy_data_V&apos; to &apos;ap_memory&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-500]" severity="INFO" keynum="73" content="Setting interface mode on function &apos;sobel_accel&apos; to &apos;ap_ctrl_hs&apos;." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;sobel_accel/p_src_allocatedFlag&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;sobel_accel/p_src_size&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;sobel_accel/p_dstgx_allocatedFlag&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;sobel_accel/p_dstgx_size&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;sobel_accel/p_dstgy_allocatedFlag&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;sobel_accel/p_dstgy_rows&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-101]" severity="WARNING" keynum="251" content="Port &apos;sobel_accel/p_dstgy_size&apos; has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to." tag=""/>
+	<Message prefix="[RTGEN 206-100]" severity="INFO" keynum="369" content="Finished creating RTL model for &apos;sobel_accel&apos;." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="474" content=" Elapsed time: 0.579 seconds; current allocated memory: 198.219 MB." tag=""/>
+	<Message prefix="[RTMG 210-278]" severity="INFO" keynum="RTMG_278_1790" content="Implementing memory &apos;a0_xFSobelFilter3x3_bkb_ram (RAM_S2P_BRAM)&apos; using block RAMs." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_fifo_w8_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_fifo_w32_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_fifo_w32_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_fifo_w32_d3_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_fifo_w32_d3_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_fifo_w32_d3_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_fifo_w8_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_fifo_w8_d2_A&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_start_for_xFSobelfYi&apos; using Shift Registers." tag=""/>
+	<Message prefix="[RTMG 210-285]" severity="INFO" keynum="RTMG_285_1799" content="Implementing FIFO &apos;a0_start_for_Sobel_Lg8j&apos; using Shift Registers." tag=""/>
+	<Message prefix="[HLS 200-111]" severity="INFO" keynum="473" content="Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:01:10 . Memory (MB): peak = 260.254 ; gain = 202.813" tag=""/>
+	<Message prefix="[SYSC 207-301]" severity="INFO" keynum="SYSC_301_1062" content="Generating SystemC RTL for sobel_accel with prefix a0_." tag=""/>
+	<Message prefix="[VHDL 208-304]" severity="INFO" keynum="VHDL_304_1063" content="Generating VHDL RTL for sobel_accel with prefix a0_." tag=""/>
+	<Message prefix="[VLOG 209-307]" severity="INFO" keynum="VLOG_307_1064" content="Generating Verilog RTL for sobel_accel with prefix a0_." tag=""/>
+</Messages>

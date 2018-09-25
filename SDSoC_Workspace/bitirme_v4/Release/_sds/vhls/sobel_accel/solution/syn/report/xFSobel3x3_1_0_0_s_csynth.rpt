@@ -1,0 +1,124 @@
+
+
+================================================================
+== Vivado HLS Report for 'xFSobel3x3_1_0_0_s'
+================================================================
+* Date:           Wed May 23 18:09:53 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        sobel_accel
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.14|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |                                |                      |  Latency  |  Interval | Pipeline |
+        |            Instance            |        Module        | min | max | min | max |   Type   |
+        +--------------------------------+----------------------+-----+-----+-----+-----+----------+
+        |grp_xFGradientX3x3_0_0_s_fu_72  |xFGradientX3x3_0_0_s  |    1|    1|    1|    1| function |
+        |grp_xFGradientY3x3_0_0_s_fu_88  |xFGradientY3x3_0_0_s  |    1|    1|    1|    1| function |
+        +--------------------------------+----------------------+-----+-----+-----+-----+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       -|      -|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|      54|    178|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|      54|    178|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+----------------------+---------+-------+----+----+
+    |            Instance            |        Module        | BRAM_18K| DSP48E| FF | LUT|
+    +--------------------------------+----------------------+---------+-------+----+----+
+    |grp_xFGradientX3x3_0_0_s_fu_72  |xFGradientX3x3_0_0_s  |        0|      0|  27|  89|
+    |grp_xFGradientY3x3_0_0_s_fu_88  |xFGradientY3x3_0_0_s  |        0|      0|  27|  89|
+    +--------------------------------+----------------------+---------+-------+----+----+
+    |Total                           |                      |        0|      0|  54| 178|
+    +--------------------------------+----------------------+---------+-------+----+----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+---------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++-------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs | xFSobel3x3<1, 0, 0> | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs | xFSobel3x3<1, 0, 0> | return value |
+|ap_return_0        | out |    8| ap_ctrl_hs | xFSobel3x3<1, 0, 0> | return value |
+|ap_return_1        | out |    8| ap_ctrl_hs | xFSobel3x3<1, 0, 0> | return value |
+|ap_ce              |  in |    1| ap_ctrl_hs | xFSobel3x3<1, 0, 0> | return value |
+|src_buf1_0_V_read  |  in |    8|   ap_none  |  src_buf1_0_V_read  |    scalar    |
+|src_buf1_1_V_read  |  in |    8|   ap_none  |  src_buf1_1_V_read  |    scalar    |
+|src_buf1_2_V_read  |  in |    8|   ap_none  |  src_buf1_2_V_read  |    scalar    |
+|src_buf2_0_V_read  |  in |    8|   ap_none  |  src_buf2_0_V_read  |    scalar    |
+|src_buf2_2_V_read  |  in |    8|   ap_none  |  src_buf2_2_V_read  |    scalar    |
+|src_buf3_0_V_read  |  in |    8|   ap_none  |  src_buf3_0_V_read  |    scalar    |
+|src_buf3_1_V_read  |  in |    8|   ap_none  |  src_buf3_1_V_read  |    scalar    |
+|src_buf3_2_V_read  |  in |    8|   ap_none  |  src_buf3_2_V_read  |    scalar    |
++-------------------+-----+-----+------------+---------------------+--------------+
+

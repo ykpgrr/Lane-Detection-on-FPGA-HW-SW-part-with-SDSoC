@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vivado HLS Report for 'xFSobel3x3_1_0_0_s'
+================================================================
+* Date:           Wed May 23 18:09:49 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        sobel_accel
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.14|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    1|    1|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+ <State 1> : 1.92ns
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%src_buf3_2_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf3_2_V_read)"
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%src_buf3_1_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf3_1_V_read)"
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%src_buf3_0_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf3_0_V_read)"
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%src_buf2_2_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf2_2_V_read)"
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%src_buf2_0_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf2_0_V_read)"
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%src_buf1_2_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf1_2_V_read)"
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%src_buf1_1_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf1_1_V_read)"
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%src_buf1_0_V_read_1 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %src_buf1_0_V_read)"
+ST_1 : Operation 11 [2/2] (1.91ns)   --->   "%GradientvaluesX_V_wr = call fastcc i8 @"xFGradientX3x3<0, 0>"(i8 %src_buf1_0_V_read_1, i8 %src_buf1_2_V_read_1, i8 %src_buf2_0_V_read_1, i8 %src_buf2_2_V_read_1, i8 %src_buf3_0_V_read_1, i8 %src_buf3_2_V_read_1)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:160]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 12 [2/2] (1.91ns)   --->   "%GradientvaluesY_V_wr = call fastcc i8 @"xFGradientY3x3<0, 0>"(i8 %src_buf1_0_V_read_1, i8 %src_buf1_1_V_read_1, i8 %src_buf1_2_V_read_1, i8 %src_buf3_0_V_read_1, i8 %src_buf3_1_V_read_1, i8 %src_buf3_2_V_read_1)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:165]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 2> : 6.14ns
+ST_2 : Operation 13 [1/2] (6.13ns)   --->   "%GradientvaluesX_V_wr = call fastcc i8 @"xFGradientX3x3<0, 0>"(i8 %src_buf1_0_V_read_1, i8 %src_buf1_2_V_read_1, i8 %src_buf2_0_V_read_1, i8 %src_buf2_2_V_read_1, i8 %src_buf3_0_V_read_1, i8 %src_buf3_2_V_read_1)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:160]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 14 [1/2] (6.13ns)   --->   "%GradientvaluesY_V_wr = call fastcc i8 @"xFGradientY3x3<0, 0>"(i8 %src_buf1_0_V_read_1, i8 %src_buf1_1_V_read_1, i8 %src_buf1_2_V_read_1, i8 %src_buf3_0_V_read_1, i8 %src_buf3_1_V_read_1, i8 %src_buf3_2_V_read_1)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:165]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i8, i8 } undef, i8 %GradientvaluesX_V_wr, 0" [C:/xfopencv/include\imgproc/xf_sobel.hpp:167]
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i8, i8 } %mrv, i8 %GradientvaluesY_V_wr, 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:167]
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "ret { i8, i8 } %mrv_1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:167]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.92ns
+The critical path consists of the following:
+	wire read on port 'src_buf3_2_V_read' [9]  (0 ns)
+	'call' operation ('GradientvaluesX.V', C:/xfopencv/include\imgproc/xf_sobel.hpp:160) to 'xFGradientX3x3<0, 0>' [17]  (1.92 ns)
+
+ <State 2>: 6.14ns
+The critical path consists of the following:
+	'call' operation ('GradientvaluesX.V', C:/xfopencv/include\imgproc/xf_sobel.hpp:160) to 'xFGradientX3x3<0, 0>' [17]  (6.14 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

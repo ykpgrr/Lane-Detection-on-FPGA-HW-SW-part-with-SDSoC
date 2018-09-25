@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:repository xmlns:xd="http://www.xilinx.com/xd">
+  <xd:component xd:vendor="xilinx.com" xd:library="xd" xd:name="sobel_accel_if" xd:version="1.0" xd:componentRef="adapter_v3_0" xd:adapteeCompRef="sobel_accel" xd:type="accelerator">
+    <xd:busInterface xd:name="S_AXI" xd:busTypeRef="aximm" xd:mode="slave" xd:clockRef="s_axi_aclk" xd:resetRef="s_axi_aresetn" xd:dataWidth="32">
+       <xd:reg xd:name="ap_ctrl" xd:offset="0x8" xd:dataWidth="4"/>
+       <xd:reg xd:name="p_src_allocatedFlag" xd:offset="0xC" xd:dataWidth="8"/>
+       <xd:reg xd:name="p_src_rows" xd:offset="0x10" xd:dataWidth="32"/>
+       <xd:reg xd:name="p_src_cols" xd:offset="0x14" xd:dataWidth="32"/>
+       <xd:reg xd:name="p_src_size" xd:offset="0x18" xd:dataWidth="32"/>
+       <xd:reg xd:name="p_dstgx_allocatedFlag" xd:offset="0x1C" xd:dataWidth="8"/>
+       <xd:reg xd:name="p_dstgx_rows" xd:offset="0x20" xd:dataWidth="32"/>
+       <xd:reg xd:name="p_dstgx_cols" xd:offset="0x24" xd:dataWidth="32"/>
+       <xd:reg xd:name="p_dstgx_size" xd:offset="0x28" xd:dataWidth="32"/>
+       <xd:reg xd:name="p_dstgy_allocatedFlag" xd:offset="0x2C" xd:dataWidth="8"/>
+       <xd:reg xd:name="p_dstgy_rows" xd:offset="0x30" xd:dataWidth="32"/>
+       <xd:reg xd:name="p_dstgy_cols" xd:offset="0x34" xd:dataWidth="32"/>
+       <xd:reg xd:name="p_dstgy_size" xd:offset="0x38" xd:dataWidth="32"/>
+    </xd:busInterface>
+    <xd:busInterface xd:name="s_axi_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="s_axi_aclk"/>
+    <xd:busInterface xd:name="acc_aclk" xd:busTypeRef="clock" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="acc_aclk"/>
+    <xd:busInterface xd:name="s_axi_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="s_axi_aresetn"/>
+    <xd:busInterface xd:name="acc_aresetn" xd:busTypeRef="reset" xd:mode="slave" xd:library="signal" xd:direction="in" xd:port="acc_aresetn"/>
+  </xd:component>
+</xd:repository>

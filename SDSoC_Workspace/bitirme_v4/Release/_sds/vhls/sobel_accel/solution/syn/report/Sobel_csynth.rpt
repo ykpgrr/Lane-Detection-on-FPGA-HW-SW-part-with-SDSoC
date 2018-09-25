@@ -1,0 +1,180 @@
+
+
+================================================================
+== Vivado HLS Report for 'Sobel'
+================================================================
+* Date:           Wed May 23 18:09:55 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        sobel_accel
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.89|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+----------+
+    |     Latency     |     Interval    | Pipeline |
+    |   min  |   max  |   min  |   max  |   Type   |
+    +--------+--------+--------+--------+----------+
+    |  312165|  312165|  312164|  312164| dataflow |
+    +--------+--------+--------+--------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+        |                         |                      |     Latency     |     Interval    | Pipeline|
+        |         Instance        |        Module        |   min  |   max  |   min  |   max  |   Type  |
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+        |xFSobelFilter3x3_U0      |xFSobelFilter3x3      |  312163|  312163|  312163|  312163|   none  |
+        |Sobel_Loop_2_proc38_U0   |Sobel_Loop_2_proc38   |       5|  308641|       5|  308641|   none  |
+        |Sobel_Loop_1_proc374_U0  |Sobel_Loop_1_proc374  |       5|  308641|       5|  308641|   none  |
+        +-------------------------+----------------------+--------+--------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      4|
+|FIFO             |        0|      -|      40|    280|
+|Instance         |        3|      3|     948|   1768|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|      -|
+|Register         |        -|      -|       -|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        3|      3|     988|   2052|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        1|      1|   ~0   |      3|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+------+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF |  LUT |
+    +-------------------------+----------------------+---------+-------+-----+------+
+    |Sobel_Loop_1_proc374_U0  |Sobel_Loop_1_proc374  |        0|      1|  142|   293|
+    |Sobel_Loop_2_proc38_U0   |Sobel_Loop_2_proc38   |        0|      2|  265|   314|
+    |xFSobelFilter3x3_U0      |xFSobelFilter3x3      |        3|      0|  541|  1161|
+    +-------------------------+----------------------+---------+-------+-----+------+
+    |Total                    |                      |        3|      3|  948|  1768|
+    +-------------------------+----------------------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------------------+---------+---+----+------+-----+---------+
+    |           Name           | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +--------------------------+---------+---+----+------+-----+---------+
+    |p_dst_matx_cols_read_s_U  |        0|  5|  44|     3|   32|       96|
+    |p_dst_matx_rows_read_s_U  |        0|  5|  44|     3|   32|       96|
+    |p_dst_maty_cols_read_s_U  |        0|  5|  44|     3|   32|       96|
+    |p_dstx_V_V_U              |        0|  5|  20|     2|    8|       16|
+    |p_dsty_V_V_U              |        0|  5|  20|     2|    8|       16|
+    |p_src_V_V_U               |        0|  5|  20|     2|    8|       16|
+    |p_src_mat_cols_read_c_U   |        0|  5|  44|     2|   32|       64|
+    |p_src_mat_rows_read_c_U   |        0|  5|  44|     2|   32|       64|
+    +--------------------------+---------+---+----+------+-----+---------+
+    |Total                     |        0| 40| 280|    19|  184|      464|
+    +--------------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +--------------------------------------+----------+-------+---+----+------------+------------+
+    |             Variable Name            | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------+----------+-------+---+----+------------+------------+
+    |Sobel_Loop_1_proc374_U0_start_full_n  |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                               |    and   |      0|  0|   2|           1|           1|
+    +--------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                 |          |      0|  0|   4|           2|           2|
+    +--------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+----------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-----------------------------+-----+-----+------------+----------------------+--------------+
+|p_src_mat_rows_read          |  in |   32|   ap_none  |  p_src_mat_rows_read |    scalar    |
+|p_src_mat_rows_read_ap_vld   |  in |    1|   ap_none  |  p_src_mat_rows_read |    scalar    |
+|p_src_mat_cols_read          |  in |   32|   ap_none  |  p_src_mat_cols_read |    scalar    |
+|p_src_mat_cols_read_ap_vld   |  in |    1|   ap_none  |  p_src_mat_cols_read |    scalar    |
+|p_src_mat_data_V_address0    | out |   19|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_ce0         | out |    1|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_d0          | out |    8|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_q0          |  in |    8|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_we0         | out |    1|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_address1    | out |   19|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_ce1         | out |    1|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_d1          | out |    8|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_q1          |  in |    8|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_src_mat_data_V_we1         | out |    1|  ap_memory |   p_src_mat_data_V   |     array    |
+|p_dst_matx_rows_read         |  in |   32|   ap_none  | p_dst_matx_rows_read |    scalar    |
+|p_dst_matx_rows_read_ap_vld  |  in |    1|   ap_none  | p_dst_matx_rows_read |    scalar    |
+|p_dst_matx_cols_read         |  in |   32|   ap_none  | p_dst_matx_cols_read |    scalar    |
+|p_dst_matx_cols_read_ap_vld  |  in |    1|   ap_none  | p_dst_matx_cols_read |    scalar    |
+|p_dst_matx_data_V_address0   | out |   19|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_ce0        | out |    1|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_d0         | out |    8|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_q0         |  in |    8|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_we0        | out |    1|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_address1   | out |   19|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_ce1        | out |    1|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_d1         | out |    8|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_q1         |  in |    8|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_matx_data_V_we1        | out |    1|  ap_memory |   p_dst_matx_data_V  |     array    |
+|p_dst_maty_cols_read         |  in |   32|   ap_none  | p_dst_maty_cols_read |    scalar    |
+|p_dst_maty_cols_read_ap_vld  |  in |    1|   ap_none  | p_dst_maty_cols_read |    scalar    |
+|p_dst_maty_data_V_address0   | out |   19|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_ce0        | out |    1|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_d0         | out |    8|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_q0         |  in |    8|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_we0        | out |    1|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_address1   | out |   19|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_ce1        | out |    1|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_d1         | out |    8|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_q1         |  in |    8|  ap_memory |   p_dst_maty_data_V  |     array    |
+|p_dst_maty_data_V_we1        | out |    1|  ap_memory |   p_dst_maty_data_V  |     array    |
+|ap_clk                       |  in |    1| ap_ctrl_hs |         Sobel        | return value |
+|ap_rst                       |  in |    1| ap_ctrl_hs |         Sobel        | return value |
+|ap_done                      | out |    1| ap_ctrl_hs |         Sobel        | return value |
+|ap_start                     |  in |    1| ap_ctrl_hs |         Sobel        | return value |
+|ap_ready                     | out |    1| ap_ctrl_hs |         Sobel        | return value |
+|ap_idle                      | out |    1| ap_ctrl_hs |         Sobel        | return value |
+|ap_continue                  |  in |    1| ap_ctrl_hs |         Sobel        | return value |
++-----------------------------+-----+-----+------------+----------------------+--------------+
+
