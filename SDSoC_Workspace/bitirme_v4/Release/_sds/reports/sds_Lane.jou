@@ -1,0 +1,16 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.1 SW Build 2188600 on Wed Apr  4 18:41:44 MDT 2018
+# Start time    : Wed May 23 18:07:27 +0300 2018
+# Command line  : sds++ -Wall -O3 -I../src -IC:/xfopencv/include -IC:/OpencvWin/include -c -fmessage-length=0 -MTsrc/Lane.o -MMD -MP -MFsrc/Lane.d -MTsrc/Lane.o -o src/Lane.o ../src/Lane.cpp -sds-hw sobel_accel xf_sobel_accel.cpp -clkid 2 -sds-end -sds-hw Sobel xf_sobel.hpp -clkid 2 -sds-end -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds_Lane.log
+# Journal file  : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds_Lane.jou
+# Report file   : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds_Lane.rpt
+#-----------------------------------------------------------
+
+# Create data motion intermediate representation
+C:/Xilinx/SDx/2018.1/bin/clang_wrapper -I../src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g     -I C:/Xilinx/SDx/2018.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.1/include   -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1/include -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 -emit-llvm -S C:/Users/yakup/workspace/bitirme_v4/src/Lane.cpp -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/src/Lane.s
+# Compiling C:/Users/yakup/workspace/bitirme_v4/src/Lane.cpp
+arm-linux-gnueabihf-g++ -c -I../src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Users/yakup/workspace/bitirme_v4/Release/src/Lane.o -MFC:/Users/yakup/workspace/bitirme_v4/Release/src/Lane.d -MTC:/Users/yakup/workspace/bitirme_v4/Release/src/Lane.o     -I C:/Xilinx/SDx/2018.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.1/include C:/Users/yakup/workspace/bitirme_v4/src/Lane.cpp -o src/Lane.o
+arm-linux-gnueabihf-objcopy --add-section .xdsdata=C:/Users/yakup/workspace/bitirme_v4/Release/_sds/swstubs/Lane.o.xml src/Lane.o
+# sds++ completed at Wed May 23 18:07:39 +0300 2018

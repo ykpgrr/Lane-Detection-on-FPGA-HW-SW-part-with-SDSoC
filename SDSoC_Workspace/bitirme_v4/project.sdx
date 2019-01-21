@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdsproject:SDSProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdsproject="http://www.xilinx.com/sdsproject" name="bitirme_v4" location="C:/Users/yakup/workspace/bitirme_v4" platform="C:/Xilinx/SDx/2018.1/platforms\zed\zed.xpfm" platformUID="xilinx.com:zed:zed:1.0" sysConfig="linux" runtime="C/C++" cpu="linux" cpuInstance="" os="linux" ConfigType="Debug">
+  <configuration name="Debug" id="com.xilinx.sdsoc.managedbuild.project.debug.1112698599">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" genbitstream="true" gensdcard="true" dmclkid="3" enableHwSwTrace="false" traceApplication="false" genEmulationModel="false">
+      <accelerator name="absdiff" filepath="C:/xfopencv/include/core/xf_arithm.hpp" clkid="3" location="C:/xfopencv/include/core/xf_arithm.hpp"/>
+      <accelerator name="bitwise_or" filepath="C:/xfopencv/include/core/xf_arithm.hpp" clkid="3" location="C:/xfopencv/include/core/xf_arithm.hpp"/>
+      <accelerator name="warpTransform" filepath="C:/xfopencv/include/imgproc/xf_warp_transform.hpp" clkid="2" location="C:/xfopencv/include/imgproc/xf_warp_transform.hpp"/>
+      <accelerator name="Threshold" filepath="C:/xfopencv/include/imgproc/xf_threshold.hpp" clkid="2" location="C:/xfopencv/include/imgproc/xf_threshold.hpp"/>
+      <accelerator name="Sobel" filepath="C:/xfopencv/include/imgproc/xf_sobel.hpp" clkid="2" location="C:/xfopencv/include/imgproc/xf_sobel.hpp"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" genbitstream="true" gensdcard="true" dmclkid="3" enableHwSwTrace="false" traceApplication="false" genEmulationModel="false">
+      <accelerator name="absdiff" filepath="C:/xfopencv/include/core/xf_arithm.hpp" clkid="3" location="C:/xfopencv/include/core/xf_arithm.hpp"/>
+      <accelerator name="bitwise_or" filepath="C:/xfopencv/include/core/xf_arithm.hpp" clkid="3" location="C:/xfopencv/include/core/xf_arithm.hpp"/>
+      <accelerator name="warpTransform" filepath="C:/xfopencv/include/imgproc/xf_warp_transform.hpp" clkid="2" location="C:/xfopencv/include/imgproc/xf_warp_transform.hpp"/>
+      <accelerator name="Threshold" filepath="C:/xfopencv/include/imgproc/xf_threshold.hpp" clkid="2" location="C:/xfopencv/include/imgproc/xf_threshold.hpp"/>
+      <accelerator name="Sobel" filepath="C:/xfopencv/include/imgproc/xf_sobel.hpp" clkid="2" location="C:/xfopencv/include/imgproc/xf_sobel.hpp"/>
+    </lastBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdsoc.managedbuild.project.release.1253379562">
+    <configBuildOptions xsi:type="sdsproject:Option" insertapm="false" genbitstream="true" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false" genEmulationModel="false">
+      <accelerator name="sobel_accel" filepath="src/xf_sobel_accel.cpp" clkid="2" location="C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp"/>
+      <accelerator name="Sobel" filepath="C:/xfopencv/include/imgproc/xf_sobel.hpp" clkid="2" location="C:/xfopencv/include/imgproc/xf_sobel.hpp"/>
+    </configBuildOptions>
+    <lastBuildOptions xsi:type="sdsproject:Option" insertapm="false" genbitstream="true" gensdcard="true" dmclkid="2" enableHwSwTrace="false" traceApplication="false">
+      <accelerator name="sobel_accel" filepath="src/xf_sobel_accel.cpp" clkid="2" location="C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp"/>
+      <accelerator name="Sobel" filepath="C:/xfopencv/include/imgproc/xf_sobel.hpp" clkid="2" location="C:/xfopencv/include/imgproc/xf_sobel.hpp"/>
+    </lastBuildOptions>
+  </configuration>
+</sdsproject:SDSProject>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:source name="main.cpp" compiler="g++" objfile="src/main.o" srcpath="C:/Users/yakup/workspace/bitirme_v4/src" flags="-IC:/Users/yakup/workspace/bitirme_v4/src -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__"/>
+</xd:data>

@@ -1,0 +1,135 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.1 SW Build 2188600 on Wed Apr  4 18:41:44 MDT 2018
+# Start time    : Wed May 23 18:07:53 +0300 2018
+# Command line  : sds++ -Wall -O3 -I../src -IC:/xfopencv/include -IC:/OpencvWin/include -c -fmessage-length=0 -MTsrc/main.o -MMD -MP -MFsrc/main.d -MTsrc/main.o -o src/main.o ../src/main.cpp -sds-hw sobel_accel xf_sobel_accel.cpp -clkid 2 -sds-end -sds-hw Sobel xf_sobel.hpp -clkid 2 -sds-end -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds_main.log
+# Journal file  : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds_main.jou
+# Report file   : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds_main.rpt
+#-----------------------------------------------------------
+
+Create data motion intermediate representation
+C:/Xilinx/SDx/2018.1/bin/clang_wrapper -I../src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g     -I C:/Xilinx/SDx/2018.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.1/include   -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1/include -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include  -std=c++11 -emit-llvm -S C:/Users/yakup/workspace/bitirme_v4/src/main.cpp -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/src/main.s
+
+C:\Users\yakup\workspace\bitirme_v4\Release>C:\Xilinx\SDx\2018.1\llvm-clang\win64\llvm\bin\clang.exe -I../src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -fmessage-length=0 -MMD -MP -D __SDSCC__ -target arm-linux-gnueabihf -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -O0 -g -I C:/Xilinx/SDx/2018.1/target/aarch32-linux/include -D HLS_NO_XIL_FPO_LIB -I C:/Xilinx/Vivado/2018.1/include -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1 -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1/arm-linux-gnueabihf -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1/backward -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1/include -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1/include-fixed -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include -IC:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include -std=c++11 -emit-llvm -S C:/Users/yakup/workspace/bitirme_v4/src/main.cpp -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/src/main.s 
+C:/xfopencv/include\common/xf_utility.h:71:2: warning: unused label 'Extract_pixels_loop' [-Wunused-label]
+        Extract_pixels_loop:
+        ^~~~~~~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:153:2: warning: unused label 'Compute_Grad_Loop' [-Wunused-label]
+        Compute_Grad_Loop:
+        ^~~~~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:188:2: warning: unused label 'Col_Loop' [-Wunused-label]
+        Col_Loop:
+        ^~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:291:2: warning: unused label 'Clear_Row_Loop' [-Wunused-label]
+        Clear_Row_Loop:
+        ^~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:301:2: warning: unused label 'Row_Loop' [-Wunused-label]
+        Row_Loop:                                                                                                                                                                               // Process complete image
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:496:2: warning: unused label 'Compute_Grad_Loop' [-Wunused-label]
+        Compute_Grad_Loop:
+        ^~~~~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:526:2: warning: unused label 'Col_Loop' [-Wunused-label]
+        Col_Loop:
+        ^~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:678:2: warning: unused label 'Row_Loop' [-Wunused-label]
+        Row_Loop:
+        ^~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:656:2: warning: unused label 'Clear_Row_Loop' [-Wunused-label]
+        Clear_Row_Loop:
+        ^~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:668:2: warning: unused label 'Read_Row2_Loop' [-Wunused-label]
+        Read_Row2_Loop:
+        ^~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:1083:2: warning: unused label 'Col_Loop' [-Wunused-label]
+        Col_Loop:
+        ^~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:1326:2: warning: unused label 'Row_Loop' [-Wunused-label]
+        Row_Loop:
+        ^~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:1316:2: warning: unused label 'Read_Row2_Loop' [-Wunused-label]
+        Read_Row2_Loop:
+        ^~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:1294:2: warning: unused label 'Clear_Row_Loop' [-Wunused-label]
+        Clear_Row_Loop:
+        ^~~~~~~~~~~~~~~
+C:/xfopencv/include\imgproc/xf_sobel.hpp:1306:2: warning: unused label 'Read_Row1_Loop' [-Wunused-label]
+        Read_Row1_Loop:
+        ^~~~~~~~~~~~~~~
+
+C:\Users\yakup\workspace\bitirme_v4\Release>exit /b 0 
+Compiling C:/Users/yakup/workspace/bitirme_v4/src/main.cpp
+arm-linux-gnueabihf-g++ -c -I../src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__ -MTC:/Users/yakup/workspace/bitirme_v4/Release/src/main.o -MFC:/Users/yakup/workspace/bitirme_v4/Release/src/main.d -MTC:/Users/yakup/workspace/bitirme_v4/Release/src/main.o     -I C:/Xilinx/SDx/2018.1/target/aarch32-linux/include  -D HLS_NO_XIL_FPO_LIB  -I C:/Xilinx/Vivado/2018.1/include C:/Users/yakup/workspace/bitirme_v4/src/main.cpp -o src/main.o
+                 from C:/xfopencv/include/common/xf_sw_utils.h:33,
+                 from C:/Users/yakup/workspace/bitirme_v4/src/xf_headers.h:62,
+                 from C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:17:
+C:/Users/yakup/workspace/bitirme_v4/src/Fitting_Second_Order.hpp:122:19: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for(int i=0; i<lenght ; i++){
+                  ~^~~~~~~
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp: In function 'void SlidingWindow(cv::Mat)':
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:373:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if(nonzero.size() > minpix){
+            ~~~~~~~~~~~~~~~^~~~~~~~
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:406:27: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         if(nonzero.size() > minpix){
+            ~~~~~~~~~~~~~~~^~~~~~~~
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:444:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if( left_lane_y_inds.size() > thres && right_lane_y_inds.size() > thres){
+         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:444:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if( left_lane_y_inds.size() > thres && right_lane_y_inds.size() > thres){
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp: In function 'void FollowLine(cv::Mat)':
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:520:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if( left_lane_y_inds.size() > thres && right_lane_y_inds.size() > thres){
+         ~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:520:69: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if( left_lane_y_inds.size() > thres && right_lane_y_inds.size() > thres){
+                                            ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+                 from C:/Xilinx/Vivado/2018.1/include/ap_int.h:75,
+                 from C:/Users/yakup/workspace/bitirme_v4/src/xf_headers.h:37,
+                 from C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:17:
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 1; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1625:5:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(bool) [with int _AP_W = 1; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.1/include/etc/ap_fixed_sim.h:2439:1:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+         VAL = (ValType)(_AP_S ? ((((int64_t)VAL)<<(excess_bits))>> (excess_bits)) : (excess_bits ? (((uint64_t)VAL)<<(excess_bits))>>(excess_bits) : (uint64_t)VAL));
+                                                                                     ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 1; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1625:5:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(bool) [with int _AP_W = 1; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.1/include/etc/ap_fixed_sim.h:2439:1:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 8; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1626:5:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(signed char) [with int _AP_W = 8; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.1/include/etc/ap_fixed_sim.h:2440:1:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 8; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1626:5:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(signed char) [with int _AP_W = 8; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.1/include/etc/ap_fixed_sim.h:2440:1:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 16; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1628:5:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(short int) [with int _AP_W = 16; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.1/include/etc/ap_fixed_sim.h:2442:1:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 16; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1628:5:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(short int) [with int _AP_W = 16; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.1/include/etc/ap_fixed_sim.h:2442:1:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 32; bool _AP_S = true]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1624:5:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(int) [with int _AP_W = 32; bool _AP_S = true]'
+C:/Xilinx/Vivado/2018.1/include/etc/ap_fixed_sim.h:2444:1:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 32; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1624:5:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private(int) [with int _AP_W = 32; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.1/include/etc/ap_fixed_sim.h:2444:1:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h: In instantiation of 'void ap_private<_AP_W, _AP_S, true>::clearUnusedBits() [with int _AP_W = 24; bool _AP_S = false]':
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:1614:24:   required from 'ap_private<_AP_W, _AP_S, true>::ap_private() [with int _AP_W = 24; bool _AP_S = false]'
+C:/Xilinx/Vivado/2018.1/include/ap_int.h:207:26:   required from 'ap_uint<_AP_W>::ap_uint() [with int _AP_W = 24]'
+C:/xfopencv/include/common/xf_structs.h:570:15:   required from 'void xf::Mat<T, ROWS, COLS, NPC>::copyTo(void*) [with int T = 0; int ROWS = 480; int COLS = 640; int NPC = 1]'
+C:/Users/yakup/workspace/bitirme_v4/src/main.cpp:700:45:   required from here
+C:/Xilinx/Vivado/2018.1/include/etc/ap_private.h:2089:98: warning: enum constant in boolean context [-Wint-in-bool-context]
+arm-linux-gnueabihf-objcopy --add-section .xdsdata=C:/Users/yakup/workspace/bitirme_v4/Release/_sds/swstubs/main.o.xml src/main.o
+sds++ log file saved as C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds_main.log
+sds++ completed at Wed May 23 18:08:23 +0300 2018

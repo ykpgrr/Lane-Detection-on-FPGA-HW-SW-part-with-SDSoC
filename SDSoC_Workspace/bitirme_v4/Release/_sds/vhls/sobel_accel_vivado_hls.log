@@ -1,0 +1,301 @@
+
+****** Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vivado/2018.1/scripts/vivado_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'yakup' on host 'yakupgorur6c46' (Windows NT_amd64 version 6.2) on Wed May 23 18:08:50 +0300 2018
+INFO: [HLS 200-10] In directory 'C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls'
+INFO: [HLS 200-10] Creating and opening project 'C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel'.
+INFO: [HLS 200-10] Adding design file 'C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp' to the project
+INFO: [HLS 200-10] Creating and opening solution 'C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-10] Setting target device to ' xc7z020clg484-1 '
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp' ...
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:45 . Memory (MB): peak = 102.578 ; gain = 45.137
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 102.617 ; gain = 45.176
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1048) in function 'void xf::xFSobel7x7<1, 0, 0>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*)' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Compute_Grad_Loop' (C:/xfopencv/include\imgproc/xf_sobel.hpp:498) in function 'void xf::xFSobel5x5<1, 0, 0>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*)' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Compute_Grad_Loop' (C:/xfopencv/include\imgproc/xf_sobel.hpp:155) in function 'void xf::xFSobel3x3<1, 0, 0>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*)' completely.
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:240).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:239).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:230).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:229).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:224).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:223).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:355).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:354).
+INFO: [XFORM 203-603] Inlining function 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' into 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:324).
+INFO: [XFORM 203-603] Inlining function 'xf::xFSobelFilter<480, 640, 0, 0, 1, 0, 0>' into 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1474).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:55 . Memory (MB): peak = 143.934 ; gain = 86.492
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:56 . Memory (MB): peak = 145.414 ; gain = 87.973
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col_Loop' (C:/xfopencv/include\imgproc/xf_sobel.hpp:190) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.2' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.3' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.4' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.5' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.6' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-101] Partitioning array 'GradientValuesX.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:273) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'GradientValuesY.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:274) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf1.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:278) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf2.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:278) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf3.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:279) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:286) in dimension 1 completely.
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1460) to a process function for dataflow in function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>'.
+INFO: [XFORM 203-721] Changing loop 'Loop_2_proc' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1477) to a process function for dataflow in function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>'.
+WARNING: [XFORM 203-713] All the elements of global array '_dst_matx.data.V' should be updated in process function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_2_proc38', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array '_dst_maty.data.V' should be updated in process function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_2_proc38', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>', detected/extracted 3 process function(s): 
+	 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_1_proc3740'
+	 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>'
+	 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_2_proc38'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:303:3) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:189:25) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:110:1) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:136:2) in function 'xf::xFGradientY3x3<0, 0>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:64:1) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:91:2) in function 'xf::xFGradientX3x3<0, 0>'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:58 . Memory (MB): peak = 177.766 ; gain = 120.324
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Row_Loop' (C:/xfopencv/include\imgproc/xf_sobel.hpp:303:3) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [XFORM 203-631] Renaming function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' to 'xFSobelFilter3x3' (C:/xfopencv/include\imgproc/xf_sobel.hpp:189:4)
+WARNING: [XFORM 203-631] Renaming function 'xf::xFSobel3x3<1, 0, 0>' to 'xFSobel3x3<1, 0, 0>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:147)
+WARNING: [XFORM 203-631] Renaming function 'xf::xFGradientY3x3<0, 0>' to 'xFGradientY3x3<0, 0>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:114:2)
+WARNING: [XFORM 203-631] Renaming function 'xf::xFGradientX3x3<0, 0>' to 'xFGradientX3x3<0, 0>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:68:2)
+WARNING: [XFORM 203-631] Renaming function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_2_proc38' to 'Sobel_Loop_2_proc38' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1477:32)
+WARNING: [XFORM 203-631] Renaming function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_1_proc3740' to 'Sobel_Loop_1_proc374' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1460:31)
+WARNING: [XFORM 203-631] Renaming function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>' to 'Sobel' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1454:1)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:59 . Memory (MB): peak = 240.293 ; gain = 182.852
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'sobel_accel' ...
+WARNING: [SYN 201-103] Legalizing function name 'xFGradientX3x3<0, 0>' to 'xFGradientX3x3_0_0_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFGradientY3x3<0, 0>' to 'xFGradientY3x3_0_0_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFSobel3x3<1, 0, 0>' to 'xFSobel3x3_1_0_0_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Sobel_Loop_1_proc374'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 59.347 seconds; current allocated memory: 191.483 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.112 seconds; current allocated memory: 191.710 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFGradientX3x3_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xFGradientX3x3<0, 0>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.115 seconds; current allocated memory: 191.822 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.075 seconds; current allocated memory: 191.920 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFGradientY3x3_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xFGradientY3x3<0, 0>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.118 seconds; current allocated memory: 192.017 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.083 seconds; current allocated memory: 192.115 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFSobel3x3_1_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xFSobel3x3<1, 0, 0>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.101 seconds; current allocated memory: 192.170 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 192.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFSobelFilter3x3'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Clear_Row_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.682 seconds; current allocated memory: 192.808 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_0_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_1_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_2_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.328 seconds; current allocated memory: 193.315 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Sobel_Loop_2_proc38'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.679 seconds; current allocated memory: 193.550 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 193.701 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Sobel'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.136 seconds; current allocated memory: 193.788 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.351 seconds; current allocated memory: 194.085 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel_accel'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-71] Latency directive discarded for region sobel_accel since region contains function calls with variable latency.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.413 seconds; current allocated memory: 194.200 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 194.277 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Sobel_Loop_1_proc374'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_Loop_1_proc374'.
+INFO: [HLS 200-111]  Elapsed time: 0.312 seconds; current allocated memory: 194.731 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFGradientX3x3_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFGradientX3x3_0_0_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.367 seconds; current allocated memory: 195.073 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFGradientY3x3_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFGradientY3x3_0_0_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.334 seconds; current allocated memory: 195.337 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFSobel3x3_1_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFSobel3x3_1_0_0_s'.
+INFO: [HLS 200-111]  Elapsed time: 0.343 seconds; current allocated memory: 195.558 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFSobelFilter3x3'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'xFSobelFilter3x3_buf_0_V' to 'xFSobelFilter3x3_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFSobelFilter3x3_buf_1_V' to 'xFSobelFilter3x3_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFSobelFilter3x3_buf_2_V' to 'xFSobelFilter3x3_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sobel_accel_mux_32_8_1_1' to 'sobel_accel_mux_3eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sobel_accel_mux_3eOg': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFSobelFilter3x3'.
+INFO: [HLS 200-111]  Elapsed time: 0.341 seconds; current allocated memory: 196.590 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Sobel_Loop_2_proc38'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_Loop_2_proc38'.
+INFO: [HLS 200-111]  Elapsed time: 1.296 seconds; current allocated memory: 197.123 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Sobel'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'start_for_xFSobelFilter3x3_U0' to 'start_for_xFSobelfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Sobel_Loop_2_proc38_U0' to 'start_for_Sobel_Lg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel'.
+INFO: [HLS 200-111]  Elapsed time: 0.389 seconds; current allocated memory: 197.758 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel_accel'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_allocatedFlag' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_cols' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_data_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_allocatedFlag' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_cols' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_data_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_allocatedFlag' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_cols' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_data_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sobel_accel' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_src_allocatedFlag' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_src_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgx_allocatedFlag' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgx_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgy_allocatedFlag' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgy_rows' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgy_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_accel'.
+INFO: [HLS 200-111]  Elapsed time: 0.579 seconds; current allocated memory: 198.219 MB.
+INFO: [RTMG 210-278] Implementing memory 'a0_xFSobelFilter3x3_bkb_ram (RAM_S2P_BRAM)' using block RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w8_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d3_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d3_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d3_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w8_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w8_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_start_for_xFSobelfYi' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_start_for_Sobel_Lg8j' using Shift Registers.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:01:10 . Memory (MB): peak = 260.254 ; gain = 202.813
+INFO: [SYSC 207-301] Generating SystemC RTL for sobel_accel with prefix a0_.
+INFO: [VHDL 208-304] Generating VHDL RTL for sobel_accel with prefix a0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for sobel_accel with prefix a0_.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2018.1 (64-bit)
+  **** SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+  **** IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Wed May 23 18:10:32 2018...
+INFO: [HLS 200-112] Total elapsed time: 104.692 seconds; peak allocated memory: 198.219 MB.
+INFO: [Common 17-206] Exiting vivado_hls at Wed May 23 18:10:33 2018...

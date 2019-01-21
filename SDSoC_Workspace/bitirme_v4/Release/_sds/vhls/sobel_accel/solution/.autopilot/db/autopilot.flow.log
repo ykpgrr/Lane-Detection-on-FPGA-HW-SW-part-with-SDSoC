@@ -1,0 +1,1817 @@
+INFO: [HLS 200-0] Workspace C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution opened at Wed May 23 18:08:50 +0300 2018
+Command   open_solution returned 0; 0.049 sec.
+Execute   set_part  xc7z020clg484-1  
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg484:-1 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart returned 1; 0.06 sec.
+Execute       open_platform DefaultPlatform 
+Command       open_platform returned 0; 0.008 sec.
+Execute       import_lib C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.lib 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.lib 
+Command             ap_source returned 0; 0.007 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.lib 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.lib 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.lib 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.lib 
+Command             ap_source returned 0; 0.005 sec.
+Command           ap_source returned 0; 0.025 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.lib 
+Command           ap_source returned 0; 0.005 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.lib 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.lib 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.lib 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.059 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_old.lib 
+Command         ap_source returned 0; 0.007 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_vivado.lib 
+Command         ap_source returned 0; 0.022 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0.006 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0.002 sec.
+Command           ap_source returned 0; 0.005 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0.004 sec.
+Command         ap_source returned 0; 0.021 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/dsp48e1.hlp 
+Command         ap_source returned 0; 0.002 sec.
+Execute         get_default_platform 
+Command         get_default_platform returned 0; 0 sec.
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command         config_chip_info returned 0; 0 sec.
+Execute         config_chip_info -quiet -speed medium 
+Command         config_chip_info returned 0; 0 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command             ap_source returned 0; 0 sec.
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source returned 0; 0.01 sec.
+Command         ap_source returned 0; 0.016 sec.
+Command       import_lib returned 0; 0.154 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0.005 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.01 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.013 sec.
+Execute               source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.017 sec.
+Command             ap_source returned 0; 0.032 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.034 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.019 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.009 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.214 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0.002 sec.
+Command           ap_source returned 0; 0.346 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0.002 sec.
+Command         ap_source returned 0; 0.356 sec.
+Command       ap_source returned 0; 0.356 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Command       config_chip_info returned 0; 0.001 sec.
+Execute       config_chip_info -quiet -speed slow 
+Command       config_chip_info returned 0; 0 sec.
+Command     add_library returned 0; 0.597 sec.
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       open_platform DefaultPlatform 
+Command       open_platform returned 0; 0 sec.
+Execute       import_lib C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_hp.lib 
+Command           ap_source returned 0; 0.003 sec.
+Command         ap_source returned 0; 0.009 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.hlp 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/target_info.tcl 
+Command             ap_source returned 0; 0.003 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.hlp 
+Command               ap_source returned 0; 0 sec.
+Execute               source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.hlp 
+Command               ap_source returned 0; 0.001 sec.
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.hlp 
+Command             ap_source returned 0; 0.002 sec.
+Command           ap_source returned 0; 0.009 sec.
+Command         ap_source returned 0; 0.01 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq_hp.hlp 
+Command         ap_source returned 0; 0.004 sec.
+Command       import_lib returned 0; 0.044 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0.005 sec.
+Command       ap_source returned 0; 0.006 sec.
+Command     add_library returned 0; 0.059 sec.
+INFO: [HLS 200-10] Setting target device to ' xc7z020clg484-1 '
+Execute     get_default_platform 
+Command     get_default_platform returned 0; 0 sec.
+Command   set_part returned 0; 0.725 sec.
+Execute   create_clock -period 10.000000 
+Execute     config_clock -quiet -name default -period 10.000000 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Command     config_clock returned 0; 0.003 sec.
+Command   create_clock returned 0; 0.005 sec.
+Execute   set_clock_uncertainty 27.0% 
+Execute     config_clock -quiet -name default -uncertainty 2.7 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+Command     config_clock returned 0; 0 sec.
+Command   set_clock_uncertainty returned 0; 0.004 sec.
+Execute   config_rtl -reset_level low 
+Command   config_rtl returned 0; 0.002 sec.
+Execute   source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel.tcl 
+Execute     set_directive_latency -min 1 sobel_accel 
+INFO: [HLS 200-0] Setting directive 'LATENCY' min=1 
+Command     set_directive_latency returned 0; 0.004 sec.
+Command   ap_source returned 0; 0.006 sec.
+Execute   config_rtl -prefix a0_ 
+Command   config_rtl returned 0; 0.001 sec.
+Execute   csynth_design 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -enable_clang39=0 
+INFO: [HLS 200-10] Analyzing design file 'C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp' ...
+INFO: [HLS 200-0] Compiling one TU...
+Execute       is_m_axi_addr64 
+Command       is_m_axi_addr64 returned 0; 0 sec.
+INFO: [HLS 200-0] Handling C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp as C++
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+Execute       is_encrypted C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp 
+Command       is_encrypted returned 0; 0.001 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp"   -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m32 -DHLS_NO_XIL_FPO_LIB -IC:/Xilinx/SDx/2018.1/target/aarch32-linux/include -IC:/Users/yakup/workspace/bitirme_v4/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -IC:/Users/yakup/workspace/bitirme_v4/Release -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.1/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m32 -DHLS_NO_XIL_FPO_LIB -IC:/Xilinx/SDx/2018.1/target/aarch32-linux/include -IC:/Users/yakup/workspace/bitirme_v4/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -IC:/Users/yakup/workspace/bitirme_v4/Release -w -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.1/common/technology/autopilot -I C:/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp
+Command       clang returned 0; 1.494 sec.
+INFO: [HLS 200-0] Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.1/msys" -hls  -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m32 -DHLS_NO_XIL_FPO_LIB -IC:/Xilinx/SDx/2018.1/target/aarch32-linux/include -IC:/Users/yakup/workspace/bitirme_v4/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -IC:/Users/yakup/workspace/bitirme_v4/Release -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp"  -o "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/useless.bc"  
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.1/msys -hls -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m32 -DHLS_NO_XIL_FPO_LIB -IC:/Xilinx/SDx/2018.1/target/aarch32-linux/include -IC:/Users/yakup/workspace/bitirme_v4/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -IC:/Users/yakup/workspace/bitirme_v4/Release -w -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.1/common/technology/autopilot -I C:/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/useless.bc
+Command       clang returned 0; 3.344 sec.
+INFO: [HLS 200-0] GCC PP time: 4 seconds per iteration
+INFO: [HLS 200-0] Setting directive 'LATENCY' min=1 
+Execute       list_core -type functional_unit 
+Command       list_core returned 0; 0 sec.
+INFO: [HLS 200-0] CDT Preprocessing...
+INFO: [HLS 200-0] Marker-Pragma convertor: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp.ap-line.cpp C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp.ap-line.cpp.CXX 1
+INFO: [HLS 200-0] Converting Markers to Pragmas...
+Execute       cdt  "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp.ap-line.cpp"  -m "sobel_accel" -o "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp.ap-cdt.cpp" --pp --directive C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/solution.directive --source C:/Users/yakup/workspace/bitirme_v4/src/xf_sobel_accel.cpp --error C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db --funcunit "AddSub AddSub_DSP AddSubnS DAddSub_fulldsp DAddSub_nodsp DDiv DExp_fulldsp DExp_meddsp DExp_nodsp DLog_fulldsp DLog_meddsp DLog_nodsp DMul_fulldsp DMul_maxdsp DMul_meddsp DMul_nodsp DRSqrt DRecip DSP_Macro DSqrt DivnS FAddSub_fulldsp FAddSub_nodsp FDiv FExp_fulldsp FExp_meddsp FExp_nodsp FLog_fulldsp FLog_meddsp FLog_nodsp FMul_fulldsp FMul_maxdsp FMul_meddsp FMul_nodsp FRSqrt_fulldsp FRSqrt_nodsp FRecip_fulldsp FRecip_nodsp FSqrt HAddSub_fulldsp HAddSub_meddsp HAddSub_nodsp HDiv HMul_fulldsp HMul_maxdsp HMul_nodsp HSqrt Mul Mul2S Mul3S Mul4S Mul5S Mul6S Mul_LUT MulnS MuxnS" --ve --vetcl C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db --ca --es --gf --pd --p2d C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db --sd --scff C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/.systemc_flag --ad 
+Command       cdt returned 0; 32.093 sec.
+INFO: [HLS 200-0] Marker-Pragma convertor: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pp.0.cpp.ap-cdt.cpp C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pragma.0.cpp C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pragma.0.cpp.ap-line.CXX 0
+INFO: [HLS 200-0] Converting Pragmas to Markers...
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-0] Pragma Handling...
+INFO: [HLS 200-0] Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2018.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pragma.1.cpp"   -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m32 -DHLS_NO_XIL_FPO_LIB -IC:/Xilinx/SDx/2018.1/target/aarch32-linux/include -IC:/Users/yakup/workspace/bitirme_v4/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -IC:/Users/yakup/workspace/bitirme_v4/Release -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pragma.2.cpp" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.1/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pragma.1.cpp -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m32 -DHLS_NO_XIL_FPO_LIB -IC:/Xilinx/SDx/2018.1/target/aarch32-linux/include -IC:/Users/yakup/workspace/bitirme_v4/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -IC:/Users/yakup/workspace/bitirme_v4/Release -w -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.1/common/technology/autopilot -I C:/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pragma.2.cpp
+Command       clang returned 0; 1.093 sec.
+Execute       get_default_platform 
+Command       get_default_platform returned 0; 0 sec.
+INFO: [HLS 200-0] Processing labels
+Execute       clang  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pragma.2.cpp"  -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m32 -DHLS_NO_XIL_FPO_LIB -IC:/Xilinx/SDx/2018.1/target/aarch32-linux/include -IC:/Users/yakup/workspace/bitirme_v4/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -IC:/Users/yakup/workspace/bitirme_v4/Release -w  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2018.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.g.bc" 
+INFO: [HLS 200-0] exec clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2018.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.pragma.2.cpp -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -D__SDSCC__ -m32 -DHLS_NO_XIL_FPO_LIB -IC:/Xilinx/SDx/2018.1/target/aarch32-linux/include -IC:/Users/yakup/workspace/bitirme_v4/src -D__SDSVHLS__ -D__SDSVHLS_SYNTHESIS__ -IC:/Users/yakup/workspace/bitirme_v4/Release -w -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2018.1/common/technology/autopilot -I C:/Xilinx/Vivado/2018.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.g.bc
+Command       clang returned 0; 2.726 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/ve_warning.tcl 
+Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-10] Validating synthesis directives ...
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/pragma.status.tcl 
+Command       ap_source returned 0; 0.001 sec.
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:03 ; elapsed = 00:00:45 . Memory (MB): peak = 102.578 ; gain = 45.137
+INFO: [HLS 200-0] Linking Release ...
+Execute       llvm-ld C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.bc -hls-opt -except-internalize sobel_accel -LC:/Xilinx/Vivado/2018.1/win64/lib -lm_basic -lhlsmc++ -lhlsm -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o 
+Command       llvm-ld returned 0; 4.207 sec.
+Execute       disassemble C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o 
+Execute         is_encrypted C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.bc 
+Command         is_encrypted returned 0; 0 sec.
+Command       disassemble returned 0; 0.324 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-0] Linking Debug ...
+Execute       llvm-ld C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xf_sobel_accel.g.bc -hls-opt -except-internalize sobel_accel -LC:/Xilinx/Vivado/2018.1/win64/lib -lm_basic -lhlsmc++ -lhlsm -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g 
+Command       llvm-ld returned 0; 3.438 sec.
+INFO: [HLS 200-0] Disassemble time: 0 seconds per iteration
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:03 ; elapsed = 00:00:53 . Memory (MB): peak = 102.617 ; gain = 45.176
+Execute       ::config_rtl 
+Command       config_rtl returned 0; 0.001 sec.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 -enable_clang39=0 
+Execute         cleanup_all_models 
+Command         cleanup_all_models returned 0; 0 sec.
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.pp.bc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.pp.0.bc -f 
+Command         transform returned 0; 0.278 sec.
+Execute         llvm-ld C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2018.1/win64/lib -lfloatconversion -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.0 
+Command         llvm-ld returned 0; 0.895 sec.
+INFO: [HLS 200-0] Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top sobel_accel -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.0.bc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1048) in function 'void xf::xFSobel7x7<1, 0, 0>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*)' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Compute_Grad_Loop' (C:/xfopencv/include\imgproc/xf_sobel.hpp:498) in function 'void xf::xFSobel5x5<1, 0, 0>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*)' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Compute_Grad_Loop' (C:/xfopencv/include\imgproc/xf_sobel.hpp:155) in function 'void xf::xFSobel3x3<1, 0, 0>(PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*, PixelType<0>::name*)' completely.
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:240).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:239).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:230).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:229).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:224).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:223).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:355).
+INFO: [XFORM 203-603] Inlining function 'xfPackPixels<1, 0, 0>' into 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:354).
+INFO: [XFORM 203-603] Inlining function 'xf::ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>' into 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:324).
+INFO: [XFORM 203-603] Inlining function 'xf::xFSobelFilter<480, 640, 0, 0, 1, 0, 0>' into 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1474).
+Command         transform returned 0; 0.938 sec.
+Execute         disassemble C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.1 C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.1 
+Execute           is_encrypted C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.1.bc 
+Command           is_encrypted returned 0; 0.001 sec.
+Command         disassemble returned 0; 0.231 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:04 ; elapsed = 00:00:55 . Memory (MB): peak = 143.934 ; gain = 86.492
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-0] Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.1.bc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform returned 0; 0.329 sec.
+INFO: [HLS 200-0] Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.2.prechk.bc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform returned 0; 0.106 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:04 ; elapsed = 00:00:56 . Memory (MB): peak = 145.414 ; gain = 87.973
+INFO: [HLS 200-0] Compiler optimizing ...
+INFO: [HLS 200-0] Share syncheck's 1.bc for syn flow: copy C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.g.1.bc to C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.1.bc
+INFO: [HLS 200-0] Presyn 1...
+Execute         transform -hls -tmp C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.1.bc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col_Loop' (C:/xfopencv/include\imgproc/xf_sobel.hpp:190) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' for pipelining.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.1' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.2' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.3' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.4' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.5' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.1.6' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.2' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-2.3' (C:/xfopencv/include\common/xf_utility.h:51) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' completely.
+INFO: [XFORM 203-101] Partitioning array 'GradientValuesX.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:273) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'GradientValuesY.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:274) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf1.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:278) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf2.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:278) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf3.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:279) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:286) in dimension 1 completely.
+INFO: [XFORM 203-721] Changing loop 'Loop_1_proc' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1460) to a process function for dataflow in function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>'.
+INFO: [XFORM 203-721] Changing loop 'Loop_2_proc' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1477) to a process function for dataflow in function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>'.
+WARNING: [XFORM 203-713] All the elements of global array '_dst_matx.data.V' should be updated in process function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_2_proc38', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array '_dst_maty.data.V' should be updated in process function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_2_proc38', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>', detected/extracted 3 process function(s): 
+	 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_1_proc3740'
+	 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>'
+	 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_2_proc38'.
+Command         transform returned 0; 0.843 sec.
+Execute         disassemble C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.1.tmp C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.1.tmp 
+Execute           is_encrypted C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.1.tmp.bc 
+Command           is_encrypted returned 0; 0 sec.
+Command         disassemble returned 0; 0.198 sec.
+INFO: [HLS 200-0] Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.1.tmp.bc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:303:3) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:189:25) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:110:1) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:136:2) in function 'xf::xFGradientY3x3<0, 0>'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/xfopencv/include\imgproc/xf_sobel.hpp:64:1) to (C:/xfopencv/include\imgproc/xf_sobel.hpp:91:2) in function 'xf::xFGradientX3x3<0, 0>'... converting 3 basic blocks.
+Command         transform returned 0; 0.545 sec.
+Execute         disassemble C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.2 C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.2 
+Execute           is_encrypted C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.2.bc 
+Command           is_encrypted returned 0; 0.001 sec.
+Command         disassemble returned 0; 0.203 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:58 . Memory (MB): peak = 177.766 ; gain = 120.324
+INFO: [HLS 200-0] Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -licm -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -read-loop-dep -dce -bitwidth -loop-dep -check-stream -norm-name -legalize -validate-dataflow -cdfg-build C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.2.bc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+                         Cannot flatten a loop nest 'Row_Loop' (C:/xfopencv/include\imgproc/xf_sobel.hpp:303:3) in function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+WARNING: [XFORM 203-631] Renaming function 'xf::xFSobelFilter3x3<480, 640, 0, 0, 1, 0, 0, 640>' to 'xFSobelFilter3x3' (C:/xfopencv/include\imgproc/xf_sobel.hpp:189:4)
+WARNING: [XFORM 203-631] Renaming function 'xf::xFSobel3x3<1, 0, 0>' to 'xFSobel3x3<1, 0, 0>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:147)
+WARNING: [XFORM 203-631] Renaming function 'xf::xFGradientY3x3<0, 0>' to 'xFGradientY3x3<0, 0>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:114:2)
+WARNING: [XFORM 203-631] Renaming function 'xf::xFGradientX3x3<0, 0>' to 'xFGradientX3x3<0, 0>' (C:/xfopencv/include\imgproc/xf_sobel.hpp:68:2)
+WARNING: [XFORM 203-631] Renaming function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_2_proc38' to 'Sobel_Loop_2_proc38' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1477:32)
+WARNING: [XFORM 203-631] Renaming function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>_Loop_1_proc3740' to 'Sobel_Loop_1_proc374' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1460:31)
+WARNING: [XFORM 203-631] Renaming function 'xf::Sobel<0, 3, 0, 0, 480, 640, 1>' to 'Sobel' (C:/xfopencv/include\imgproc/xf_sobel.hpp:1454:1)
+Command         transform returned 0; 0.959 sec.
+Execute         disassemble C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.3 C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.3 
+Execute           is_encrypted C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.o.3.bc 
+Command           is_encrypted returned 0; 0.001 sec.
+Command         disassemble returned 0; 0.134 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:59 . Memory (MB): peak = 240.293 ; gain = 182.852
+INFO: [HLS 200-0] Finish building internal data model.
+Command       opt_and_import_c returned 0; 5.718 sec.
+Command     elaborate returned 0; 56.502 sec.
+Execute     autosyn 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-0] Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'sobel_accel' ...
+Execute       ap_set_top_model sobel_accel 
+WARNING: [SYN 201-103] Legalizing function name 'xFGradientX3x3<0, 0>' to 'xFGradientX3x3_0_0_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFGradientY3x3<0, 0>' to 'xFGradientY3x3_0_0_s'.
+WARNING: [SYN 201-103] Legalizing function name 'xFSobel3x3<1, 0, 0>' to 'xFSobel3x3_1_0_0_s'.
+Command       ap_set_top_model returned 0; 0.007 sec.
+Execute       get_model_list sobel_accel -filter all-wo-channel -topdown 
+Command       get_model_list returned 0; 0 sec.
+Execute       preproc_iomode -model sobel_accel 
+Command       preproc_iomode returned 0; 0.001 sec.
+Execute       preproc_iomode -model Sobel 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model Sobel_Loop_2_proc38 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model xFSobelFilter3x3 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model xFSobel3x3<1, 0, 0> 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model xFGradientY3x3<0, 0> 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model xFGradientX3x3<0, 0> 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       preproc_iomode -model Sobel_Loop_1_proc374 
+Command       preproc_iomode returned 0; 0 sec.
+Execute       get_model_list sobel_accel -filter all-wo-channel 
+Command       get_model_list returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for configure: Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel
+INFO: [HLS 200-0] Configuring Module : Sobel_Loop_1_proc374 ...
+Execute       set_default_model Sobel_Loop_1_proc374 
+Command       set_default_model returned 0; 0.001 sec.
+Execute       apply_spec_resource_limit Sobel_Loop_1_proc374 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : xFGradientX3x3<0, 0> ...
+Execute       set_default_model xFGradientX3x3<0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit xFGradientX3x3<0, 0> 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : xFGradientY3x3<0, 0> ...
+Execute       set_default_model xFGradientY3x3<0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit xFGradientY3x3<0, 0> 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : xFSobel3x3<1, 0, 0> ...
+Execute       set_default_model xFSobel3x3<1, 0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit xFSobel3x3<1, 0, 0> 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : xFSobelFilter3x3 ...
+Execute       set_default_model xFSobelFilter3x3 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit xFSobelFilter3x3 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : Sobel_Loop_2_proc38 ...
+Execute       set_default_model Sobel_Loop_2_proc38 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit Sobel_Loop_2_proc38 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : Sobel ...
+Execute       set_default_model Sobel 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit Sobel 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Configuring Module : sobel_accel ...
+Execute       set_default_model sobel_accel 
+Command       set_default_model returned 0; 0 sec.
+Execute       apply_spec_resource_limit sobel_accel 
+Command       apply_spec_resource_limit returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for preprocess: Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel
+INFO: [HLS 200-0] Preprocessing Module: Sobel_Loop_1_proc374 ...
+Execute       set_default_model Sobel_Loop_1_proc374 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model Sobel_Loop_1_proc374 
+Command       cdfg_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess Sobel_Loop_1_proc374 
+Command       rtl_gen_preprocess returned 0; 0.002 sec.
+INFO: [HLS 200-0] Preprocessing Module: xFGradientX3x3<0, 0> ...
+Execute       set_default_model xFGradientX3x3<0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model xFGradientX3x3<0, 0> 
+Command       cdfg_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess xFGradientX3x3<0, 0> 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Preprocessing Module: xFGradientY3x3<0, 0> ...
+Execute       set_default_model xFGradientY3x3<0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model xFGradientY3x3<0, 0> 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess xFGradientY3x3<0, 0> 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Preprocessing Module: xFSobel3x3<1, 0, 0> ...
+Execute       set_default_model xFSobel3x3<1, 0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model xFSobel3x3<1, 0, 0> 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess xFSobel3x3<1, 0, 0> 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+INFO: [HLS 200-0] Preprocessing Module: xFSobelFilter3x3 ...
+Execute       set_default_model xFSobelFilter3x3 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model xFSobelFilter3x3 
+Command       cdfg_preprocess returned 0; 0.004 sec.
+Execute       rtl_gen_preprocess xFSobelFilter3x3 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Preprocessing Module: Sobel_Loop_2_proc38 ...
+Execute       set_default_model Sobel_Loop_2_proc38 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model Sobel_Loop_2_proc38 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess Sobel_Loop_2_proc38 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Preprocessing Module: Sobel ...
+Execute       set_default_model Sobel 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model Sobel 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess Sobel 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Preprocessing Module: sobel_accel ...
+Execute       set_default_model sobel_accel 
+Command       set_default_model returned 0; 0 sec.
+Execute       cdfg_preprocess -model sobel_accel 
+Command       cdfg_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess sobel_accel 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Model list for synthesis: Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Sobel_Loop_1_proc374'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Sobel_Loop_1_proc374 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model Sobel_Loop_1_proc374 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.431 sec.
+INFO: [HLS 200-111]  Elapsed time: 59.347 seconds; current allocated memory: 191.483 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.03 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.sched.adb -f 
+Command       db_write returned 0; 0.021 sec.
+INFO: [HLS 200-0] Finish scheduling Sobel_Loop_1_proc374.
+Execute       set_default_model Sobel_Loop_1_proc374 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model Sobel_Loop_1_proc374 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=Sobel_Loop_1_proc374
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.029 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.112 seconds; current allocated memory: 191.710 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.029 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.bind.adb -f 
+Command       db_write returned 0; 0.016 sec.
+INFO: [HLS 200-0] Finish binding Sobel_Loop_1_proc374.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFGradientX3x3_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model xFGradientX3x3<0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model xFGradientX3x3<0, 0> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xFGradientX3x3<0, 0>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.037 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.115 seconds; current allocated memory: 191.822 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.009 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.sched.adb -f 
+Command       db_write returned 0; 0.015 sec.
+INFO: [HLS 200-0] Finish scheduling xFGradientX3x3<0, 0>.
+Execute       set_default_model xFGradientX3x3<0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model xFGradientX3x3<0, 0> 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=xFGradientX3x3<0, 0>
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.02 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.075 seconds; current allocated memory: 191.920 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.027 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.bind.adb -f 
+Command       db_write returned 0; 0.013 sec.
+INFO: [HLS 200-0] Finish binding xFGradientX3x3<0, 0>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFGradientY3x3_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model xFGradientY3x3<0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model xFGradientY3x3<0, 0> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xFGradientY3x3<0, 0>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.042 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.118 seconds; current allocated memory: 192.017 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.009 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.sched.adb -f 
+Command       db_write returned 0; 0.014 sec.
+INFO: [HLS 200-0] Finish scheduling xFGradientY3x3<0, 0>.
+Execute       set_default_model xFGradientY3x3<0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model xFGradientY3x3<0, 0> 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=xFGradientY3x3<0, 0>
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.023 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.083 seconds; current allocated memory: 192.115 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.025 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.bind.adb -f 
+Command       db_write returned 0; 0.015 sec.
+INFO: [HLS 200-0] Finish binding xFGradientY3x3<0, 0>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFSobel3x3_1_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model xFSobel3x3<1, 0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model xFSobel3x3<1, 0, 0> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'xFSobel3x3<1, 0, 0>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.024 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.101 seconds; current allocated memory: 192.170 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.004 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.sched.adb -f 
+Command       db_write returned 0; 0.011 sec.
+INFO: [HLS 200-0] Finish scheduling xFSobel3x3<1, 0, 0>.
+Execute       set_default_model xFSobel3x3<1, 0, 0> 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model xFSobel3x3<1, 0, 0> 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=xFSobel3x3<1, 0, 0>
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.054 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.098 seconds; current allocated memory: 192.273 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.038 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.bind.adb -f 
+Command       db_write returned 0; 0.009 sec.
+INFO: [HLS 200-0] Finish binding xFSobel3x3<1, 0, 0>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFSobelFilter3x3'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model xFSobelFilter3x3 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model xFSobelFilter3x3 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Clear_Row_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 6.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.594 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.682 seconds; current allocated memory: 192.808 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.1 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.sched.adb -f 
+Command       db_write returned 0; 0.045 sec.
+INFO: [HLS 200-0] Finish scheduling xFSobelFilter3x3.
+Execute       set_default_model xFSobelFilter3x3 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model xFSobelFilter3x3 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=xFSobelFilter3x3
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_0_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_1_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_2_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.151 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.328 seconds; current allocated memory: 193.315 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.193 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.bind.adb -f 
+Command       db_write returned 0; 0.049 sec.
+INFO: [HLS 200-0] Finish binding xFSobelFilter3x3.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Sobel_Loop_2_proc38'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Sobel_Loop_2_proc38 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model Sobel_Loop_2_proc38 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.394 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.679 seconds; current allocated memory: 193.550 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.031 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.sched.adb -f 
+Command       db_write returned 0; 0.02 sec.
+INFO: [HLS 200-0] Finish scheduling Sobel_Loop_2_proc38.
+Execute       set_default_model Sobel_Loop_2_proc38 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model Sobel_Loop_2_proc38 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=Sobel_Loop_2_proc38
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.036 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.143 seconds; current allocated memory: 193.701 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.039 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.bind.adb -f 
+Command       db_write returned 0; 0.02 sec.
+INFO: [HLS 200-0] Finish binding Sobel_Loop_2_proc38.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Sobel'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Sobel 
+Command       set_default_model returned 0; 0 sec.
+Execute       schedule -model Sobel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.03 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.136 seconds; current allocated memory: 193.788 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.01 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.sched.adb -f 
+Command       db_write returned 0; 0.017 sec.
+INFO: [HLS 200-0] Finish scheduling Sobel.
+Execute       set_default_model Sobel 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model Sobel 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=Sobel
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.289 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.351 seconds; current allocated memory: 194.085 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.33 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.bind.adb -f 
+Command       db_write returned 0; 0.014 sec.
+INFO: [HLS 200-0] Finish binding Sobel.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sobel_accel'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model sobel_accel 
+Command       set_default_model returned 0; 0.001 sec.
+Execute       schedule -model sobel_accel 
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-71] Latency directive discarded for region sobel_accel since region contains function calls with variable latency.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule returned 0; 0.025 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.413 seconds; current allocated memory: 194.200 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.verbose.sched.rpt -verbose -f 
+Command       report returned 0; 0.01 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.sched.adb -f 
+Command       db_write returned 0; 0.013 sec.
+INFO: [HLS 200-0] Finish scheduling sobel_accel.
+Execute       set_default_model sobel_accel 
+Command       set_default_model returned 0; 0 sec.
+Execute       bind -model sobel_accel 
+INFO: [BIND 205-110] clear=
+INFO: [BIND 205-110] debug=
+INFO: [BIND 205-110] drf=
+INFO: [BIND 205-110] effort=
+INFO: [BIND 205-110] fast_refine=
+INFO: [BIND 205-110] fu_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] global_opt=
+INFO: [BIND 205-110] gsearch=
+INFO: [BIND 205-110] help=
+INFO: [BIND 205-110] help-hidden=
+INFO: [BIND 205-110] min_mem_port=
+INFO: [BIND 205-110] min_op=
+INFO: [BIND 205-110] minreg=
+INFO: [BIND 205-110] ml=
+INFO: [BIND 205-110] model=sobel_accel
+INFO: [BIND 205-110] no_false_path=
+INFO: [BIND 205-110] no_min_op=
+INFO: [BIND 205-110] normalize=
+INFO: [BIND 205-110] quiet=
+INFO: [BIND 205-110] refine=
+INFO: [BIND 205-110] reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-110] search=
+INFO: [BIND 205-110] tight_delay=
+INFO: [BIND 205-110] verbose=
+INFO: [BIND 205-110] wFF=
+INFO: [BIND 205-110] wFU=
+INFO: [BIND 205-110] wMUX=
+INFO: [BIND 205-110] wNET=
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind returned 0; 0.085 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.146 seconds; current allocated memory: 194.277 MB.
+Execute       report -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.verbose.bind.rpt -verbose -f 
+Command       report returned 0; 0.177 sec.
+Execute       db_write -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.bind.adb -f 
+Command       db_write returned 0; 0.01 sec.
+INFO: [HLS 200-0] Finish binding sobel_accel.
+Execute       get_model_list sobel_accel -filter all-wo-channel 
+Command       get_model_list returned 0; 0.001 sec.
+INFO: [HLS 200-0] Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess Sobel_Loop_1_proc374 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess xFGradientX3x3<0, 0> 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess xFGradientY3x3<0, 0> 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess xFSobel3x3<1, 0, 0> 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess xFSobelFilter3x3 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess Sobel_Loop_2_proc38 
+Command       rtl_gen_preprocess returned 0; 0 sec.
+Execute       rtl_gen_preprocess Sobel 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+Execute       rtl_gen_preprocess sobel_accel 
+Command       rtl_gen_preprocess returned 0; 0.001 sec.
+INFO: [HLS 200-0] Model list for RTL generation: Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Sobel_Loop_1_proc374'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model Sobel_Loop_1_proc374 -vendor xilinx -mg_file C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_Loop_1_proc374'.
+Command       create_rtl_model returned 0; 0.056 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.312 seconds; current allocated memory: 194.731 MB.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       gen_rtl Sobel_Loop_1_proc374 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/systemc/a0_Sobel_Loop_1_proc374 -synmodules Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel 
+Command       gen_rtl returned 0; 0.008 sec.
+Execute       gen_rtl Sobel_Loop_1_proc374 -style xilinx -f -lang vhdl -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/vhdl/a0_Sobel_Loop_1_proc374 
+Command       gen_rtl returned 0; 0.008 sec.
+Execute       gen_rtl Sobel_Loop_1_proc374 -style xilinx -f -lang vlog -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/verilog/a0_Sobel_Loop_1_proc374 
+Command       gen_rtl returned 0; 0.006 sec.
+Execute       gen_tb_info Sobel_Loop_1_proc374 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374 -p C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db 
+Command       gen_tb_info returned 0; 0.018 sec.
+Execute       report -model Sobel_Loop_1_proc374 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/Sobel_Loop_1_proc374_csynth.rpt -f 
+Command       report returned 0; 0.018 sec.
+Execute       report -model Sobel_Loop_1_proc374 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/Sobel_Loop_1_proc374_csynth.xml -f -x 
+Command       report returned 0; 0.015 sec.
+Execute       report -model Sobel_Loop_1_proc374 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.verbose.rpt -verbose -f 
+Command       report returned 0; 0.042 sec.
+Execute       db_write -model Sobel_Loop_1_proc374 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.adb -f 
+Command       db_write returned 0; 0.04 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFGradientX3x3_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model xFGradientX3x3<0, 0> -vendor xilinx -mg_file C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFGradientX3x3_0_0_s'.
+Command       create_rtl_model returned 0; 0.014 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.367 seconds; current allocated memory: 195.073 MB.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       gen_rtl xFGradientX3x3<0, 0> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/systemc/a0_xFGradientX3x3_0_0_s -synmodules Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_rtl xFGradientX3x3<0, 0> -style xilinx -f -lang vhdl -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/vhdl/a0_xFGradientX3x3_0_0_s 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl xFGradientX3x3<0, 0> -style xilinx -f -lang vlog -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/verilog/a0_xFGradientX3x3_0_0_s 
+Command       gen_rtl returned 0; 0.001 sec.
+Execute       gen_tb_info xFGradientX3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s -p C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db 
+Command       gen_tb_info returned 0; 0.01 sec.
+Execute       report -model xFGradientX3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/xFGradientX3x3_0_0_s_csynth.rpt -f 
+Command       report returned 0; 0.012 sec.
+Execute       report -model xFGradientX3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/xFGradientX3x3_0_0_s_csynth.xml -f -x 
+Command       report returned 0; 0.008 sec.
+Execute       report -model xFGradientX3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.verbose.rpt -verbose -f 
+Command       report returned 0; 0.048 sec.
+Execute       db_write -model xFGradientX3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.adb -f 
+Command       db_write returned 0; 0.033 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFGradientY3x3_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model xFGradientY3x3<0, 0> -vendor xilinx -mg_file C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFGradientY3x3_0_0_s'.
+Command       create_rtl_model returned 0; 0.016 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.334 seconds; current allocated memory: 195.337 MB.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.004 sec.
+Execute       gen_rtl xFGradientY3x3<0, 0> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/systemc/a0_xFGradientY3x3_0_0_s -synmodules Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl xFGradientY3x3<0, 0> -style xilinx -f -lang vhdl -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/vhdl/a0_xFGradientY3x3_0_0_s 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl xFGradientY3x3<0, 0> -style xilinx -f -lang vlog -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/verilog/a0_xFGradientY3x3_0_0_s 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_tb_info xFGradientY3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s -p C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db 
+Command       gen_tb_info returned 0; 0.012 sec.
+Execute       report -model xFGradientY3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/xFGradientY3x3_0_0_s_csynth.rpt -f 
+Command       report returned 0; 0.011 sec.
+Execute       report -model xFGradientY3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/xFGradientY3x3_0_0_s_csynth.xml -f -x 
+Command       report returned 0; 0.01 sec.
+Execute       report -model xFGradientY3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.verbose.rpt -verbose -f 
+Command       report returned 0; 0.042 sec.
+Execute       db_write -model xFGradientY3x3<0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.adb -f 
+Command       db_write returned 0; 0.034 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFSobel3x3_1_0_0_s'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model xFSobel3x3<1, 0, 0> -vendor xilinx -mg_file C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFSobel3x3_1_0_0_s'.
+Command       create_rtl_model returned 0; 0.014 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.343 seconds; current allocated memory: 195.558 MB.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.004 sec.
+Execute       gen_rtl xFSobel3x3<1, 0, 0> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/systemc/a0_xFSobel3x3_1_0_0_s -synmodules Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_rtl xFSobel3x3<1, 0, 0> -style xilinx -f -lang vhdl -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/vhdl/a0_xFSobel3x3_1_0_0_s 
+Command       gen_rtl returned 0; 0.004 sec.
+Execute       gen_rtl xFSobel3x3<1, 0, 0> -style xilinx -f -lang vlog -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/verilog/a0_xFSobel3x3_1_0_0_s 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_tb_info xFSobel3x3<1, 0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s -p C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db 
+Command       gen_tb_info returned 0; 0.003 sec.
+Execute       report -model xFSobel3x3<1, 0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/xFSobel3x3_1_0_0_s_csynth.rpt -f 
+Command       report returned 0; 0.003 sec.
+Execute       report -model xFSobel3x3<1, 0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/xFSobel3x3_1_0_0_s_csynth.xml -f -x 
+Command       report returned 0; 0.002 sec.
+Execute       report -model xFSobel3x3<1, 0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.verbose.rpt -verbose -f 
+Command       report returned 0; 0.049 sec.
+Execute       db_write -model xFSobel3x3<1, 0, 0> -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.adb -f 
+Command       db_write returned 0; 0.023 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFSobelFilter3x3'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model xFSobelFilter3x3 -vendor xilinx -mg_file C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'xFSobelFilter3x3_buf_0_V' to 'xFSobelFilter3x3_bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFSobelFilter3x3_buf_1_V' to 'xFSobelFilter3x3_cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFSobelFilter3x3_buf_2_V' to 'xFSobelFilter3x3_dEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'sobel_accel_mux_32_8_1_1' to 'sobel_accel_mux_3eOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'sobel_accel_mux_3eOg': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFSobelFilter3x3'.
+Command       create_rtl_model returned 0; 0.161 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.341 seconds; current allocated memory: 196.590 MB.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       gen_rtl xFSobelFilter3x3 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/systemc/a0_xFSobelFilter3x3 -synmodules Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel 
+Command       gen_rtl returned 0; 0.009 sec.
+Execute       gen_rtl xFSobelFilter3x3 -style xilinx -f -lang vhdl -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/vhdl/a0_xFSobelFilter3x3 
+Command       gen_rtl returned 0; 0.007 sec.
+Execute       gen_rtl xFSobelFilter3x3 -style xilinx -f -lang vlog -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/verilog/a0_xFSobelFilter3x3 
+Command       gen_rtl returned 0; 0.008 sec.
+Execute       gen_tb_info xFSobelFilter3x3 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3 -p C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db 
+Command       gen_tb_info returned 0; 0.052 sec.
+Execute       report -model xFSobelFilter3x3 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/xFSobelFilter3x3_csynth.rpt -f 
+Command       report returned 0; 0.058 sec.
+Execute       report -model xFSobelFilter3x3 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/xFSobelFilter3x3_csynth.xml -f -x 
+Command       report returned 0; 0.04 sec.
+Execute       report -model xFSobelFilter3x3 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.verbose.rpt -verbose -f 
+Command       report returned 0; 0.273 sec.
+Execute       db_write -model xFSobelFilter3x3 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.adb -f 
+Command       db_write returned 0; 0.123 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Sobel_Loop_2_proc38'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model Sobel_Loop_2_proc38 -vendor xilinx -mg_file C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel_Loop_2_proc38'.
+Command       create_rtl_model returned 0; 0.047 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.296 seconds; current allocated memory: 197.123 MB.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       gen_rtl Sobel_Loop_2_proc38 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/systemc/a0_Sobel_Loop_2_proc38 -synmodules Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel 
+Command       gen_rtl returned 0; 0.006 sec.
+Execute       gen_rtl Sobel_Loop_2_proc38 -style xilinx -f -lang vhdl -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/vhdl/a0_Sobel_Loop_2_proc38 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_rtl Sobel_Loop_2_proc38 -style xilinx -f -lang vlog -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/verilog/a0_Sobel_Loop_2_proc38 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_tb_info Sobel_Loop_2_proc38 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38 -p C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db 
+Command       gen_tb_info returned 0; 0.015 sec.
+Execute       report -model Sobel_Loop_2_proc38 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/Sobel_Loop_2_proc38_csynth.rpt -f 
+Command       report returned 0; 0.015 sec.
+Execute       report -model Sobel_Loop_2_proc38 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/Sobel_Loop_2_proc38_csynth.xml -f -x 
+Command       report returned 0; 0.013 sec.
+Execute       report -model Sobel_Loop_2_proc38 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.verbose.rpt -verbose -f 
+Command       report returned 0; 0.044 sec.
+Execute       db_write -model Sobel_Loop_2_proc38 -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.adb -f 
+Command       db_write returned 0; 0.049 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Sobel'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model Sobel -vendor xilinx -mg_file C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'start_for_xFSobelFilter3x3_U0' to 'start_for_xFSobelfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'start_for_Sobel_Loop_2_proc38_U0' to 'start_for_Sobel_Lg8j' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Sobel'.
+Command       create_rtl_model returned 0; 0.033 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.389 seconds; current allocated memory: 197.758 MB.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       gen_rtl Sobel -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/systemc/a0_Sobel -synmodules Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel 
+Command       gen_rtl returned 0; 0.003 sec.
+Execute       gen_rtl Sobel -style xilinx -f -lang vhdl -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/vhdl/a0_Sobel 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_rtl Sobel -style xilinx -f -lang vlog -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/verilog/a0_Sobel 
+Command       gen_rtl returned 0; 0.002 sec.
+Execute       gen_tb_info Sobel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel -p C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db 
+Command       gen_tb_info returned 0; 0.024 sec.
+Execute       report -model Sobel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/Sobel_csynth.rpt -f 
+Command       report returned 0; 0.025 sec.
+Execute       report -model Sobel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/Sobel_csynth.xml -f -x 
+Command       report returned 0; 0.02 sec.
+Execute       report -model Sobel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.verbose.rpt -verbose -f 
+Command       report returned 0; 0.212 sec.
+Execute       db_write -model Sobel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.adb -f 
+Command       db_write returned 0; 0.059 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sobel_accel'
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       create_rtl_model sobel_accel -vendor xilinx -mg_file C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_allocatedFlag' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_cols' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_src_data_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_allocatedFlag' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_cols' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgx_data_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_allocatedFlag' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_rows' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_cols' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_size' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'sobel_accel/p_dstgy_data_V' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'sobel_accel' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_src_allocatedFlag' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_src_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgx_allocatedFlag' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgx_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgy_allocatedFlag' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgy_rows' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'sobel_accel/p_dstgy_size' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sobel_accel'.
+Command       create_rtl_model returned 0; 0.141 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.579 seconds; current allocated memory: 198.219 MB.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       gen_rtl sobel_accel -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/systemc/a0_sobel_accel -synmodules Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel 
+Command       gen_rtl returned 0; 0.005 sec.
+Execute       gen_rtl sobel_accel -istop -style xilinx -f -lang vhdl -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/vhdl/a0_sobel_accel 
+Command       gen_rtl returned 0; 0.006 sec.
+Execute       gen_rtl sobel_accel -istop -style xilinx -f -lang vlog -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/verilog/a0_sobel_accel 
+Command       gen_rtl returned 0; 0.005 sec.
+Execute       export_constraint_db -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.constraint.tcl -f -tool general 
+Command       export_constraint_db returned 0; 0.002 sec.
+Execute       report -model sobel_accel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.design.xml -verbose -f -dv 
+Command       report returned 0; 0.19 sec.
+Execute       report -model sobel_accel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.sdaccel.xml -verbose -f -sdaccel 
+Command       report returned 0; 0.009 sec.
+Execute       gen_tb_info sobel_accel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel -p C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db 
+Command       gen_tb_info returned 0; 0.006 sec.
+Execute       report -model sobel_accel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/sobel_accel_csynth.rpt -f 
+Command       report returned 0; 0.006 sec.
+Execute       report -model sobel_accel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/syn/report/sobel_accel_csynth.xml -f -x 
+Command       report returned 0; 0.004 sec.
+Execute       report -model sobel_accel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.verbose.rpt -verbose -f 
+Command       report returned 0; 0.183 sec.
+Execute       db_write -model sobel_accel -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.adb -f 
+Command       db_write returned 0; 0.038 sec.
+Execute       sc_get_clocks sobel_accel 
+Command       sc_get_clocks returned 0; 0.001 sec.
+Execute       sc_get_portdomain sobel_accel 
+Command       sc_get_portdomain returned 0; 0 sec.
+INFO: [HLS 200-0] Model list for RTL component generation: Sobel_Loop_1_proc374 {xFGradientX3x3<0, 0>} {xFGradientY3x3<0, 0>} {xFSobel3x3<1, 0, 0>} xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel
+INFO: [HLS 200-0] Handling components in module [Sobel_Loop_1_proc374] ... 
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-0] Handling components in module [xFGradientX3x3_0_0_s] ... 
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-0] Handling components in module [xFGradientY3x3_0_0_s] ... 
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-0] Handling components in module [xFSobel3x3_1_0_0_s] ... 
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-0] Handling components in module [xFSobelFilter3x3] ... 
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+INFO: [HLS 200-0] Found component a0_sobel_accel_mux_3eOg.
+INFO: [HLS 200-0] Append model a0_sobel_accel_mux_3eOg
+INFO: [HLS 200-0] Found component a0_xFSobelFilter3x3_bkb.
+INFO: [HLS 200-0] Append model a0_xFSobelFilter3x3_bkb
+Command       ap_source returned 0; 0.004 sec.
+INFO: [HLS 200-0] Handling components in module [Sobel_Loop_2_proc38] ... 
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-0] Handling components in module [Sobel] ... 
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+INFO: [HLS 200-0] Found component a0_fifo_w8_d2_A.
+INFO: [HLS 200-0] Append model a0_fifo_w8_d2_A
+INFO: [HLS 200-0] Found component a0_fifo_w32_d2_A.
+INFO: [HLS 200-0] Append model a0_fifo_w32_d2_A
+INFO: [HLS 200-0] Found component a0_fifo_w32_d2_A.
+INFO: [HLS 200-0] Append model a0_fifo_w32_d2_A
+INFO: [HLS 200-0] Found component a0_fifo_w32_d3_A.
+INFO: [HLS 200-0] Append model a0_fifo_w32_d3_A
+INFO: [HLS 200-0] Found component a0_fifo_w32_d3_A.
+INFO: [HLS 200-0] Append model a0_fifo_w32_d3_A
+INFO: [HLS 200-0] Found component a0_fifo_w32_d3_A.
+INFO: [HLS 200-0] Append model a0_fifo_w32_d3_A
+INFO: [HLS 200-0] Found component a0_fifo_w8_d2_A.
+INFO: [HLS 200-0] Append model a0_fifo_w8_d2_A
+INFO: [HLS 200-0] Found component a0_fifo_w8_d2_A.
+INFO: [HLS 200-0] Append model a0_fifo_w8_d2_A
+INFO: [HLS 200-0] Found component a0_start_for_xFSobelfYi.
+INFO: [HLS 200-0] Append model a0_start_for_xFSobelfYi
+INFO: [HLS 200-0] Found component a0_start_for_Sobel_Lg8j.
+INFO: [HLS 200-0] Append model a0_start_for_Sobel_Lg8j
+Command       ap_source returned 0; 0.004 sec.
+INFO: [HLS 200-0] Handling components in module [sobel_accel] ... 
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+INFO: [HLS 200-0] Append model Sobel_Loop_1_proc374
+INFO: [HLS 200-0] Append model xFGradientX3x3_0_0_s
+INFO: [HLS 200-0] Append model xFGradientY3x3_0_0_s
+INFO: [HLS 200-0] Append model xFSobel3x3_1_0_0_s
+INFO: [HLS 200-0] Append model xFSobelFilter3x3
+INFO: [HLS 200-0] Append model Sobel_Loop_2_proc38
+INFO: [HLS 200-0] Append model Sobel
+INFO: [HLS 200-0] Append model sobel_accel
+INFO: [HLS 200-0] Generating RTL model list ...
+INFO: [HLS 200-0] All models in this session: a0_sobel_accel_mux_3eOg a0_xFSobelFilter3x3_bkb a0_fifo_w8_d2_A a0_fifo_w32_d2_A a0_fifo_w32_d2_A a0_fifo_w32_d3_A a0_fifo_w32_d3_A a0_fifo_w32_d3_A a0_fifo_w8_d2_A a0_fifo_w8_d2_A a0_start_for_xFSobelfYi a0_start_for_Sobel_Lg8j Sobel_Loop_1_proc374 xFGradientX3x3_0_0_s xFGradientY3x3_0_0_s xFSobel3x3_1_0_0_s xFSobelFilter3x3 Sobel_Loop_2_proc38 Sobel sobel_accel
+INFO: [HLS 200-0] To file: write model a0_sobel_accel_mux_3eOg
+INFO: [HLS 200-0] To file: write model a0_xFSobelFilter3x3_bkb
+INFO: [HLS 200-0] To file: write model a0_fifo_w8_d2_A
+INFO: [HLS 200-0] To file: write model a0_fifo_w32_d2_A
+INFO: [HLS 200-0] To file: write model a0_fifo_w32_d2_A
+INFO: [HLS 200-0] To file: write model a0_fifo_w32_d3_A
+INFO: [HLS 200-0] To file: write model a0_fifo_w32_d3_A
+INFO: [HLS 200-0] To file: write model a0_fifo_w32_d3_A
+INFO: [HLS 200-0] To file: write model a0_fifo_w8_d2_A
+INFO: [HLS 200-0] To file: write model a0_fifo_w8_d2_A
+INFO: [HLS 200-0] To file: write model a0_start_for_xFSobelfYi
+INFO: [HLS 200-0] To file: write model a0_start_for_Sobel_Lg8j
+INFO: [HLS 200-0] To file: write model Sobel_Loop_1_proc374
+INFO: [HLS 200-0] To file: write model xFGradientX3x3_0_0_s
+INFO: [HLS 200-0] To file: write model xFGradientY3x3_0_0_s
+INFO: [HLS 200-0] To file: write model xFSobel3x3_1_0_0_s
+INFO: [HLS 200-0] To file: write model xFSobelFilter3x3
+INFO: [HLS 200-0] To file: write model Sobel_Loop_2_proc38
+INFO: [HLS 200-0] To file: write model Sobel
+INFO: [HLS 200-0] To file: write model sobel_accel
+INFO: [HLS 200-0] Finished generating RTL model list.
+
+
+INFO: [HLS 200-0] RTL Generation done.
+INFO: [HLS 200-0] CAS Generation done.
+INFO: [HLS 200-0] CBC Generation done.
+Execute       export_ssdm C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/a.export.ll 
+Command       export_ssdm returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0.002 sec.
+Command       ap_source returned 0; 0.005 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0.005 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.007 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.008 sec.
+Execute               source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.014 sec.
+Command             ap_source returned 0; 0.023 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.022 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.015 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.006 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.14 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0.002 sec.
+Command           ap_source returned 0; 0.229 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0.002 sec.
+Command         ap_source returned 0; 0.238 sec.
+Command       ap_source returned 0; 0.238 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0.003 sec.
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'a0_xFSobelFilter3x3_bkb_ram (RAM_S2P_BRAM)' using block RAMs.
+Command       ap_source returned 0; 0.056 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w8_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d3_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d3_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w32_d3_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w8_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_fifo_w8_d2_A' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_start_for_xFSobelfYi' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'a0_start_for_Sobel_Lg8j' using Shift Registers.
+Command       ap_source returned 0; 0.25 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command       ap_source returned 0; 0 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command             ap_source returned 0; 0.002 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command             ap_source returned 0; 0.001 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command             ap_source returned 0; 0.003 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command               ap_source returned 0; 0.005 sec.
+Execute               source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command               ap_source returned 0; 0.011 sec.
+Command             ap_source returned 0; 0.016 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command             ap_source returned 0; 0.018 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command             ap_source returned 0; 0.011 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command             ap_source returned 0; 0.006 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command             ap_source returned 0; 0 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source returned 0; 0.134 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command             ap_source returned 0; 0.002 sec.
+Command           ap_source returned 0; 0.195 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source returned 0; 0 sec.
+Command         ap_source returned 0; 0.199 sec.
+Command       ap_source returned 0; 0.199 sec.
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command         ap_source returned 0; 0.004 sec.
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.004 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+Command       ap_source returned 0; 0.062 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+Command       ap_source returned 0; 0.007 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.constraint.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.003 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.constraint.tcl 
+Command       ap_source returned 0; 0.001 sec.
+Execute       sc_get_clocks sobel_accel 
+Command       sc_get_clocks returned 0; 0 sec.
+Execute       source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command       ap_source returned 0; 0.002 sec.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:01:10 . Memory (MB): peak = 260.254 ; gain = 202.813
+INFO: [SYSC 207-301] Generating SystemC RTL for sobel_accel with prefix a0_.
+INFO: [VHDL 208-304] Generating VHDL RTL for sobel_accel with prefix a0_.
+INFO: [VLOG 209-307] Generating Verilog RTL for sobel_accel with prefix a0_.
+Command     autosyn returned 0; 10.967 sec.
+Command   csynth_design returned 0; 67.472 sec.
+Execute   export_design -ipname sobel_accel -acc 
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.007 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.013 sec.
+Command           ap_source returned 0; 0.02 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.021 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.014 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.006 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.142 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.002 sec.
+Command         ap_source returned 0; 0.215 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.219 sec.
+Command     ap_source returned 0; 0.219 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.003 sec.
+Command     ap_source returned 0; 0.005 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.003 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.004 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.007 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.015 sec.
+Command           ap_source returned 0; 0.023 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.022 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.013 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.005 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.159 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.002 sec.
+Command         ap_source returned 0; 0.236 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.24 sec.
+Command     ap_source returned 0; 0.241 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.003 sec.
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+Command     ap_source returned 0; 0.005 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+Command     ap_source returned 0; 0.075 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_1_proc374.compgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientX3x3_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFGradientY3x3_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobel3x3_1_0_0_s.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/xFSobelFilter3x3.compgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel_Loop_2_proc38.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/Sobel.compgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.compgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.constraint.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.016 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.constraint.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     sc_get_clocks sobel_accel 
+Command     sc_get_clocks returned 0; 0 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.005 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.005 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.006 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.005 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.004 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.rtl_wrap.cfg.tcl 
+Command     ap_source returned 0; 0.01 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.constraint.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.constraint.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.constraint.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/sobel_accel.tbgen.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/APCoreGen.gen 
+Command       ap_source returned 0; 0.001 sec.
+Command     ap_source returned 0; 0.003 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op.gen 
+Command     ap_source returned 0; 0.001 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/op_simcore.gen 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/generic/autopilot/interface.gen 
+Command     ap_source returned 0; 0 sec.
+Execute     source C:/Users/yakup/workspace/bitirme_v4/Release/_sds/vhls/sobel_accel/solution/.autopilot/db/global.setting.tcl 
+Command     ap_source returned 0; 0.002 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/virtex.gen 
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx.gen 
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/plb46.gen 
+Command           ap_source returned 0; 0.002 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/fsl.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/axi4.gen 
+Command           ap_source returned 0; 0.005 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/saxilite.gen 
+Command             ap_source returned 0; 0.007 sec.
+Execute             source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/maxi.gen 
+Command             ap_source returned 0; 0.01 sec.
+Command           ap_source returned 0; 0.017 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Command           ap_source returned 0; 0.026 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Command           ap_source returned 0; 0.022 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/dds_compiler.gen 
+Command           ap_source returned 0; 0.009 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/util.gen 
+Command           ap_source returned 0; 0.001 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source returned 0; 0.185 sec.
+Execute           source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source returned 0; 0.001 sec.
+Command         ap_source returned 0; 0.273 sec.
+Execute         source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source returned 0; 0.001 sec.
+Command       ap_source returned 0; 0.279 sec.
+Command     ap_source returned 0; 0.279 sec.
+Execute     source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source C:/Xilinx/Vivado/2018.1/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command       ap_source returned 0; 0.004 sec.
+Command     ap_source returned 0; 0.004 sec.
+Command   export_design returned 0; 34.81 sec.
+Execute   cleanup_all 
+Command   cleanup_all returned 0; 0.039 sec.

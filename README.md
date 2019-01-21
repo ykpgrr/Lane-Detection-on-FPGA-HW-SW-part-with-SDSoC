@@ -1,7 +1,7 @@
 # Lane-Detection-SDSoC-FPGA
 Realization of Advance Lane Detection Algorithm on Xilinx ZYNQ-7000 using SDSoC platform. <br />
 
-This project realized in C++ using with OpenCV and xfOpenCV Libraries. 
+This project realized in C++ using with OpenCV and xfOpenCV Libraries. <br />
 It is a sub-task of "REALIZATION OF LANE DETECTION ALGORITHMS ON FPGA USING SDSOC AND VIVADO" graduate project at Istanbul Technical University, June 2018. <br />
 
 Project members: <br />
@@ -12,14 +12,18 @@ Sıddıka Berna ÖRS YALÇIN (Advisor) <br />
 ### LANE-DETECTION-ALGORITHMS-ON-FPGA (https://github.com/ykpgrr/LANE-DETECTION-ALGORITHMS-ON-FPGA.git) -Full Project -
 1-) Lane Detection (https://github.com/ykpgrr/Lane-Detection.git)<br />
 __2-) Lane Detection SDSoC FPGA (This Repository) <br />__
+<<<<<<< HEAD
 3-) Lane-Detection VIVADO FPGA (https://github.com/ykpgrr/Lane-Detection-VIVADO-FPGA.git) <br />
+=======
+3-) Lane-Detection VIVADO FPGA () <br />
+>>>>>>> 073ae4eeb9de0b6b936e433dce85850cd8e6d6cb
 
 ## TODO
 - Update Readme <br />
 -- x Add Summary of REALIZATION OF LANE DETECTION ALGORITHMS ON FPGA USING SDSOC AND VIVADO <br />
 -- Add SDSoC software/hardware diagram on Readme <br />
 -- Add Results <br />
--- Add project settings files <br />
+- Add project settings files <br />
 
 
 
@@ -35,5 +39,9 @@ The lane detection algorithm is written in “C++” with “OpenCV” library. 
 
 According to the time analysis of the lane detection algorithm, the preprocessing part was implemented in hardware. SDSoC and Vivado platforms were used to make implementation of the developed lane detection algorithm on FPGA. Low level code (Verilog) is used in Vivado platform while high level code (C++) is used in SDSoC platform. In SDSoC platform, the "xfOpenCV" library was also used. The “xfOpenCV” library is a set of 50+ kernels, optimized for Xilinx FPGAs and SoCs, based on the OpenCV computer vision library. The kernels in the xfOpenCV library are optimized and supported in the Xilinx SDSoC Tool Suit.<br />
 
-
-
+# Lane-Detection-SDSoC-FPGA
+### Dependencies
+- Xilinx SDx Development Environments (tested version 2018.1 ) <br />
+- OpenCV 2.4 (tested at windows platform __(builded for windows)__ ) <br />
+- OpenCV 2.4 for ARM processor  (tested on Zedboard __(builded for ARCH32 architecture)__) <br />
+- Xilinx xfOpenCV Library <br />

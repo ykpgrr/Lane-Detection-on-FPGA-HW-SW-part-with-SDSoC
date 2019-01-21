@@ -1,0 +1,90 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.1 SW Build 2188600 on Wed Apr  4 18:41:44 MDT 2018
+# Start time    : Wed May 23 18:10:39 +0300 2018
+# Command line  : sds++ -LC:/OpencvlibARCH32 --remote_ip_cache C:/Users/yakup/workspace/ip_cache -o bitirme_v4.elf ./src/Lane.o ./src/TimeAnalyze.o ./src/main.o ./src/xf_sobel_accel.o -lopencv_calib3d -lopencv_features2d -lopencv_flann -lopencv_imgproc -lopencv_core -lopencv_highgui -dmclkid 2 -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds.log
+# Journal file  : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds.jou
+# Report file   : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+Libraries: opencv_calib3d opencv_features2d opencv_flann opencv_imgproc opencv_core opencv_highgui
+Library Paths C:/OpencvlibARCH32 {}
+Searching for static library libopencv_calib3d.a
+Searching for static library libopencv_features2d.a
+Searching for static library libopencv_flann.a
+Searching for static library libopencv_imgproc.a
+Searching for static library libopencv_core.a
+Searching for static library libopencv_highgui.a
+Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/yakup/workspace/bitirme_v4/Release/src/Lane.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/yakup/workspace/bitirme_v4/Release/src/Lane.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/yakup/workspace/bitirme_v4/Release/src/TimeAnalyze.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/yakup/workspace/bitirme_v4/Release/src/TimeAnalyze.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/yakup/workspace/bitirme_v4/Release/src/main.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/yakup/workspace/bitirme_v4/Release/src/main.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/sobel_accel.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.pp/xf_sobel_accel.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/sobel_accel.sobel_accel.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/xilinx_com_hls_sobel_accel_1_0.zip
+C:/Xilinx/SDx/2018.1/bin/unzip.bat -u -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/xilinx_com_hls_sobel_accel_1_0.zip -d C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0
+Archive:  C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/xilinx_com_hls_sobel_accel_1_0.zip
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/component.xml  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/constraints/a0_sobel_accel_ooc.xdc  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_fifo_w8_d2_A.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_fifo_w32_d2_A.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_fifo_w32_d3_A.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_Sobel.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_sobel_accel_mux_3eOg.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_Sobel_Loop_1_proc374.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_Sobel_Loop_2_proc38.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_start_for_Sobel_Lg8j.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_start_for_xFSobelfYi.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_xFGradientX3x3_0_0_s.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_xFGradientY3x3_0_0_s.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_xFSobel3x3_1_0_0_s.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_xFSobelFilter3x3.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_xFSobelFilter3x3_bkb.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/verilog/a0_sobel_accel.v  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_fifo_w8_d2_A.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_fifo_w32_d2_A.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_fifo_w32_d3_A.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_Sobel.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_sobel_accel_mux_3eOg.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_Sobel_Loop_1_proc374.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_Sobel_Loop_2_proc38.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_start_for_Sobel_Lg8j.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_start_for_xFSobelfYi.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_xFGradientX3x3_0_0_s.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_xFGradientY3x3_0_0_s.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_xFSobel3x3_1_0_0_s.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_xFSobelFilter3x3.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_xFSobelFilter3x3_bkb.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/hdl/vhdl/a0_sobel_accel.vhd  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/doc/ReleaseNotes.txt  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/misc/logo.png  
+  inflating: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/xgui/sobel_accel_v1_0.tcl  
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/sobel_accel_if.xml
+C:/Xilinx/SDx/2018.1/bin/build_xd_ip_db  -sds-pf C:/Users/yakup/workspace/bitirme_v4/Release/.Xil/zed.hpfm  -ip C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0  -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/xd_ip_db.xml  
+INFO: Using user-defined path for XILINX_XD environment variable C:/Xilinx/SDx/2018.1
+processing accelerators: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0
+ip_dir: C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0
+C:/Xilinx/SDx/2018.1/bin/xsltproc --stringparam xpath "spirit:component/spirit:name/text()" C:/Xilinx/SDx/2018.1/scripts/xdcc/xpathValueOf.xsl C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/component.xml
+ip_name: sobel_accel
+Generating data motion network
+C:/Xilinx/SDx/2018.1/bin/llvm-link -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/sds_all.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/Lane.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/TimeAnalyze.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/main.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/xf_sobel_accel.s
+
+C:\Users\yakup\workspace\bitirme_v4\Release>C:\Xilinx\SDx\2018.1\llvm-clang\win64\llvm\bin\llvm-link.exe -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/sds_all.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/Lane.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/TimeAnalyze.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/main.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/xf_sobel_accel.s 
+
+C:\Users\yakup\workspace\bitirme_v4\Release>exit /b 0 
+C:/Xilinx/SDx/2018.1/bin/XidanePass  --platform zed  --dmclkid 2  --repo C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.1/data/DM.db   -os linux -processor cortex-a9 -partition 0  
+
+C:\Users\yakup\workspace\bitirme_v4\Release\_sds\.llvm>opt -disable-output -mem2reg -basicaa -XidanePass --platform zed --dmclkid 2 --repo C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/xd_ip_db.xml --dmdb C:/Xilinx/SDx/2018.1/data/DM.db -os linux -processor cortex-a9 -partition 0  0<sds_all.o 
+INFO: [DMAnalysis 83-4494] Analyzing hardware accelerators...
+ERROR: [DMAnalysis 83-4432] Interface type of port p_src_data_V_q0 of accelerator sobel_accel not supported!
+XidanePass exited with return code 1
+- errors detected
+sds++ log file saved as C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds.log
+ERROR: [SdsCompiler 83-5004] Build failed
+sds++ completed at Wed May 23 18:11:15 +0300 2018

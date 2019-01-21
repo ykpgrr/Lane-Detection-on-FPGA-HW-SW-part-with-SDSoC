@@ -1,0 +1,32 @@
+(c) Copyright 2012-2018 Xilinx, Inc. All Rights Reserved.
+#-----------------------------------------------------------
+# Tool version  : sds++ 2018.1 SW Build 2188600 on Wed Apr  4 18:41:44 MDT 2018
+# Start time    : Wed May 23 18:10:39 +0300 2018
+# Command line  : sds++ -LC:/OpencvlibARCH32 --remote_ip_cache C:/Users/yakup/workspace/ip_cache -o bitirme_v4.elf ./src/Lane.o ./src/TimeAnalyze.o ./src/main.o ./src/xf_sobel_accel.o -lopencv_calib3d -lopencv_features2d -lopencv_flann -lopencv_imgproc -lopencv_core -lopencv_highgui -dmclkid 2 -sds-sys-config linux -sds-proc linux -sds-pf zed
+# Log file      : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds.log
+# Journal file  : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds.jou
+# Report file   : C:/Users/yakup/workspace/bitirme_v4/Release/_sds/reports/sds.rpt
+#-----------------------------------------------------------
+
+# Analyzing object files
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/yakup/workspace/bitirme_v4/Release/src/Lane.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/yakup/workspace/bitirme_v4/Release/src/Lane.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/yakup/workspace/bitirme_v4/Release/src/TimeAnalyze.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/yakup/workspace/bitirme_v4/Release/src/TimeAnalyze.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/yakup/workspace/bitirme_v4/Release/src/main.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/yakup/workspace/bitirme_v4/Release/src/main.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xddata.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdinfo=alloc --only-section=.xdinfo C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/xdinfo.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xddata=alloc --only-section=.xddata C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.data/sobel_accel.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdpp=alloc --only-section=.xdpp C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.pp/xf_sobel_accel.ii
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdfcnmap=alloc --only-section=.xdfcnmap C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/sobel_accel.sobel_accel.fcnmap.xml
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdhlscore=alloc --only-section=.xdhlscore C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/xilinx_com_hls_sobel_accel_1_0.zip
+C:/Xilinx/SDx/2018.1/bin/unzip.bat -u -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0/xilinx_com_hls_sobel_accel_1_0.zip -d C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0
+arm-linux-gnueabihf-objcopy -O binary --set-section-flags .xdif=alloc --only-section=.xdif C:/Users/yakup/workspace/bitirme_v4/Release/src/xf_sobel_accel.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/sobel_accel_if.xml
+C:/Xilinx/SDx/2018.1/bin/build_xd_ip_db  -sds-pf C:/Users/yakup/workspace/bitirme_v4/Release/.Xil/zed.hpfm  -ip C:/Users/yakup/workspace/bitirme_v4/Release/_sds/iprepo/repo/xilinx_com_hls_sobel_accel_1_0  -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/xd_ip_db.xml  
+# Generating data motion network
+C:/Xilinx/SDx/2018.1/bin/llvm-link -o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/sds_all.o C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/Lane.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/TimeAnalyze.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/main.s C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm/./src/xf_sobel_accel.s
+cd C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm
+cd C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.llvm
+C:/Xilinx/SDx/2018.1/bin/XidanePass  --platform zed  --dmclkid 2  --repo C:/Users/yakup/workspace/bitirme_v4/Release/_sds/.cdb/xd_ip_db.xml  --dmdb C:/Xilinx/SDx/2018.1/data/DM.db   -os linux -processor cortex-a9 -partition 0  
+# ERROR: [SdsCompiler 83-5004] Build failed
+# sds++ completed at Wed May 23 18:11:15 +0300 2018

@@ -1,0 +1,402 @@
+
+
+================================================================
+== Vivado HLS Report for 'xFSobelFilter3x3'
+================================================================
+* Date:           Wed May 23 18:09:49 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        sobel_accel
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.89|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  312163|  312163|  312163|  312163|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------+--------+--------+----------+-----------+-----------+------+----------+
+        |                  |     Latency     | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name    |   min  |   max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------+--------+--------+----------+-----------+-----------+------+----------+
+        |- Clear_Row_Loop  |     640|     640|         2|          1|          1|   640|    yes   |
+        |- Row_Loop        |  311520|  311520|       649|          -|          -|   480|    no    |
+        | + Col_Loop       |     644|     644|         6|          1|          1|   640|    yes   |
+        +------------------+--------+--------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 6
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+  Pipeline-1 : II = 1, D = 6, States = { 6 7 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	4  / (!tmp_2_i_i)
+	3  / (tmp_2_i_i)
+3 --> 
+	2  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / (tmp_7_i_i)
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	12  / (!tmp_12_i_i)
+	10  / (tmp_12_i_i)
+10 --> 
+	11  / true
+11 --> 
+	6  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	5  / true
+
+* FSM state operations: 
+
+ <State 1> : 3.63ns
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_grady_mat_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%empty_7 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_gradx_mat_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%empty_8 = call i32 (...)* @_ssdm_op_SpecInterface(i8* %p_src_mat_V_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%buf_0_V = alloca [640 x i8], align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:286->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%buf_1_V = alloca [640 x i8], align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:286->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%buf_2_V = alloca [640 x i8], align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:286->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty_9 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %p_src_mat_cols_read, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%empty_10 = call i32 (...)* @_ssdm_op_SpecInterface(i32* %p_src_mat_rows_read, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"
+ST_1 : Operation 23 [1/1] (3.63ns)   --->   "%p_src_mat_rows_read_1 = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %p_src_mat_rows_read)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_1 : Operation 24 [1/1] (3.63ns)   --->   "%p_src_mat_cols_read_1 = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %p_src_mat_cols_read)"   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%tmp_1 = trunc i32 %p_src_mat_rows_read_1 to i16" [C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%tmp_2 = trunc i32 %p_src_mat_cols_read_1 to i16" [C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([640 x i8]* %buf_0_V, [640 x i8]* %buf_1_V, [640 x i8]* %buf_2_V, [1 x i8]* @p_str, [13 x i8]* @p_str10, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:287->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_1 : Operation 28 [1/1] (1.76ns)   --->   "br label %0" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+ <State 2> : 2.43ns
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%p_1_i_i = phi i13 [ 0, %entry ], [ %col_V, %1 ]"
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_1_cast_i_i = zext i13 %p_1_i_i to i16" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_2 : Operation 31 [1/1] (2.42ns)   --->   "%tmp_2_i_i = icmp ult i16 %tmp_1_cast_i_i, %tmp_2" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (1.67ns)   --->   "%col_V = add i13 %p_1_i_i, 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "br i1 %tmp_2_i_i, label %1, label %.preheader.preheader.i.i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+ <State 3> : 6.89ns
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%tmp_1_i_i = zext i13 %p_1_i_i to i32" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([15 x i8]* @p_str11) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:293->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%tmp_4_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str11)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:293->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 640, i32 640, i32 0, [1 x i8]* @p_str) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:294->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:295->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%buf_0_V_addr = getelementptr [640 x i8]* %buf_0_V, i32 0, i32 %tmp_1_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_3 : Operation 40 [1/1] (3.25ns)   --->   "store i8 0, i8* %buf_0_V_addr, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:296->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_3 : Operation 41 [1/1] (3.63ns)   --->   "%tmp_V = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %p_src_mat_V_V)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:297->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%buf_1_V_addr = getelementptr [640 x i8]* %buf_1_V, i32 0, i32 %tmp_1_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_3 : Operation 43 [1/1] (3.25ns)   --->   "store i8 %tmp_V, i8* %buf_1_V_addr, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:297->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%empty_11 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str11, i32 %tmp_4_i_i)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:298->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "br label %0" [C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+ <State 4> : 2.08ns
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%p_5_i_i = alloca i2"
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%p_4_i_i = alloca i2"
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%p_3_i_i = alloca i2"
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "%tmp_5_cast100_i_i = zext i16 %tmp_1 to i17" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_4 : Operation 50 [1/1] (2.07ns)   --->   "%op2_assign = add i17 %tmp_5_cast100_i_i, 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 51 [1/1] (1.76ns)   --->   "br label %.preheader.i.i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+ <State 5> : 5.05ns
+ST_5 : Operation 52 [1/1] (0.00ns)   --->   "%p_2_i_i = phi i13 [ 2, %.preheader.preheader.i.i ], [ %p_i_i_15, %"ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>.exit.i.i" ]" [C:/xfopencv/include\imgproc/xf_sobel.hpp:364->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 53 [1/1] (0.00ns)   --->   "%p_6_i_i = phi i13 [ 1, %.preheader.preheader.i.i ], [ %row_V, %"ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>.exit.i.i" ]"
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%tmp_6_cast_i_i = zext i13 %p_6_i_i to i17" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 55 [1/1] (2.43ns)   --->   "%tmp_7_i_i = icmp ult i17 %tmp_6_cast_i_i, %op2_assign" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "br i1 %tmp_7_i_i, label %_ifconv, label %.exit" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "%p_5_i_i_load = load i2* %p_5_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:313->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 58 [1/1] (0.00ns)   --->   "%p_4_i_i_load = load i2* %p_4_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:313->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 59 [1/1] (0.00ns)   --->   "%p_3_i_i_load = load i2* %p_3_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:313->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_6_cast99_i_i = zext i13 %p_6_i_i to i16" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str14) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:303->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 62 [1/1] (0.00ns)   --->   "%tmp_10_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str14)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:303->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 480, i32 480, i32 0, [1 x i8]* @p_str) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:304->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 64 [1/1] (2.09ns)   --->   "%tmp_8_i_i = icmp eq i13 %p_2_i_i, 2" [C:/xfopencv/include\imgproc/xf_sobel.hpp:305->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 65 [1/1] (2.09ns)   --->   "%tmp_9_i_i = icmp eq i13 %p_2_i_i, 0" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 66 [1/1] (2.09ns)   --->   "%tmp_i_i = icmp eq i13 %p_2_i_i, 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:313->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 67 [1/1] (0.00ns) (grouped into LUT with out node p_0455_3_i_i)   --->   "%p_i_i = select i1 %tmp_i_i, i2 -2, i2 %p_3_i_i_load" [C:/xfopencv/include\imgproc/xf_sobel.hpp:313->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 68 [1/1] (0.00ns) (grouped into LUT with out node p_0449_3_i_i)   --->   "%p_1_i_i_12 = select i1 %tmp_i_i, i2 0, i2 %p_4_i_i_load" [C:/xfopencv/include\imgproc/xf_sobel.hpp:313->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 69 [1/1] (0.00ns) (grouped into LUT with out node p_0443_3_i_i)   --->   "%p_2_i_i_13 = select i1 %tmp_i_i, i2 1, i2 %p_5_i_i_load" [C:/xfopencv/include\imgproc/xf_sobel.hpp:313->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 70 [1/1] (0.00ns) (grouped into LUT with out node sel_tmp2)   --->   "%sel_tmp1 = xor i1 %tmp_8_i_i, true" [C:/xfopencv/include\imgproc/xf_sobel.hpp:305->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 71 [1/1] (0.97ns) (out node of the LUT)   --->   "%sel_tmp2 = and i1 %tmp_9_i_i, %sel_tmp1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 72 [1/1] (0.00ns) (grouped into LUT with out node p_0455_3_i_i)   --->   "%sel_tmp = zext i1 %sel_tmp2 to i2" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 73 [1/1] (0.97ns)   --->   "%tmp = or i1 %sel_tmp2, %tmp_8_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 74 [1/1] (0.99ns) (out node of the LUT)   --->   "%p_0455_3_i_i = select i1 %tmp, i2 %sel_tmp, i2 %p_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 75 [1/1] (0.00ns) (grouped into LUT with out node p_0449_3_i_i)   --->   "%sel_tmp4 = select i1 %sel_tmp2, i2 -2, i2 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 76 [1/1] (0.99ns) (out node of the LUT)   --->   "%p_0449_3_i_i = select i1 %tmp, i2 %sel_tmp4, i2 %p_1_i_i_12" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 77 [1/1] (0.00ns) (grouped into LUT with out node p_0443_3_i_i)   --->   "%sel_tmp8 = select i1 %sel_tmp2, i2 0, i2 -2" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 78 [1/1] (0.99ns) (out node of the LUT)   --->   "%p_0443_3_i_i = select i1 %tmp, i2 %sel_tmp8, i2 %p_2_i_i_13" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_5 : Operation 79 [1/1] (2.42ns)   --->   "%tmp_3_i_i = icmp ult i16 %tmp_6_cast99_i_i, %tmp_1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:193->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_3 = trunc i13 %p_2_i_i to i2" [C:/xfopencv/include\imgproc/xf_sobel.hpp:364->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "store i2 %p_0455_3_i_i, i2* %p_3_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 82 [1/1] (0.00ns)   --->   "store i2 %p_0449_3_i_i, i2* %p_4_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 83 [1/1] (0.00ns)   --->   "store i2 %p_0443_3_i_i, i2* %p_5_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 84 [1/1] (1.76ns)   --->   "br label %2" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_5 : Operation 85 [1/1] (0.00ns)   --->   "ret void"
+
+ <State 6> : 2.43ns
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%p_0177_0_i_i_i = phi i13 [ 0, %_ifconv ], [ %col_V_1, %"xfPackPixels<1, 0, 0>.exit393.i.i.i" ]"
+ST_6 : Operation 87 [1/1] (0.00ns)   --->   "%tmp_11_cast_i_i = zext i13 %p_0177_0_i_i_i to i16" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_6 : Operation 88 [1/1] (2.42ns)   --->   "%tmp_12_i_i = icmp ult i16 %tmp_11_cast_i_i, %tmp_2" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 89 [1/1] (1.67ns)   --->   "%col_V_1 = add i13 %p_0177_0_i_i_i, 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "br i1 %tmp_3_i_i, label %4, label %6" [C:/xfopencv/include\imgproc/xf_sobel.hpp:193->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_6 : Operation 91 [1/1] (0.00ns)   --->   "br label %8"
+ST_6 : Operation 92 [1/1] (1.13ns)   --->   "switch i2 %tmp_3, label %branch2.i.i [
+    i2 0, label %branch0.i.i
+    i2 1, label %branch1.i.i
+  ]" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_6 : Operation 93 [1/1] (0.00ns)   --->   "br label %8" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+ <State 7> : 6.89ns
+ST_7 : Operation 94 [1/1] (0.00ns)   --->   "%tmp_11_i_i = zext i13 %p_0177_0_i_i_i to i32" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 95 [1/1] (0.00ns)   --->   "%buf_0_V_addr_2 = getelementptr [640 x i8]* %buf_0_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 96 [1/1] (0.00ns)   --->   "%buf_1_V_addr_2 = getelementptr [640 x i8]* %buf_1_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 97 [1/1] (0.00ns)   --->   "%buf_2_V_addr_1 = getelementptr [640 x i8]* %buf_2_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 98 [1/1] (1.13ns)   --->   "switch i2 %p_0443_3_i_i, label %branch5.i.i [
+    i2 0, label %branch3.i.i
+    i2 1, label %branch4.i.i
+  ]" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 99 [1/1] (3.25ns)   --->   "store i8 0, i8* %buf_1_V_addr_2, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_7 : Operation 100 [1/1] (0.00ns)   --->   "br label %7" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 101 [1/1] (3.25ns)   --->   "store i8 0, i8* %buf_0_V_addr_2, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_7 : Operation 102 [1/1] (0.00ns)   --->   "br label %7" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 103 [1/1] (3.25ns)   --->   "store i8 0, i8* %buf_2_V_addr_1, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_7 : Operation 104 [1/1] (0.00ns)   --->   "br label %7" [C:/xfopencv/include\imgproc/xf_sobel.hpp:196->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 105 [1/1] (3.63ns)   --->   "%tmp_V_3 = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %p_src_mat_V_V)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_7 : Operation 106 [1/1] (0.00ns)   --->   "%buf_0_V_addr_1 = getelementptr [640 x i8]* %buf_0_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 107 [1/1] (0.00ns)   --->   "%buf_1_V_addr_1 = getelementptr [640 x i8]* %buf_1_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 108 [1/1] (0.00ns)   --->   "%buf_2_V_addr = getelementptr [640 x i8]* %buf_2_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 109 [1/1] (3.25ns)   --->   "store i8 %tmp_V_3, i8* %buf_1_V_addr_1, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_7 : Operation 110 [1/1] (0.00ns)   --->   "br label %5" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 111 [1/1] (3.25ns)   --->   "store i8 %tmp_V_3, i8* %buf_0_V_addr_1, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_7 : Operation 112 [1/1] (0.00ns)   --->   "br label %5" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 113 [1/1] (3.25ns)   --->   "store i8 %tmp_V_3, i8* %buf_2_V_addr, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_7 : Operation 114 [1/1] (0.00ns)   --->   "br label %5" [C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_7 : Operation 115 [1/1] (2.09ns)   --->   "%tmp_15_i_i = icmp eq i13 %p_0177_0_i_i_i, 0" [C:/xfopencv/include\imgproc/xf_sobel.hpp:218->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 116 [1/1] (0.00ns)   --->   "br i1 %tmp_15_i_i, label %"xfPackPixels<1, 0, 0>.exit393.i.i.i", label %.preheader851.0.i.i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:218->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+ <State 8> : 3.25ns
+ST_8 : Operation 117 [1/1] (0.00ns)   --->   "%buf_0_V_addr_3 = getelementptr [640 x i8]* %buf_0_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_8 : Operation 118 [2/2] (3.25ns)   --->   "%buf_0_V_load = load i8* %buf_0_V_addr_3, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_8 : Operation 119 [1/1] (0.00ns)   --->   "%buf_1_V_addr_3 = getelementptr [640 x i8]* %buf_1_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_8 : Operation 120 [2/2] (3.25ns)   --->   "%buf_1_V_load = load i8* %buf_1_V_addr_3, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_8 : Operation 121 [1/1] (0.00ns)   --->   "%buf_2_V_addr_2 = getelementptr [640 x i8]* %buf_2_V, i32 0, i32 %tmp_11_i_i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_8 : Operation 122 [2/2] (3.25ns)   --->   "%buf_2_V_load = load i8* %buf_2_V_addr_2, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+
+ <State 9> : 5.03ns
+ST_9 : Operation 123 [1/1] (0.00ns)   --->   "%src_buf3_V_0_i_i = phi i8 [ 0, %_ifconv ], [ %src_buf3_0_V, %"xfPackPixels<1, 0, 0>.exit393.i.i.i" ]"
+ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%src_buf2_0_V = phi i8 [ 0, %_ifconv ], [ %buf1_V, %"xfPackPixels<1, 0, 0>.exit393.i.i.i" ]"
+ST_9 : Operation 125 [1/1] (0.00ns)   --->   "%src_buf2_V_0_i_i = phi i8 [ 0, %_ifconv ], [ %src_buf2_0_V, %"xfPackPixels<1, 0, 0>.exit393.i.i.i" ]"
+ST_9 : Operation 126 [1/1] (0.00ns)   --->   "%src_buf3_0_V = phi i8 [ 0, %_ifconv ], [ %buf2_V, %"xfPackPixels<1, 0, 0>.exit393.i.i.i" ]"
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "%src_buf1_0_V = phi i8 [ 0, %_ifconv ], [ %buf0_V, %"xfPackPixels<1, 0, 0>.exit393.i.i.i" ]"
+ST_9 : Operation 128 [1/1] (0.00ns)   --->   "%src_buf1_V_0_i_i = phi i8 [ 0, %_ifconv ], [ %src_buf1_0_V, %"xfPackPixels<1, 0, 0>.exit393.i.i.i" ]"
+ST_9 : Operation 129 [1/1] (0.00ns)   --->   "br i1 %tmp_12_i_i, label %3, label %"ProcessSobel3x3<480, 640, 0, 0, 1, 0, 0, 640>.exit.i.i"" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_9 : Operation 130 [1/2] (3.25ns)   --->   "%buf_0_V_load = load i8* %buf_0_V_addr_3, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_9 : Operation 131 [1/2] (3.25ns)   --->   "%buf_1_V_load = load i8* %buf_1_V_addr_3, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_9 : Operation 132 [1/2] (3.25ns)   --->   "%buf_2_V_load = load i8* %buf_2_V_addr_2, align 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 45 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 640> <RAM>
+ST_9 : Operation 133 [1/1] (1.77ns)   --->   "%buf0_V = call i8 @_ssdm_op_Mux.ap_auto.3i8.i2(i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %p_0455_3_i_i)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 134 [1/1] (1.77ns)   --->   "%buf1_V = call i8 @_ssdm_op_Mux.ap_auto.3i8.i2(i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %p_0449_3_i_i)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 135 [1/1] (1.77ns)   --->   "%buf2_V = call i8 @_ssdm_op_Mux.ap_auto.3i8.i2(i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %p_0443_3_i_i)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 136 [2/2] (0.00ns)   --->   "%call_ret_i_i = call fastcc { i8, i8 } @"xFSobel3x3<1, 0, 0>"(i8 %src_buf1_V_0_i_i, i8 %src_buf1_0_V, i8 %buf0_V, i8 %src_buf2_V_0_i_i, i8 %buf1_V, i8 %src_buf3_V_0_i_i, i8 %src_buf3_0_V, i8 %buf2_V)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:215->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 10> : 6.14ns
+ST_10 : Operation 137 [1/2] (6.13ns)   --->   "%call_ret_i_i = call fastcc { i8, i8 } @"xFSobel3x3<1, 0, 0>"(i8 %src_buf1_V_0_i_i, i8 %src_buf1_0_V, i8 %buf0_V, i8 %src_buf2_V_0_i_i, i8 %buf1_V, i8 %src_buf3_V_0_i_i, i8 %src_buf3_0_V, i8 %buf2_V)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:215->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 138 [1/1] (0.00ns)   --->   "%GradientValuesX_0_V = extractvalue { i8, i8 } %call_ret_i_i, 0" [C:/xfopencv/include\imgproc/xf_sobel.hpp:215->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_10 : Operation 139 [1/1] (0.00ns)   --->   "%GradientValuesY_0_V = extractvalue { i8, i8 } %call_ret_i_i, 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:215->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+ <State 11> : 3.63ns
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str20) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:190->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_13_i_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str20)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:190->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_11 : Operation 142 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 640, i32 640, i32 0, [1 x i8]* @p_str) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:191->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_11 : Operation 143 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [C:/xfopencv/include\imgproc/xf_sobel.hpp:192->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_11 : Operation 144 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %p_gradx_mat_V_V, i8 %GradientValuesX_0_V)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:232->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_11 : Operation 145 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %p_grady_mat_V_V, i8 %GradientValuesY_0_V)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:233->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_11 : Operation 146 [1/1] (0.00ns)   --->   "br label %"xfPackPixels<1, 0, 0>.exit393.i.i.i""
+ST_11 : Operation 147 [1/1] (0.00ns)   --->   "%empty_14 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str20, i32 %tmp_13_i_i)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:251->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_11 : Operation 148 [1/1] (0.00ns)   --->   "br label %2" [C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+ <State 12> : 4.48ns
+ST_12 : Operation 149 [2/2] (1.91ns)   --->   "%GradientValuesX_0_V_2 = call fastcc i8 @"xFGradientX3x3<0, 0>"(i8 %src_buf1_V_0_i_i, i8 0, i8 %src_buf2_V_0_i_i, i8 0, i8 %src_buf3_V_0_i_i, i8 0)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:346->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 150 [2/2] (1.91ns)   --->   "%GradientValuesY_0_V_2 = call fastcc i8 @"xFGradientY3x3<0, 0>"(i8 %src_buf1_V_0_i_i, i8 %src_buf1_0_V, i8 0, i8 %src_buf3_V_0_i_i, i8 %src_buf3_0_V, i8 0)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:351->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_12 : Operation 151 [1/1] (1.67ns)   --->   "%row_ind_V = add i13 %p_2_i_i, 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:363->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 152 [1/1] (2.09ns)   --->   "%tmp_14_i_i = icmp eq i13 %row_ind_V, 3" [C:/xfopencv/include\imgproc/xf_sobel.hpp:364->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.09> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 153 [1/1] (0.69ns)   --->   "%p_i_i_15 = select i1 %tmp_14_i_i, i13 0, i13 %row_ind_V" [C:/xfopencv/include\imgproc/xf_sobel.hpp:364->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_12 : Operation 154 [1/1] (1.67ns)   --->   "%row_V = add i13 %p_6_i_i, 1" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.67> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+ <State 13> : 6.14ns
+ST_13 : Operation 155 [1/2] (6.13ns)   --->   "%GradientValuesX_0_V_2 = call fastcc i8 @"xFGradientX3x3<0, 0>"(i8 %src_buf1_V_0_i_i, i8 0, i8 %src_buf2_V_0_i_i, i8 0, i8 %src_buf3_V_0_i_i, i8 0)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:346->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_13 : Operation 156 [1/2] (6.13ns)   --->   "%GradientValuesY_0_V_2 = call fastcc i8 @"xFGradientY3x3<0, 0>"(i8 %src_buf1_V_0_i_i, i8 %src_buf1_0_V, i8 0, i8 %src_buf3_V_0_i_i, i8 %src_buf3_0_V, i8 0)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:351->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+ <State 14> : 3.63ns
+ST_14 : Operation 157 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %p_gradx_mat_V_V, i8 %GradientValuesX_0_V_2)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:357->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_14 : Operation 158 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %p_grady_mat_V_V, i8 %GradientValuesY_0_V_2)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:358->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 3> <FIFO>
+ST_14 : Operation 159 [1/1] (0.00ns)   --->   "%empty_16 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str14, i32 %tmp_10_i_i)" [C:/xfopencv/include\imgproc/xf_sobel.hpp:368->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+ST_14 : Operation 160 [1/1] (0.00ns)   --->   "br label %.preheader.i.i" [C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474]
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	fifo read on port 'p_src_mat_rows_read' [14]  (3.63 ns)
+
+ <State 2>: 2.43ns
+The critical path consists of the following:
+	'phi' operation ('col.V') with incoming values : ('col.V', C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [21]  (0 ns)
+	'icmp' operation ('tmp_2_i_i', C:/xfopencv/include\imgproc/xf_sobel.hpp:292->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [23]  (2.43 ns)
+
+ <State 3>: 6.89ns
+The critical path consists of the following:
+	fifo read on port 'p_src_mat_V_V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:297->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [34]  (3.63 ns)
+	'store' operation (C:/xfopencv/include\imgproc/xf_sobel.hpp:297->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) of variable 'tmp.V', C:/xfopencv/include\imgproc/xf_sobel.hpp:297->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474 on array 'buf[1].V', C:/xfopencv/include\imgproc/xf_sobel.hpp:286->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474 [36]  (3.25 ns)
+
+ <State 4>: 2.08ns
+The critical path consists of the following:
+	'add' operation ('op2', C:/xfopencv/include\imgproc/xf_sobel.hpp:302->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [44]  (2.08 ns)
+
+ <State 5>: 5.05ns
+The critical path consists of the following:
+	'phi' operation ('p_2_i_i', C:/xfopencv/include\imgproc/xf_sobel.hpp:364->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) with incoming values : ('p_i_i_15', C:/xfopencv/include\imgproc/xf_sobel.hpp:364->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [47]  (0 ns)
+	'icmp' operation ('tmp_9_i_i', C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [61]  (2.1 ns)
+	'and' operation ('sel_tmp2', C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [67]  (0.978 ns)
+	'or' operation ('tmp', C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [69]  (0.978 ns)
+	'select' operation ('p_0455_3_i_i', C:/xfopencv/include\imgproc/xf_sobel.hpp:309->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [70]  (0.993 ns)
+
+ <State 6>: 2.43ns
+The critical path consists of the following:
+	'phi' operation ('col.V') with incoming values : ('col.V', C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [88]  (0 ns)
+	'icmp' operation ('tmp_12_i_i', C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [90]  (2.43 ns)
+
+ <State 7>: 6.89ns
+The critical path consists of the following:
+	fifo read on port 'p_src_mat_V_V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [117]  (3.63 ns)
+	'store' operation (C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) of variable 'tmp.V', C:/xfopencv/include\imgproc/xf_sobel.hpp:194->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474 on array 'buf[0].V', C:/xfopencv/include\imgproc/xf_sobel.hpp:286->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474 [126]  (3.25 ns)
+
+ <State 8>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('buf_0_V_addr_3', C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [134]  (0 ns)
+	'load' operation ('buf_0_V_load', C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) on array 'buf[0].V', C:/xfopencv/include\imgproc/xf_sobel.hpp:286->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474 [135]  (3.25 ns)
+
+ <State 9>: 5.03ns
+The critical path consists of the following:
+	'load' operation ('buf_0_V_load', C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) on array 'buf[0].V', C:/xfopencv/include\imgproc/xf_sobel.hpp:286->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474 [135]  (3.25 ns)
+	'mux' operation ('buf0.V', C:/xfopencv/include\imgproc/xf_sobel.hpp:189->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [140]  (1.77 ns)
+	'call' operation ('call_ret_i_i', C:/xfopencv/include\imgproc/xf_sobel.hpp:215->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) to 'xFSobel3x3<1, 0, 0>' [143]  (0 ns)
+
+ <State 10>: 6.14ns
+The critical path consists of the following:
+	'call' operation ('call_ret_i_i', C:/xfopencv/include\imgproc/xf_sobel.hpp:215->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) to 'xFSobel3x3<1, 0, 0>' [143]  (6.14 ns)
+
+ <State 11>: 3.63ns
+The critical path consists of the following:
+	fifo write on port 'p_gradx_mat_V_V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:232->C:/xfopencv/include\imgproc/xf_sobel.hpp:324->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [149]  (3.63 ns)
+
+ <State 12>: 4.48ns
+The critical path consists of the following:
+	'add' operation ('row_ind.V', C:/xfopencv/include\imgproc/xf_sobel.hpp:363->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [160]  (1.68 ns)
+	'icmp' operation ('tmp_14_i_i', C:/xfopencv/include\imgproc/xf_sobel.hpp:364->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [161]  (2.1 ns)
+	'select' operation ('p_i_i_15', C:/xfopencv/include\imgproc/xf_sobel.hpp:364->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [162]  (0.7 ns)
+
+ <State 13>: 6.14ns
+The critical path consists of the following:
+	'call' operation ('GradientValuesX[0].V', C:/xfopencv/include\imgproc/xf_sobel.hpp:346->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) to 'xFGradientX3x3<0, 0>' [156]  (6.14 ns)
+
+ <State 14>: 3.63ns
+The critical path consists of the following:
+	fifo write on port 'p_gradx_mat_V_V' (C:/xfopencv/include\imgproc/xf_sobel.hpp:357->C:/xfopencv/include\imgproc/xf_sobel.hpp:1422->C:/xfopencv/include\imgproc/xf_sobel.hpp:1474) [158]  (3.63 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

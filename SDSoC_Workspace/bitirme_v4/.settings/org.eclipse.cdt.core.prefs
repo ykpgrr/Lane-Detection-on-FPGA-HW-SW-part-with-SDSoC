@@ -1,0 +1,12 @@
+//showInclude\:C\:/OpencvWin/include=false
+//showInclude\:C\:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include=false
+//showInclude\:C\:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1=false
+//showInclude\:C\:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1/arm-linux-gnueabihf=false
+//showInclude\:C\:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/include/c++/7.2.1/backward=false
+//showInclude\:C\:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/arm-linux-gnueabihf/libc/usr/include=false
+//showInclude\:C\:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1/include=false
+//showInclude\:C\:/Xilinx/SDK/2018.1/gnu/aarch32/nt/gcc-arm-linux-gnueabi/lib/gcc/arm-linux-gnueabihf/7.2.1/include-fixed=false
+//showInclude\:C\:/Xilinx/SDx/2018.1/target/aarch32-linux/include=false
+//showInclude\:C\:/Xilinx/Vivado/2018.1/include=false
+//showInclude\:C\:/xfopencv/include=true
+eclipse.preferences.version=1

@@ -1,0 +1,562 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+<sourceFile name="">
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="val"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator =" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator +" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator +" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator -" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator -" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator *" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator *" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator /" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Scalar&lt;N, T&gt;::operator /" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xfPackPixels" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="xfPackPixels" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xfExtractPixels" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xfExtractData" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="xfCopyData" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="xfCopyData" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="6"/>
+<option name="max" value="6"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xfCopyData" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFDuplicateStream" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="IN_BH"/>
+<option name="max" value="IN_BH"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFDuplicateStream" label="">
+<pragma name="LOOP_FLATTEN">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFDuplicateStream" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="IN_BW"/>
+<option name="max" value="IN_BW"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFGradientX3x3" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFGradientY3x3" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobel3x3" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobel3x3" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="ProcessSobel3x3" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="ProcessSobel3x3" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="GradientValuesX"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="GradientValuesY"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf1"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf2"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf3"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="buf"/>
+<option name="core" value="RAM_S2P_BRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="buf"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter3x3" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="ROWS"/>
+<option name="max" value="ROWS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFGradientX5x5" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFGradientY5x5" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobel5x5" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobel5x5" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="8"/>
+<option name="max" value="8"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobel5x5" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="ProcessSobel5x5" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="ProcessSobel5x5" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="ProcessSobel5x5" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="GradientValuesX"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="GradientValuesY"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf1"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf2"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf3"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf4"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf5"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="buf"/>
+<option name="core" value="RAM_S2P_BRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="buf"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="ROWS"/>
+<option name="max" value="ROWS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ALLOCATION">
+<option name="instances" positionalBoolean="4" value="xFGradientX5x5"/>
+<option name="limit" value="1"/>
+<option name="function" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="ALLOCATION">
+<option name="instances" positionalBoolean="4" value="xFGradientY5x5"/>
+<option name="limit" value="1"/>
+<option name="function" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter5x5" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="xFGradientX7x7" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFGradientX7x7" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFGradientY7x7" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFGradientY7x7" label="">
+<pragma name="PIPELINE">
+<option name="II" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobel7x7" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="xFSobel7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="8"/>
+<option name="max" value="8"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobel7x7" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="ProcessSobel7x7" label="">
+<pragma name="INLINE"/>
+</directive>
+<directive functionLabel="" functionName="ProcessSobel7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="RightBorder7x7" label="">
+<pragma name="INLINE">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="RightBorder7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="8"/>
+<option name="max" value="8"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="RightBorder7x7" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="RightBorder7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="3"/>
+<option name="max" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="RightBorder7x7" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="RightBorder7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="3"/>
+<option name="max" value="3"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="RightBorder7x7" label="">
+<pragma name="ALLOCATION">
+<option name="instances" positionalBoolean="4" value="xFGradientX7x7"/>
+<option name="limit" value="1"/>
+<option name="function" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="RightBorder7x7" label="">
+<pragma name="ALLOCATION">
+<option name="instances" positionalBoolean="4" value="xFGradientY7x7"/>
+<option name="limit" value="1"/>
+<option name="function" positionalBoolean="type" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="GradientValuesX"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="GradientValuesY"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf1"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf2"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf3"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf4"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf5"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf6"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="src_buf7"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="RESOURCE">
+<option name="variable" positionalBoolean="4" value="buf"/>
+<option name="core" value="RAM_S2P_BRAM"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="ARRAY_PARTITION">
+<option name="variable" positionalBoolean="4" value="buf"/>
+<option name="complete" positionalBoolean="type" value=""/>
+<option name="dim" value="1"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="TC"/>
+<option name="max" value="TC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="ROWS"/>
+<option name="max" value="ROWS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="xFSobelFilter7x7" label="">
+<pragma name="UNROLL"/>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="INLINE">
+<option name="OFF" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="DATAFLOW"/>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="ROWS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="COLS/NPC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="LOOP_FLATTEN">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="ROWS"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="LOOP_TRIPCOUNT">
+<option name="min" value="1"/>
+<option name="max" value="COLS/NPC"/>
+</pragma>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="PIPELINE"/>
+</directive>
+<directive functionLabel="" functionName="Sobel" label="">
+<pragma name="LOOP_FLATTEN">
+<option name="off" positionalBoolean="1" value=""/>
+</pragma>
+</directive>
+</sourceFile>
+</AutoPilot:ProjectResources>

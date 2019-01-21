@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vivado HLS Report for 'sobel_accel'
+================================================================
+* Date:           Wed May 23 18:09:56 2018
+
+* Version:        2018.1 (Build 2188600 on Wed Apr 04 19:04:02 MDT 2018)
+* Project:        sobel_accel
+* Solution:       solution
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      6.89|        2.70|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +--------+--------+--------+--------+---------+
+    |     Latency     |     Interval    | Pipeline|
+    |   min  |   max  |   min  |   max  |   Type  |
+    +--------+--------+--------+--------+---------+
+    |  312166|  312166|  312166|  312166|   none  |
+    +--------+--------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------+-------+--------+--------+--------+--------+----------+
+        |                 |       |     Latency     |     Interval    | Pipeline |
+        |     Instance    | Module|   min  |   max  |   min  |   max  |   Type   |
+        +-----------------+-------+--------+--------+--------+--------+----------+
+        |grp_Sobel_fu_78  |Sobel  |  312165|  312165|  312164|  312164| dataflow |
+        +-----------------+-------+--------+--------+--------+--------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|      4|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        3|      3|     988|   2052|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|     15|
+|Register         |        -|      -|       5|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        3|      3|     993|   2071|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        1|      1|   ~0   |      3|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +-----------------+-------+---------+-------+-----+------+
+    |     Instance    | Module| BRAM_18K| DSP48E|  FF |  LUT |
+    +-----------------+-------+---------+-------+-----+------+
+    |grp_Sobel_fu_78  |Sobel  |        3|      3|  988|  2052|
+    +-----------------+-------+---------+-------+-----+------+
+    |Total            |       |        3|      3|  988|  2052|
+    +-----------------+-------+---------+-------+-----+------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_sync_grp_Sobel_fu_78_ap_done   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_Sobel_fu_78_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|   4|           2|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  15|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  15|          3|    1|          3|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------+---+----+-----+-----------+
+    |                 Name                 | FF| LUT| Bits| Const Bits|
+    +--------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                             |  2|   0|    2|          0|
+    |ap_sync_reg_grp_Sobel_fu_78_ap_done   |  1|   0|    1|          0|
+    |ap_sync_reg_grp_Sobel_fu_78_ap_ready  |  1|   0|    1|          0|
+    |grp_Sobel_fu_78_ap_start_reg          |  1|   0|    1|          0|
+    +--------------------------------------+---+----+-----+-----------+
+    |Total                                 |  5|   0|    5|          0|
+    +--------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-----------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++-------------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs |      sobel_accel      | return value |
+|ap_rst_n                 |  in |    1| ap_ctrl_hs |      sobel_accel      | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs |      sobel_accel      | return value |
+|ap_done                  | out |    1| ap_ctrl_hs |      sobel_accel      | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs |      sobel_accel      | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs |      sobel_accel      | return value |
+|p_src_allocatedFlag      |  in |    8|   ap_none  |  p_src_allocatedFlag  |    pointer   |
+|p_src_rows               |  in |   32|   ap_none  |       p_src_rows      |    pointer   |
+|p_src_cols               |  in |   32|   ap_none  |       p_src_cols      |    pointer   |
+|p_src_size               |  in |   32|   ap_none  |       p_src_size      |    pointer   |
+|p_src_data_V_address0    | out |   19|  ap_memory |      p_src_data_V     |     array    |
+|p_src_data_V_ce0         | out |    1|  ap_memory |      p_src_data_V     |     array    |
+|p_src_data_V_q0          |  in |    8|  ap_memory |      p_src_data_V     |     array    |
+|p_dstgx_allocatedFlag    |  in |    8|   ap_none  | p_dstgx_allocatedFlag |    pointer   |
+|p_dstgx_rows             |  in |   32|   ap_none  |      p_dstgx_rows     |    pointer   |
+|p_dstgx_cols             |  in |   32|   ap_none  |      p_dstgx_cols     |    pointer   |
+|p_dstgx_size             |  in |   32|   ap_none  |      p_dstgx_size     |    pointer   |
+|p_dstgx_data_V_address0  | out |   19|  ap_memory |     p_dstgx_data_V    |     array    |
+|p_dstgx_data_V_ce0       | out |    1|  ap_memory |     p_dstgx_data_V    |     array    |
+|p_dstgx_data_V_we0       | out |    1|  ap_memory |     p_dstgx_data_V    |     array    |
+|p_dstgx_data_V_d0        | out |    8|  ap_memory |     p_dstgx_data_V    |     array    |
+|p_dstgy_allocatedFlag    |  in |    8|   ap_none  | p_dstgy_allocatedFlag |    pointer   |
+|p_dstgy_rows             |  in |   32|   ap_none  |      p_dstgy_rows     |    pointer   |
+|p_dstgy_cols             |  in |   32|   ap_none  |      p_dstgy_cols     |    pointer   |
+|p_dstgy_size             |  in |   32|   ap_none  |      p_dstgy_size     |    pointer   |
+|p_dstgy_data_V_address0  | out |   19|  ap_memory |     p_dstgy_data_V    |     array    |
+|p_dstgy_data_V_ce0       | out |    1|  ap_memory |     p_dstgy_data_V    |     array    |
+|p_dstgy_data_V_we0       | out |    1|  ap_memory |     p_dstgy_data_V    |     array    |
+|p_dstgy_data_V_d0        | out |    8|  ap_memory |     p_dstgy_data_V    |     array    |
++-------------------------+-----+-----+------------+-----------------------+--------------+
+

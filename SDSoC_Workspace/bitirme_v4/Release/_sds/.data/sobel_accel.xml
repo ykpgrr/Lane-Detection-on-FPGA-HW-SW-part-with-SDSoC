@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xd:data xmlns:xd="http://www.xilinx.com/xd">
+  <xd:accel name="sobel_accel" platform="zed" compiler="g++" srcfile="xf_sobel_accel.cpp" srcpath="C:/Users/yakup/workspace/bitirme_v4/src" flags="-IC:/Users/yakup/workspace/bitirme_v4/src -IC:/Users/yakup/workspace/bitirme_v4/src -IC:/xfopencv/include -IC:/OpencvWin/include -Wall -O3 -fmessage-length=0 -MMD -MP -D __SDSCC__" clk_id="2" ip_requires_adapter="1" ip_is_rtl="0" ip_has_repo="0" ip_is_pfunc="0" vlnv="" is_opencl="0" asmfile="xf_sobel_accel.s" esc_original_name="sobel_accel" template_source_file="NA"/>
+</xd:data>
